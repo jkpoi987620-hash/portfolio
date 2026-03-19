@@ -7,7 +7,6 @@
   <title>TEMPUR</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://kit.fontawesome.com/632d3e2496.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -237,13 +236,19 @@
             <line x1="1" y1="5" x2="9" y2="5" />
           </svg></button>
         <div class="slider-controls">
-          <i class="fas fa-chevron-left" id="prevDot"></i>
+          <svg id="prevDot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;cursor:pointer;">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
           <ul class="dots" id="sliderDots">
             <li class="active"></li>
             <li></li>
             <li></li>
           </ul>
-          <i class="fas fa-chevron-right" id="nextDot"></i>
+          <svg id="nextDot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;cursor:pointer;">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
         </div>
       </div>
 
@@ -438,10 +443,12 @@
 
   <!-- 스크롤 TOP 버튼 -->
   <button class="scroll-top" id="scrollTopBtn" aria-label="맨 위로">
-    <i class="fas fa-chevron-up"></i>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round" style="width:20px;height:20px;">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
   </button>
 
-  <script src="https://kit.fontawesome.com/632d3e2496.js" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
 </body>
 

@@ -165,7 +165,7 @@ header>.gnb>.menu>.on{
 .container>.inner>.img>.bg-img>b{
   position: absolute;
   top: 340px; left: 130px;
-  font-size: 24;
+  font-size: 24px;
   color: #fff;
   font-weight: lighter;
 }

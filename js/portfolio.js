@@ -201,17 +201,38 @@ updatePositions();
 const pageWorks = document.getElementById('page-works');
 const workPdfImg = document.getElementById('workPdfImg');
 const workCtaBtn = document.getElementById('workCtaBtn');
-const base = location.hostname === 'localhost' ? './' : '/portfolio/';
+
 
 // 초기 숨김 (resetPage와 동일 방식)
 pageWorks.style.cssText = 'position:absolute;top:0;left:0;width:100%;transform:translateX(100%);opacity:0;pointer-events:none;z-index:1;visibility:hidden;height:0;overflow:hidden;';
 
+const BASE = window.location.pathname.includes('/portfolio') ? '/portfolio' : '';
 const workData = {
-  cineq: { pdf: `${base}img/CINEQ_PORTFOLIO.jpg`, link: `${base}portfolio_ex/movie.html`, bg: `${base}img/CINEQ_CTA-bg.png` },
-  tempur: { pdf: `${base}img/TEMPUR_PORTFOLIO.png`, link: `${base}portfolio_ex/index.html`, bg: `${base}img/TEMPUR_CTA-bg.png` },
-  melon: { pdf: `${base}img/MELON_PORTFOLIO.jpg`, link: `${base}portfolio_ex/melon.html`, bg: `${base}img/MELON_CTA-bg.png` },
-  aquaderm: { pdf: `${base}img/AQUADREM_PORTFOLIO.jpg`, link: `${base}portfolio_ex/aquadrem_index/aquaderm.html`, bg: `${base}img/AQUA_CTA-bg.png` },
-  ssense: { pdf: `${base}img/SSENSE_PORTFOLIO.png`, link: `${base}portfolio_ex/teamProject-main/index.html`, bg: `${base}img/SSENSE_CTA-bg.png` }
+  cineq: {
+    pdf: `${BASE}/img/CINEQ_PORTFOLIO.jpg`,
+    link: `${BASE}/portfolio_ex/movie.html`,
+    bg: `${BASE}/img/CINEQ_CTA-bg.png`
+  },
+  tempur: {
+    pdf: `${BASE}/img/TEMPUR_PORTFOLIO.png`,
+    link: `${BASE}/portfolio_ex/index.html`,
+    bg: `${BASE}/img/TEMPUR_CTA-bg.png`
+  },
+  melon: {
+    pdf: `${BASE}/img/MELON_PORTFOLIO.jpg`,
+    link: `${BASE}/portfolio_ex/melon.html`,
+    bg: `${BASE}/img/MELON_CTA-bg.png`
+  },
+  aquaderm: {
+    pdf: `${BASE}/img/AQUADREM_PORTFOLIO.jpg`,
+    link: `${BASE}/portfolio_ex/aquadrem_index/aquaderm.html`,
+    bg: `${BASE}/img/AQUA_CTA-bg.png`
+  },
+  ssense: {
+    pdf: `${BASE}/img/SSENSE_PORTFOLIO.png`,
+    link: `${BASE}/portfolio_ex/teamProject-main/index.html`,
+    bg: `${BASE}/img/SSENSE_CTA-bg.png`
+  }
 };
 
 function openWork(workKey) {

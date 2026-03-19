@@ -568,6 +568,12 @@ main>#container>.title{
   margin: auto;
   margin-top: 193px;
 }
+main>#container>#txt{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 19px;
+}
 main>#container>h2{
   font-size: 30px;
   font-weight: normal;
@@ -964,15 +970,20 @@ main>#premium>.box2>.txt2>p{
 /*프리미엄 상영끝=========================*/
 .map>.inner{
   width: 997px;
-  height: 486px;
+  height: auto;
+  min-height: 486px;
   background-color: #121C38;
   border: 1px solid #203269;
   border-radius: 22px;
   margin: auto;
   display: flex;
-  padding: 24px 35px 0;
+  padding: 24px 35px 24px;
   gap: 61px;
   margin-top: 147px;
+}
+.map>.inner>.box{
+  width: 463px;
+  flex-shrink: 0;
 }
 .map>.inner>.box>.title{
   display: flex;
@@ -984,9 +995,11 @@ main>#premium>.box2>.txt2>p{
   color: #fff;
   font-weight: normal;
 }
-.map>.inner>.box>.title>i{
-  font-size: 30px;
-  color: #E60013;
+.map>.inner>.box>.title>svg{
+  width: 22px;
+  height: 22px;
+  stroke: #E60013;
+  flex-shrink: 0;
 }
 .map>.inner>.box>.content{
   display: flex;
@@ -997,6 +1010,8 @@ main>#premium>.box2>.txt2>p{
   color: #fff;
   font-size: 17px;
   opacity: 0.8;
+  width: 40px;
+  flex-shrink: 0;
 }
 .map>.inner>.box>.content>p{
   font-size: 16px;
@@ -1022,18 +1037,22 @@ main>#premium>.box2>.txt2>p{
 .map>.inner>.item>.card>.txt:hover>p{color: #FB5151;}
 .map>.inner>.item>.card>.txt:hover>h3{color: #FB5151;}
 
-.map>.inner>.item>.card>.txt>i{
+.map>.inner>.item>.card>.txt>.icon-box{
   width: 45px;
   height: 45px;
   background-color: #71050E;
-  color: #FB5151;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 27px;
   margin: auto;
   margin-top: 15px;
+}
+.map>.inner>.item>.card>.txt>.icon-box>svg{
+  width: 27px;
+  height: 27px;
+  stroke: #FB5151;
+
 }
 .map>.inner>.item>.card>.txt>p{
   color: #fff;

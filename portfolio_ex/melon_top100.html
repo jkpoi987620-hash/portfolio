@@ -1,354 +1,550 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>멜론 TOP 100</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/melon_top100.css">
 </head>
+
 <body>
 
-<!-- TOP NAV -->
-<nav class="top-nav">
-  <div class="top-nav__inner">
-    <div class="top-nav__left">
-      <a href="#" class="top-nav__item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>이용권 구매
-      </a>
-      <a href="#" class="top-nav__item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>고객센터
-      </a>
-      <a href="#" class="top-nav__item">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>공지사항
-      </a>
-    </div>
-    <div class="top-nav__right">
-      <button class="top-nav__icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-      <button class="top-nav__icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button>
-      <button class="top-nav__icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
-    </div>
-  </div>
-</nav>
-
-<!-- BOTTOM NAV -->
-<nav class="bottom-nav">
-  <div class="bottom-nav__inner">
-    <span class="bottom-nav__logo"><a href="melon.html"><img src="melon-img/top_logo.png" alt=""></a></span>
-    <div class="bottom-nav__search">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" placeholder="아티스트, 곡, 앨범 검색" />
-    </div>
-  </div>
-</nav>
-
-<!-- MAIN -->
-<main>
-
-  <h1 class="page-title">멜론 TOP 100</h1>
-  <p class="page-subtitle">2026.02.08 (일) 14:00 기준</p>
-
-  <!-- 액션 버튼 행 -->
-  <div class="top-actions">
-    <button class="btn-play-all">전체 듣기</button>
-    <button class="btn-add-all">전체 담기</button>
-    <button class="btn-sort">
-      최신순
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-    </button>
-  </div>
-
-  <!-- 차트 카드 -->
-  <div class="chart-card">
-
-    <!-- 헤더 -->
-    <div class="chart-header">
-      <span class="col-rank">순위</span>
-      <span class="col-change">변동</span>
-      <span class="col-info">곡 정보</span>
-      <span class="col-artist">아티스트</span>
-      <span class="col-album">앨범</span>
-      <span class="col-action">기능</span>
-    </div>
-
-    <!-- 1 -->
-    <div class="chart-row odd">
-      <span class="row-rank top3">1</span>
-      <span class="row-change">–</span>
-      <div class="row-info">
-        <div class="row-album-img"><img src="melon-img/top_100_1.png" alt="앨범"></div>
-        <span class="row-song-name">그대 작은 나의 세상이 되어</span>
+  <!-- TOP NAV -->
+  <nav class="top-nav">
+    <div class="top-nav__inner">
+      <div class="top-nav__left">
+        <a href="#" class="top-nav__item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 12 20 22 4 22 4 12" />
+            <rect x="2" y="7" width="20" height="5" />
+            <line x1="12" y1="22" x2="12" y2="7" />
+            <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" />
+            <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" />
+          </svg>이용권 구매
+        </a>
+        <a href="#" class="top-nav__item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z" />
+            <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+          </svg>고객센터
+        </a>
+        <a href="#" class="top-nav__item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+          </svg>공지사항
+        </a>
       </div>
-      <span class="row-artist">커더가든</span>
-      <span class="row-album-name">가까운 듯 먼 그대여</span>
-      <div class="row-actions">
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></button>
+      <div class="top-nav__right">
+        <button class="top-nav__icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg></button>
+        <button class="top-nav__icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+          </svg></button>
+        <button class="top-nav__icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg></button>
       </div>
     </div>
+  </nav>
 
-    <!-- 2 -->
-    <div class="chart-row even">
-      <span class="row-rank top3">2</span>
-      <span class="row-change"><img src="melon-img/top100_red_2.png" alt=""></span>
-      <div class="row-info">
-        <div class="row-album-img"><img src="melon-img/top_100_2.png" alt="앨범"></div>
-        <span class="row-song-name">Good Goodbye</span>
-      </div>
-      <span class="row-artist">화사(HWASA)</span>
-      <span class="row-album-name">마리아(Maria)</span>
-      <div class="row-actions">
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></button>
+  <!-- BOTTOM NAV -->
+  <nav class="bottom-nav">
+    <div class="bottom-nav__inner">
+      <span class="bottom-nav__logo"><a href="melon.html"><img src="melon-img/top_logo.png" alt=""></a></span>
+      <div class="bottom-nav__search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <input type="text" placeholder="아티스트, 곡, 앨범 검색" />
       </div>
     </div>
+  </nav>
 
-    <!-- 3 -->
-    <div class="chart-row odd">
-      <span class="row-rank top3">3</span>
-      <span class="row-change"><img src="melon-img/top100_blue_3.png" alt=""></span>
-      <div class="row-info">
-        <div class="row-album-img"><img src="melon-img/top_100_3.png" alt="앨범"></div>
-        <span class="row-song-name">사랑하게 될 거야</span>
-      </div>
-      <span class="row-artist">한로로</span>
-      <span class="row-album-name">사랑하게 될 거야</span>
-      <div class="row-actions">
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></button>
-      </div>
-    </div>
+  <!-- MAIN -->
+  <main>
 
-    <!-- 4 -->
-    <div class="chart-row even">
-      <span class="row-rank rest">4</span>
-      <span class="row-change">–</span>
-      <div class="row-info">
-        <div class="row-album-img"><img src="melon-img/top_100_4.png" alt="앨범"></div>
-        <span class="row-song-name">Drowning</span>
-      </div>
-      <span class="row-artist">WOODZ</span>
-      <span class="row-album-name">Drowning</span>
-      <div class="row-actions">
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></button>
-      </div>
-    </div>
+    <h1 class="page-title">멜론 TOP 100</h1>
+    <p class="page-subtitle">2026.02.08 (일) 14:00 기준</p>
 
-    <!-- 5 -->
-    <div class="chart-row odd">
-      <span class="row-rank rest">5</span>
-      <span class="row-change"><img src="melon-img/top100_blue_5.png" alt=""></span>
-      <div class="row-info">
-        <div class="row-album-img"><img src="melon-img/top_100_5.png" alt="앨범"></div>
-        <span class="row-song-name">타임캡슐</span>
-      </div>
-      <span class="row-artist">다비치</span>
-      <span class="row-album-name">안녕이라고 말하지마</span>
-      <div class="row-actions">
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></button>
-      </div>
-    </div>
-
-    <!-- 6 -->
-    <div class="chart-row even">
-      <span class="row-rank rest">6</span>
-      <span class="row-change"><img src="melon-img/top100_red_6.png" alt=""></span>
-      <div class="row-info">
-        <div class="row-album-img"><img src="melon-img/top_100_6.png" alt="앨범"></div>
-        <span class="row-song-name">Blue Valentine</span>
-      </div>
-      <span class="row-artist">NMIXX</span>
-      <span class="row-album-name">Love Me Like This</span>
-      <div class="row-actions">
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></button>
-      </div>
-    </div>
-
-    <!-- 7 -->
-    <div class="chart-row odd">
-      <span class="row-rank rest">7</span>
-      <span class="row-change"><img src="melon-img/top100_red_7.png" alt=""></span>
-      <div class="row-info">
-        <div class="row-album-img"><img src="melon-img/top_100_7.png" alt="앨범"></div>
-        <span class="row-song-name">Golden</span>
-      </div>
-      <span class="row-artist">HUNTR/X</span>
-      <span class="row-album-name">Golden</span>
-      <div class="row-actions">
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></button>
-      </div>
-    </div>
-
-    <!-- 8 -->
-    <div class="chart-row even">
-      <span class="row-rank rest">8</span>
-      <span class="row-change">–</span>
-      <div class="row-info">
-        <div class="row-album-img"><img src="melon-img/top_100_8.png" alt="앨범"></div>
-        <span class="row-song-name">0+0</span>
-      </div>
-      <span class="row-artist">한로로</span>
-      <span class="row-album-name">사랑하게 될 거야</span>
-      <div class="row-actions">
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></button>
-      </div>
-    </div>
-
-    <!-- 9 -->
-    <div class="chart-row odd">
-      <span class="row-rank rest">9</span>
-      <span class="row-change">–</span>
-      <div class="row-info">
-        <div class="row-album-img"><img src="melon-img/top_100_9.png" alt="앨범"></div>
-        <span class="row-song-name">멸종위기사랑</span>
-      </div>
-      <span class="row-artist">이찬혁</span>
-      <span class="row-album-name">EROS</span>
-      <div class="row-actions">
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></button>
-      </div>
-    </div>
-
-    <!-- 10 -->
-    <div class="chart-row even">
-      <span class="row-rank rest">10</span>
-      <span class="row-change"><img src="melon-img/top100_red_2.png" alt=""></span>
-      <div class="row-info">
-        <div class="row-album-img"><img src="melon-img/top_100_10.png" alt="앨범"></div>
-        <span class="row-song-name">SPAGHETTI (feat.j-hope of BTS)</span>
-      </div>
-      <span class="row-artist">르세라핌</span>
-      <span class="row-album-name">SPAGHETTI</span>
-      <div class="row-actions">
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></button>
-      </div>
-    </div>
-
-    <!-- 11 -->
-    <div class="chart-row odd">
-      <span class="row-rank rest">11</span>
-      <span class="row-change"><img src="melon-img/top100_red_6.png" alt=""></span>
-      <div class="row-info">
-        <div class="row-album-img"><img src="melon-img/top_100_11.png" alt="앨범"></div>
-        <span class="row-song-name">ONE MORE TIME</span>
-      </div>
-      <span class="row-artist">ALLDAY PROJECT</span>
-      <span class="row-album-name">ALLDAY PROJECT</span>
-      <div class="row-actions">
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></button>
-      </div>
-    </div>
-
-    <!-- 12 -->
-    <div class="chart-row even">
-      <span class="row-rank rest">12</span>
-      <span class="row-change">–</span>
-      <div class="row-info">
-        <div class="row-album-img"><img src="melon-img/top_100_12.png" alt="앨범"></div>
-        <span class="row-song-name">모르시나요(PROD.로코베리)</span>
-      </div>
-      <span class="row-artist">조패즈</span>
-      <span class="row-album-name">모르시나요</span>
-      <div class="row-actions">
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-        <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></button>
-      </div>
-    </div>
-
-  </div><!-- /chart-card -->
-
-  <!-- 더보기 버튼 -->
-  <button class="more-btn">
-    더보기
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-  </button>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-top">
-    <div class="footer-top__inner">
-      <div class="footer-brand">
-        <span class="footer-logo-text"><img src="melon-img/footer-logo.png" alt=""></span>
-        <p class="footer-tagline">대한민국 NO.1 음악 스트리밍 서비스</p>
-        <div class="footer-sns">
-          <button class="footer-sns-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></button>
-          <button class="footer-sns-btn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
-          <button class="footer-sns-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg></button>
-          <button class="footer-sns-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></button>
-        </div>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <p class="footer-col__title">서비스</p>
-          <ul class="footer-col__list">
-            <li class="footer-col__item"><a href="#">멜론 이용권</a></li>
-            <li class="footer-col__item"><a href="#">이벤트</a></li>
-            <li class="footer-col__item"><a href="#">공지사항</a></li>
-            <li class="footer-col__item"><a href="#">고객센터</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <p class="footer-col__title">정보</p>
-          <ul class="footer-col__list">
-            <li class="footer-col__item"><a href="#">회사소개</a></li>
-            <li class="footer-col__item"><a href="#">채용정보</a></li>
-            <li class="footer-col__item"><a href="#">제휴문의</a></li>
-            <li class="footer-col__item"><a href="#">광고문의</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <p class="footer-col__title">약관 및 정책</p>
-          <ul class="footer-col__list">
-            <li class="footer-col__item"><a href="#">이용약관</a></li>
-            <li class="footer-col__item"><a href="#" class="bold">개인정보처리방침</a></li>
-            <li class="footer-col__item"><a href="#">청소년보호정책</a></li>
-            <li class="footer-col__item"><a href="#">운영정책</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-bottom__inner">
-      <div class="footer-legal">
-        <p>(주)카카오엔터테인먼트 | 대표이사: 이진수 | 사업자등록번호: 123-45-67890</p>
-        <p>통신판매업 신고번호: 제2024-서울강남-12345호 | 호스팅서비스 사업자: (주)카카오엔터테인먼트</p>
-        <p>주소: 서울특별시 강남구 테헤란로 123</p>
-        <p>고객센터: 1234-5678 | 이메일: <a href="#">이메일 주소</a></p>
-        <p class="copyright">© 2026 Kakao Entertainment Corp. All rights reserved.</p>
-      </div>
-      <button class="footer-studio">
-        멜론 스튜디오
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    <!-- 액션 버튼 행 -->
+    <div class="top-actions">
+      <button class="btn-play-all">전체 듣기</button>
+      <button class="btn-add-all">전체 담기</button>
+      <button class="btn-sort">
+        최신순
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
       </button>
     </div>
-  </div>
-</footer>
+
+    <!-- 차트 카드 -->
+    <div class="chart-card">
+
+      <!-- 헤더 -->
+      <div class="chart-header">
+        <span class="col-rank">순위</span>
+        <span class="col-change">변동</span>
+        <span class="col-info">곡 정보</span>
+        <span class="col-artist">아티스트</span>
+        <span class="col-album">앨범</span>
+        <span class="col-action">기능</span>
+      </div>
+
+      <!-- 1 -->
+      <div class="chart-row odd">
+        <span class="row-rank top3">1</span>
+        <span class="row-change">–</span>
+        <div class="row-info">
+          <div class="row-album-img"><img src="melon-img/top_100_1.png" alt="앨범"></div>
+          <span class="row-song-name">그대 작은 나의 세상이 되어</span>
+        </div>
+        <span class="row-artist">커더가든</span>
+        <span class="row-album-name">가까운 듯 먼 그대여</span>
+        <div class="row-actions">
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg></button>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="chart-row even">
+        <span class="row-rank top3">2</span>
+        <span class="row-change"><img src="melon-img/top100_red_2.png" alt=""></span>
+        <div class="row-info">
+          <div class="row-album-img"><img src="melon-img/top_100_2.png" alt="앨범"></div>
+          <span class="row-song-name">Good Goodbye</span>
+        </div>
+        <span class="row-artist">화사(HWASA)</span>
+        <span class="row-album-name">마리아(Maria)</span>
+        <div class="row-actions">
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg></button>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="chart-row odd">
+        <span class="row-rank top3">3</span>
+        <span class="row-change"><img src="melon-img/top100_blue_3.png" alt=""></span>
+        <div class="row-info">
+          <div class="row-album-img"><img src="melon-img/top_100_3.png" alt="앨범"></div>
+          <span class="row-song-name">사랑하게 될 거야</span>
+        </div>
+        <span class="row-artist">한로로</span>
+        <span class="row-album-name">사랑하게 될 거야</span>
+        <div class="row-actions">
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg></button>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="chart-row even">
+        <span class="row-rank rest">4</span>
+        <span class="row-change">–</span>
+        <div class="row-info">
+          <div class="row-album-img"><img src="melon-img/top_100_4.png" alt="앨범"></div>
+          <span class="row-song-name">Drowning</span>
+        </div>
+        <span class="row-artist">WOODZ</span>
+        <span class="row-album-name">Drowning</span>
+        <div class="row-actions">
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg></button>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="chart-row odd">
+        <span class="row-rank rest">5</span>
+        <span class="row-change"><img src="melon-img/top100_blue_5.png" alt=""></span>
+        <div class="row-info">
+          <div class="row-album-img"><img src="melon-img/top_100_5.png" alt="앨범"></div>
+          <span class="row-song-name">타임캡슐</span>
+        </div>
+        <span class="row-artist">다비치</span>
+        <span class="row-album-name">안녕이라고 말하지마</span>
+        <div class="row-actions">
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg></button>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="chart-row even">
+        <span class="row-rank rest">6</span>
+        <span class="row-change"><img src="melon-img/top100_red_6.png" alt=""></span>
+        <div class="row-info">
+          <div class="row-album-img"><img src="melon-img/top_100_6.png" alt="앨범"></div>
+          <span class="row-song-name">Blue Valentine</span>
+        </div>
+        <span class="row-artist">NMIXX</span>
+        <span class="row-album-name">Love Me Like This</span>
+        <div class="row-actions">
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg></button>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="chart-row odd">
+        <span class="row-rank rest">7</span>
+        <span class="row-change"><img src="melon-img/top100_red_7.png" alt=""></span>
+        <div class="row-info">
+          <div class="row-album-img"><img src="melon-img/top_100_7.png" alt="앨범"></div>
+          <span class="row-song-name">Golden</span>
+        </div>
+        <span class="row-artist">HUNTR/X</span>
+        <span class="row-album-name">Golden</span>
+        <div class="row-actions">
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg></button>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="chart-row even">
+        <span class="row-rank rest">8</span>
+        <span class="row-change">–</span>
+        <div class="row-info">
+          <div class="row-album-img"><img src="melon-img/top_100_8.png" alt="앨범"></div>
+          <span class="row-song-name">0+0</span>
+        </div>
+        <span class="row-artist">한로로</span>
+        <span class="row-album-name">사랑하게 될 거야</span>
+        <div class="row-actions">
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg></button>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="chart-row odd">
+        <span class="row-rank rest">9</span>
+        <span class="row-change">–</span>
+        <div class="row-info">
+          <div class="row-album-img"><img src="melon-img/top_100_9.png" alt="앨범"></div>
+          <span class="row-song-name">멸종위기사랑</span>
+        </div>
+        <span class="row-artist">이찬혁</span>
+        <span class="row-album-name">EROS</span>
+        <div class="row-actions">
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg></button>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="chart-row even">
+        <span class="row-rank rest">10</span>
+        <span class="row-change"><img src="melon-img/top100_red_2.png" alt=""></span>
+        <div class="row-info">
+          <div class="row-album-img"><img src="melon-img/top_100_10.png" alt="앨범"></div>
+          <span class="row-song-name">SPAGHETTI (feat.j-hope of BTS)</span>
+        </div>
+        <span class="row-artist">르세라핌</span>
+        <span class="row-album-name">SPAGHETTI</span>
+        <div class="row-actions">
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg></button>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="chart-row odd">
+        <span class="row-rank rest">11</span>
+        <span class="row-change"><img src="melon-img/top100_red_6.png" alt=""></span>
+        <div class="row-info">
+          <div class="row-album-img"><img src="melon-img/top_100_11.png" alt="앨범"></div>
+          <span class="row-song-name">ONE MORE TIME</span>
+        </div>
+        <span class="row-artist">ALLDAY PROJECT</span>
+        <span class="row-album-name">ALLDAY PROJECT</span>
+        <div class="row-actions">
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg></button>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="chart-row even">
+        <span class="row-rank rest">12</span>
+        <span class="row-change">–</span>
+        <div class="row-info">
+          <div class="row-album-img"><img src="melon-img/top_100_12.png" alt="앨범"></div>
+          <span class="row-song-name">모르시나요(PROD.로코베리)</span>
+        </div>
+        <span class="row-artist">조패즈</span>
+        <span class="row-album-name">모르시나요</span>
+        <div class="row-actions">
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg></button>
+          <button class="row-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg></button>
+        </div>
+      </div>
+
+    </div><!-- /chart-card -->
+
+    <!-- 더보기 버튼 -->
+    <button class="more-btn">
+      더보기
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9" />
+      </svg>
+    </button>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-top__inner">
+        <div class="footer-brand">
+          <span class="footer-logo-text"><img src="melon-img/footer-logo.png" alt=""></span>
+          <p class="footer-tagline">대한민국 NO.1 음악 스트리밍 서비스</p>
+          <div class="footer-sns">
+            <button class="footer-sns-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg></button>
+            <button class="footer-sns-btn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg></button>
+            <button class="footer-sns-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none" />
+              </svg></button>
+            <button class="footer-sns-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg></button>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <p class="footer-col__title">서비스</p>
+            <ul class="footer-col__list">
+              <li class="footer-col__item"><a href="#">멜론 이용권</a></li>
+              <li class="footer-col__item"><a href="#">이벤트</a></li>
+              <li class="footer-col__item"><a href="#">공지사항</a></li>
+              <li class="footer-col__item"><a href="#">고객센터</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__title">정보</p>
+            <ul class="footer-col__list">
+              <li class="footer-col__item"><a href="#">회사소개</a></li>
+              <li class="footer-col__item"><a href="#">채용정보</a></li>
+              <li class="footer-col__item"><a href="#">제휴문의</a></li>
+              <li class="footer-col__item"><a href="#">광고문의</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__title">약관 및 정책</p>
+            <ul class="footer-col__list">
+              <li class="footer-col__item"><a href="#">이용약관</a></li>
+              <li class="footer-col__item"><a href="#" class="bold">개인정보처리방침</a></li>
+              <li class="footer-col__item"><a href="#">청소년보호정책</a></li>
+              <li class="footer-col__item"><a href="#">운영정책</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom__inner">
+        <div class="footer-legal">
+          <p>(주)카카오엔터테인먼트 | 대표이사: 이진수 | 사업자등록번호: 123-45-67890</p>
+          <p>통신판매업 신고번호: 제2024-서울강남-12345호 | 호스팅서비스 사업자: (주)카카오엔터테인먼트</p>
+          <p>주소: 서울특별시 강남구 테헤란로 123</p>
+          <p>고객센터: 1234-5678 | 이메일: <a href="#">이메일 주소</a></p>
+          <p class="copyright">© 2026 Kakao Entertainment Corp. All rights reserved.</p>
+        </div>
+        <button class="footer-studio">
+          멜론 스튜디오
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
   <script defer src="js/melon_top100.js"></script>
 </body>
+
 </html>
