@@ -1,0 +1,319 @@
+/* 배너 */
+#hero {
+  width: 100%;
+  height: 414px;
+  margin: auto;
+}
+
+#hero .hero-wrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#hero .banner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero .banner-img {
+  width: 100%;
+  height: 100%;
+  background: url(../img/men-suit/heroBanner.png) center/cover;
+  position: absolute;
+}
+
+#hero .banner-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#hero .banner-txt {
+  position: absolute;
+  left: 50%;
+  z-index: 10;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+}
+
+#hero .banner-txt h2 {
+  font-weight: 500;
+  font-size: 60px;
+  color: white;
+}
+
+/* 카테고리 메뉴 */
+#cats {
+  width: 100%;
+  height: 47px;
+  margin: 100px auto 0;
+  position: sticky;
+  top: 74px;
+  z-index: 20;
+  background-color: #fff;
+}
+
+#cats .wrap {
+  width: 100%;
+  max-width: 1190px;
+  margin: auto;
+}
+
+#cats .wrap ul {
+  display: flex;
+  align-items: center;
+  height: 47px;
+  gap: 28px;
+}
+
+#cats .wrap li a {
+  color: rgba(17, 17, 17, 0.6);
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+#cats .wrap li a:hover,
+#cats .wrap li.on a {
+  color: rgba(17, 17, 17, 1);
+}
+
+/* 제품 목록 공통 속성 */
+.cards {
+  width: 100%;
+  padding-top: 150px;
+  margin: 0 auto;
+}
+
+.cards .cards-title {
+  width: 100%;
+  max-width: 1190px;
+  text-align: left;
+  margin: 0 auto 59px;
+}
+
+.cards .cards-title h2 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #111;
+}
+
+.cards .cards-wrap {
+  margin: auto;
+  width: 100%;
+  max-width: 1190px;
+  display: flex;
+  gap: 52px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards .card {
+  width: 252px;
+  height: 457px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.cards .card-img {
+  width: 252px;
+  height: 327px;
+}
+
+.cards .card-img img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.cards .card-txt-name span {
+  font-size: 20px;
+  font-weight: 500;
+  color: #111;
+  /* white-space: nowrap; */
+}
+
+.cards .card-txt-price {
+  padding-top: 6px;
+}
+
+.cards .card-txt-price span {
+  font-weight: 500;
+  font-size: 20px;
+  color: #111;
+}
+
+.cards .card-txt-num {
+  padding-top: 13px;
+}
+
+.cards .card-txt-num span {
+  font-size: 16px;
+  color: rgba(17, 17, 17, 0.7);
+}
+
+/* hover */
+.cards .card-img:hover img {
+  transform: scale(1.05);
+}
+
+/* video */
+.cards .card-video {
+  width: 556px;
+  height: 457px;
+}
+
+.cards .card-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .view-more-btn */
+.cards .btn-wrap {
+  margin: 48px 0 180px;
+  width: 100%;
+  height: 46px;
+  position: relative;
+}
+
+.cards .view-more-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 203px;
+  height: 46px;
+  background-color: rgba(17, 17, 17, 0.4);
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+
+.cards .view-more-btn a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  gap: 10px;
+}
+
+.cards .view-more-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.cards .view-more-btn:hover {
+  background-color: rgba(17, 17, 17, 0.6);
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 257px;
+  background-color: #f8f8f8;
+}
+
+.footer-wrap {
+  width: 100%;
+  max-width: 1190px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+
+/* 소셜 */
+.social {
+  position: absolute;
+  top: 22px;
+  right: 0;
+}
+
+.social ul {
+  display: flex;
+  gap: 30px;
+}
+
+.social a {
+  width: 24px;
+  height: 24px;
+}
+
+.social a img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 하단 로고 */
+.footer-logo {
+  margin-top: 41px;
+}
+
+.footer-logo span {
+  font-weight: bold;
+  font-size: 34px;
+  color: #333;
+}
+
+/* 슬로건 */
+.slogan {
+  margin-top: 36px;
+}
+
+.slogan span {
+  font-weight: 500;
+  font-size: 18px;
+  color: #999;
+}
+
+/* 하단 기타 링크 */
+.links {
+  margin-top: 36px;
+}
+
+.links ul {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.links a {
+  color: #999;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.links a:hover,
+.links a b {
+  color: #333;
+}
+
+/* 저작권 */
+.copy {
+  margin-top: 22px;
+}
+
+.copy span {
+  font-size: 18px;
+  color: #999;
+}

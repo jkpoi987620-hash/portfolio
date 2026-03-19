@@ -1,0 +1,654 @@
+body {
+  font-family: 'optima', 'jeju', sans-serif;
+  min-width: 1200px;
+  overflow-x: hidden;
+}
+
+/* 공통 속성 .view-more-btn */
+.view-more-btn {
+  width: 203px;
+  height: 46px;
+  background-color: rgba(17, 17, 17, 0.4);
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+
+.view-more-btn a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  gap: 10px;
+}
+
+.view-more-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.view-more-btn:hover {
+  background-color: rgba(17, 17, 17, 0.6);
+}
+
+/* header */
+header {
+  width: 100%;
+  height: 74px;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  background-color: white;
+}
+
+.header-wrap {
+  margin: auto;
+  width: 100%;
+  max-width: 1190px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 좌측 메인 메뉴 */
+header .main-menu ul {
+  display: flex;
+  gap: 28px;
+}
+
+header .main-menu li a {
+  font-weight: 500;
+  color: rgba(17, 17, 17, 0.6);
+  transition: color 0.3s;
+}
+
+header .main-menu li.on a,
+header .main-menu li:hover a {
+  color: #111;
+}
+
+/* 상단 로고 */
+header .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header .logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .logo span {
+  font-weight: normal;
+  font-size: 26px;
+  color: #111;
+}
+
+/* 우측 서브 메뉴 */
+header .sub-menu ul {
+  display: flex;
+  gap: 30px;
+}
+
+header .sub-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+}
+
+header .sub-menu a img {
+  width: 85%;
+  height: 85%;
+}
+
+main {
+  width: 100%;
+  margin: 74px auto 0 auto;
+}
+
+/* 배너 */
+#hero {
+  width: 100%;
+  height: 414px;
+  margin: auto;
+}
+
+#hero .hero-wrap {
+  display: flex;
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#hero .banner {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero .banner-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+}
+
+#hero .banner-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#hero .banner:first-child .banner-img {
+  background-image: url(../img/kids/main/hero-boys.png);
+}
+
+#hero .banner:last-child .banner-img {
+  background-image: url(../img/kids/main/hero-girls.png);
+}
+
+#hero .banner-txt {
+  position: absolute;
+  left: 50%;
+  z-index: 10;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+}
+
+#hero .banner-txt h2 {
+  font-weight: 500;
+  font-size: 60px;
+  color: white;
+}
+
+#hero .view-more-btn {
+  position: absolute;
+  left: 50%;
+  z-index: 10;
+  bottom: 15%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+}
+
+/* hover */
+#hero .banner:hover .banner-txt {
+  top: 40%;
+}
+
+#hero .banner:hover .view-more-btn {
+  bottom: 35%;
+  opacity: 1;
+}
+
+/* 카테고리 */
+#cats {
+  width: 100%;
+  padding: 100px 0 0 0;
+  margin: 0 auto;
+}
+
+#cats .cats-title {
+  width: 100%;
+  max-width: 1190px;
+  text-align: center;
+  margin: 0 auto 59px;
+}
+
+#cats .cats-title h2 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #111;
+}
+
+#cats .cats-wrap {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+#cats .cat {
+  width: 25%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+#cats .cat-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+#cats .cat-img::after {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+  transition: 0.5s;
+}
+
+#cats .cat:nth-of-type(1) .cat-img {
+  background: url(../img/kids/main/cat-outer.png);
+}
+
+#cats .cat:nth-of-type(2) .cat-img {
+  background: url(../img/kids/main/cat-top.webp);
+}
+
+#cats .cat:nth-of-type(3) .cat-img {
+  background: url(../img/kids/main/cat-pants.webp);
+}
+
+#cats .cat:nth-of-type(4) .cat-img {
+  background: url(../img/kids/main/cat-skirts.png);
+}
+
+#cats .cat:nth-of-type(5) .cat-img {
+  background: url(../img/kids/main/cat-dresses.png);
+}
+
+#cats .cat:nth-of-type(6) .cat-img {
+  background: url(../img/kids/main/cat-bags.png);
+}
+
+#cats .cat:nth-of-type(7) .cat-img {
+  background: url(../img/kids/main/cat-hats.jpg);
+}
+
+#cats .cat:nth-of-type(8) .cat-img {
+  background: url(../img/kids/main/cat-shoes.jpeg);
+}
+
+#cats .cat-txt {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
+
+#cats .cat-txt h3 {
+  color: white;
+  font-weight: 500;
+  font-size: 34px;
+  transition: 0.5s;
+}
+
+/* hover */
+#cats .cat:hover .cat-img::after {
+  opacity: 0.9;
+}
+
+#cats .cat:hover .cat-txt h3 {
+  transform: scale(1.05);
+}
+
+/* 신제품 */
+.cards {
+  width: 100%;
+  padding-top: 150px;
+  margin: 0 auto;
+}
+
+.cards .cards-title {
+  width: 100%;
+  max-width: 1190px;
+  text-align: left;
+  margin: 0 auto 59px;
+}
+
+.cards .cards-title h2 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #111;
+}
+
+.cards .cards-wrap {
+  margin: auto;
+  width: 100%;
+  max-width: 1190px;
+  display: flex;
+  gap: 52px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards .card {
+  width: 252px;
+  height: 457px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.cards .card-img {
+  width: 100%;
+  height: 327px;
+  overflow: hidden;
+}
+
+.cards .card-img img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.cards .card-txt-name span {
+  font-size: 20px;
+  font-weight: 500;
+  color: #111;
+}
+
+.cards .card-txt-price {
+  padding-top: 6px;
+}
+
+.cards .card-txt-price span {
+  font-weight: 500;
+  font-size: 20px;
+  color: #111;
+}
+
+.cards .card-txt-num {
+  padding-top: 13px;
+}
+
+.cards .card-txt-num span {
+  font-size: 16px;
+  color: rgba(17, 17, 17, 0.7);
+}
+
+/* hover */
+.cards .card-img:hover img {
+  transform: scale(1.05);
+}
+
+/* 작은 배너 */
+#mini-banners {
+  width: 100%;
+  padding: 140px 0 150px;
+  margin: 0 auto;
+}
+
+#mini-banners .mini-banners-wrap {
+  margin: auto;
+  width: 100%;
+  max-width: 1190px;
+  display: flex;
+  gap: 40px;
+}
+
+#mini-banners .mini-banner {
+  width: 575px;
+  height: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f2f2;
+}
+
+#mini-banners .mini-banner-txt {
+  margin-left: 22px;
+}
+
+#mini-banners .mini-banner-txt-title h3 {
+  font-weight: 600;
+  font-size: 22px;
+  color: #111;
+}
+
+#mini-banners .mini-banner-txt-desc {
+  margin-top: 23px;
+}
+
+#mini-banners .mini-banner-txt-desc span {
+  font-size: 22px;
+  color: #111;
+}
+
+#mini-banners .mini-banner-img img {
+  width: 100%;
+  height: 100%;
+}
+
+#mini-banners .mini-banner:first-child .mini-banner-img {
+  width: 94px;
+  margin-right: 72px;
+}
+
+#mini-banners .mini-banner:last-child .mini-banner-img {
+  margin-right: 18px;
+}
+
+/* 추천 제품 */
+#featured {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f8f2f2;
+  overflow: hidden;
+}
+
+#featured .featured-wrap {
+  width: 100%;
+  max-width: 1190px;
+  height: 446px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+#featured .featured-txt {
+  color: #111;
+  width: 454px;
+  flex-shrink: 0;
+  margin-right: 141px;
+}
+
+#featured .featured-txt-title h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+#featured .featured-txt-name {
+  margin-top: 60px;
+}
+
+#featured .featured-txt-name h3 {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+#featured .featured-txt-desc {
+  margin-top: 10px;
+}
+
+#featured .featured-txt-desc span {
+  opacity: 0.7;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+#featured .view-more-btn {
+  margin-top: 28px;
+}
+
+#featured .featured-img {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-shrink: 0;
+}
+
+#featured .featured-img a {
+  background-size: cover;
+  background-position: center;
+  display: block;
+  width: 254px;
+  height: 293px;
+  position: relative;
+  transition: 0.5s;
+}
+
+#featured .featured-img a::after {
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 17, 17, 0.18);
+  transition: 0.5s;
+}
+
+#featured .featured-img .img-bg1 {
+  background-image: url(../img/kids/main/coll4.png);
+}
+
+#featured .featured-img .img-bg2 {
+  background-image: url(../img/kids/main/coll2.png);
+}
+
+#featured .featured-img .img-bg3 {
+  background-image: url(../img/kids/main/coll3.png);
+}
+
+#featured .featured-img .img-bg4 {
+  background-image: url(../img/kids/main/coll1.png);
+}
+
+/* hover */
+#featured .featured-img a.on,
+#featured a:hover {
+  width: 295px;
+  height: 340px;
+}
+
+#featured .featured-img a.on::after,
+#featured a:hover::after {
+  opacity: 0;
+}
+
+/* 프로모션 */
+#promos {
+  width: 100%;
+  margin: 0 auto;
+  padding: 160px 0 180px;
+}
+
+#promos .promos-title {
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto 59px;
+  text-align: center;
+}
+
+#promos .promos-title h2 {
+  font-weight: 500;
+  font-size: 40px;
+  color: #111;
+}
+
+#promos .promos-wrap {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+#promos .promo {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 500 / 370;
+  position: relative;
+}
+
+#promos .promo .promo-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+#promos .promo:nth-of-type(1) .promo-img {
+  background-image: url(../img/kids/main/promo1.jpg);
+}
+
+#promos .promo:nth-of-type(2) .promo-img {
+  background-image: url(../img/kids/main/promo2.avif);
+}
+
+#promos .promo:nth-of-type(3) .promo-img {
+  background-image: url(../img/kids/main/promo3.webp);
+}
+
+#promos .promo .promo-img::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+
+#promos .promo-txt {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  margin: 0 20px 20px;
+}
+
+#promos .promo-txt-title {
+  margin-bottom: 16px;
+}
+
+#promos .promo-txt-title h3 {
+  color: white;
+  font-size: 38px;
+  font-weight: 500;
+}
+
+#promos .promo-txt-desc span {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* hover */
+#promos .promo:hover .promo-img::after {
+  opacity: 0.5;
+}
+
