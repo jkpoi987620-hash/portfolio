@@ -206,11 +206,11 @@ const workCtaBtn = document.getElementById('workCtaBtn');
 pageWorks.style.cssText = 'position:absolute;top:0;left:0;width:100%;transform:translateX(100%);opacity:0;pointer-events:none;z-index:1;visibility:hidden;height:0;overflow:hidden;';
 
 const workData = {
-  cineq: { pdf: '../img/CINEQ_PORTFOLIO.jpg', link: 'portfolio_ex/movie.html', bg: '../img/CINEQ_CTA-bg.png' },
-  tempur: { pdf: '../img/TEMPUR_PORTFOLIO.png', link: 'portfolio_ex/index.html', bg: '../img/TEMPUR_CTA-bg.png' },
-  melon: { pdf: '../img/MELON_PORTFOLIO.jpg', link: 'portfolio_ex/melon.html', bg: '../img/MELON_CTA-bg.png' },
-  aquaderm: { pdf: '../img/AQUADREM_PORTFOLIO.jpg', link: 'portfolio_ex/aquadrem_index/aquaderm.html', bg: '../img/AQUA_CTA-bg.png' },
-  ssense: { pdf: '../img/SSENSE_PORTFOLIO.png', link: 'portfolio_ex/teamProject-main/index.html', bg: '../img/SSENSE_CTA-bg.png' }
+  cineq: { pdf: 'img/CINEQ_PORTFOLIO.jpg', link: 'portfolio_ex/movie.html', bg: 'img/CINEQ_CTA-bg.png' },
+  tempur: { pdf: 'img/TEMPUR_PORTFOLIO.png', link: 'portfolio_ex/index.html', bg: 'img/TEMPUR_CTA-bg.png' },
+  melon: { pdf: 'img/MELON_PORTFOLIO.jpg', link: 'portfolio_ex/melon.html', bg: 'img/MELON_CTA-bg.png' },
+  aquaderm: { pdf: 'img/AQUADREM_PORTFOLIO.jpg', link: 'portfolio_ex/aquadrem_index/aquaderm.html', bg: 'img/AQUA_CTA-bg.png' },
+  ssense: { pdf: 'img/SSENSE_PORTFOLIO.png', link: 'portfolio_ex/teamProject-main/index.html', bg: 'img/SSENSE_CTA-bg.png' }
 };
 
 function openWork(workKey) {
