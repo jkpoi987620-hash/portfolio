@@ -1,0 +1,52 @@
+#footer{
+  width: 100%;
+  background: #f8f8f8;
+}
+#footer .container{
+  margin: auto;
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+#footer .container .sns{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  right: 10px;
+  top: 22px;
+}
+#footer .container .sns a img{
+  width: 24px; 
+}
+#footer .container .sns a:last-child img{
+  width: 18px;
+  height: 18px;
+}
+#footer .container .footTxt{
+  margin: 40px auto 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  text-align: center;
+}
+#footer .container .footTxt a .logo{
+  font-size: 34px;
+}
+#footer .container .footTxt p{
+  color: #999;
+  font-size: 18px;
+}
+#footer .container .footTxt ul{
+  display: flex;
+  gap: 16px;
+}
+#footer .container .footTxt ul li a{
+  color: #999;
+  font-size: 18px;
+}
+#footer .container .footTxt ul li .priveacy{
+font-weight: bold; 
+color: #333;
+}

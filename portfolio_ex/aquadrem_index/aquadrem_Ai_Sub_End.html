@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AQUADERM - 맞춤 스킨케어 루틴</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../aquadrem_css/aquadrem_Ai_Sub_End.css" />
+</head>
+
+<body>
+
+  <!-- ───────── NAV ───────── -->
+  <nav>
+    <div class="nav-inner">
+
+      <div class="nav-left">
+        <a href="aquaderm_AI_Sub.html">피부진단</a>
+        <a href="aquaderm_Recommend.html">맞춤추천</a>
+        <a href="aquaderm_Ingredient.html">성분분석</a>
+        <a href="#">커뮤니티</a>
+        <a href="#">쇼핑</a>
+        <a href="#">이벤트</a>
+      </div>
+
+      <!-- 태블릿용 3dot 버튼 -->
+      <button class="nav-dots-btn" id="navDotsBtn" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-dots-menu" id="navDotsMenu">
+        <a href="aquaderm_AI_Sub.html">피부진단</a>
+        <a href="aquaderm_Recommend.html">맞춤추천</a>
+        <a href="aquaderm_Ingredient.html">성분분석</a>
+        <a href="#">커뮤니티</a>
+        <a href="#">쇼핑</a>
+        <a href="#">이벤트</a>
+      </div>
+
+      <div class="nav-logo">
+        <!-- 로고 이미지 삽입 시: <img src="assets/logo.png" alt="AQUADERM 로고" /> -->
+        <div class="nav-logo-placeholder">
+          <img src="../aquadream-img/top_logo.png" alt="">
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <a href="#">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="7" cy="7" r="4.5" />
+            <line x1="10.5" y1="10.5" x2="14" y2="14" />
+          </svg>
+          검색
+        </a>
+        <a href="#">로그인</a>
+        <a href="#">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="8" cy="5.5" r="2.5" />
+            <path d="M2.5 14c0-3 2.5-5 5.5-5s5.5 2 5.5 5" />
+          </svg>
+          마이페이지
+        </a>
+        <a href="#">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M1 1h2l1.5 7.5h7L13 4H4" />
+            <circle cx="6.5" cy="13" r="1" />
+            <circle cx="11" cy="13" r="1" />
+          </svg>
+          장바구니
+        </a>
+        <!-- 모바일 햄버거 버튼 -->
+        <button class="nav-hamburger" id="navHamburger" aria-label="메뉴 열기">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- 모바일 풀스크린 메뉴 -->
+      <div class="nav-mobile-menu" id="navMobileMenu">
+        <button class="nav-mobile-close" id="navMobileClose">✕</button>
+        <a href="aquaderm_AI_Sub.html">피부진단</a>
+        <a href="aquaderm_Recommend.html">맞춤추천</a>
+        <a href="aquaderm_Ingredient.html">성분분석</a>
+        <a href="#">커뮤니티</a>
+        <a href="#">쇼핑</a>
+        <a href="#">이벤트</a>
+        <a href="#">로그인</a>
+        <a href="#">마이페이지</a>
+        <a href="#">장바구니</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+
+    <!-- ═══════════════════════ SECTION 1: 상품 카드 ═══════════════════════ -->
+    <section class="sec1">
+      <div class="container">
+        <h2 class="sec-title">맞춤 스킨케어 루틴</h2>
+        <p class="sec-desc">현재 피부 상태에 맞춰 수분 밸런스를 회복하는 루틴입니다.</p>
+
+        <div class="product-cards">
+
+          <!-- 카드 1 -->
+          <div class="product-card">
+            <img class="product-img" src="../aquadream-img/skin_1.png" alt="상품 이미지">
+            <article class="product-info">
+              <span class="product-brand">SUM37</span>
+              <span class="product-desc">미세각질 제거부터 묵은 각질까지 해결</span>
+              <span class="product-price">28,000원</span>
+              <button class="product-btn">
+                바로담기
+                <svg viewBox="0 0 16 16" fill="none" stroke="#4A90E2" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M1 1h2l1.5 7.5h7L13 4H4" />
+                  <circle cx="6.5" cy="13" r="1" />
+                  <circle cx="11" cy="13" r="1" />
+                </svg>
+              </button>
+            </article>
+          </div>
+
+          <!-- 카드 2 -->
+          <div class="product-card">
+            <img class="product-img" src="../aquadream-img/skin_2.png" alt="상품 이미지">
+            <article class="product-info">
+              <span class="product-brand">만티세빔 화이트닝 스킨</span>
+              <span class="product-desc">재생기능과 탄력을 관리하지 한번에 해결</span>
+              <span class="product-price">30,000원</span>
+              <button class="product-btn">
+                바로담기
+                <svg viewBox="0 0 16 16" fill="none" stroke="#4A90E2" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M1 1h2l1.5 7.5h7L13 4H4" />
+                  <circle cx="6.5" cy="13" r="1" />
+                  <circle cx="11" cy="13" r="1" />
+                </svg>
+              </button>
+            </article>
+          </div>
+
+          <!-- 카드 3 -->
+          <div class="product-card">
+            <img class="product-img" src="../aquadream-img/skin_3.png" alt="상품 이미지">
+            <article class="product-info">
+              <span class="product-brand">물무진 앰플</span>
+              <span class="product-desc">피부 관리와 탄력 추진 개선</span>
+              <span class="product-price">32,000원</span>
+              <button class="product-btn">
+                바로담기
+                <svg viewBox="0 0 16 16" fill="none" stroke="#4A90E2" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M1 1h2l1.5 7.5h7L13 4H4" />
+                  <circle cx="6.5" cy="13" r="1" />
+                  <circle cx="11" cy="13" r="1" />
+                </svg>
+              </button>
+            </article>
+          </div>
+
+          <!-- 카드 4 -->
+          <div class="product-card">
+            <img class="product-img" src="../aquadream-img/skin_4.png" alt="상품 이미지">
+            <article class="product-info">
+              <span class="product-brand">YON-KA 크림93</span>
+              <span class="product-desc">재미있고 좋은가 빠른데 심세한 한이 활용</span>
+              <span class="product-price">29,000원</span>
+              <button class="product-btn">
+                바로담기
+                <svg viewBox="0 0 16 16" fill="none" stroke="#4A90E2" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M1 1h2l1.5 7.5h7L13 4H4" />
+                  <circle cx="6.5" cy="13" r="1" />
+                  <circle cx="11" cy="13" r="1" />
+                </svg>
+              </button>
+            </article>
+          </div>
+
+        </div><!-- /product-cards -->
+      </div><!-- /container -->
+    </section>
+
+    <!-- ═══════════════════════ SECTION 2: 그래프 이미지 ═══════════════════════ -->
+    <section class="sec2">
+      <div class="graph-box">
+        <!-- 이미지 삽입: <img src="assets/graph.png" alt="4주 후 피부 개선 예상 변화"> -->
+        <img src="../aquadream-img/grf.png" alt="그래프" style="width:100%;height:auto;display:block;">
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ SECTION 3: 사용자 후기 ═══════════════════════ -->
+    <section class="sec3">
+      <div class="container">
+        <h2 class="sec-title">실제 사용자 개선 후기</h2>
+        <p class="sec-desc">AI 피부 진단을 경험한 사용자들의 실제 후기입니다.</p>
+
+        <div class="review-cards">
+
+          <!-- 리뷰 1 -->
+          <div class="review-card">
+            <div class="review-top">
+              <img class="review-avatar" src="../aquadream-img/riview1.png" alt="프로필">
+              <div class="review-info">
+                <span class="review-name">이름 : 김**</span>
+                <span class="review-age">나이 : 23세</span>
+                <span class="review-rating">별점 : 4 / 5</span>
+              </div>
+            </div>
+            <article class="review-body">
+              <p class="review-label">후기</p>
+              <p class="review-text">복합성이라 스킨케어 찾기 너무 힘들었는데, AI가 피부상태 맞게 바로 찾아주니까 너무좋아요!!<br>꼭 써보세요~~</p>
+            </article>
+          </div>
+
+          <!-- 리뷰 2 -->
+          <div class="review-card">
+            <div class="review-top">
+              <img class="review-avatar" src="../aquadream-img/riview2.png" alt="프로필">
+              <div class="review-info">
+                <span class="review-name">이름 : 박**</span>
+                <span class="review-age">나이 : 28세</span>
+                <span class="review-rating">별점 : 5 / 5</span>
+              </div>
+            </div>
+            <article class="review-body">
+              <p class="review-label">후기</p>
+              <p class="review-text">돈도 절약되고 피부도 진짜로 좋아졌는데, 제품 바로바로 찾아주고 정보도 빠르고 나한테 잘 맞아서 계속 쓸 것 같아요. 추천이용!</p>
+            </article>
+          </div>
+
+          <!-- 리뷰 3 -->
+          <div class="review-card">
+            <div class="review-top">
+              <img class="review-avatar" src="../aquadream-img/riview3.png" alt="프로필">
+              <div class="review-info">
+                <span class="review-name">이름 : 이**</span>
+                <span class="review-age">나이 : 21세</span>
+                <span class="review-rating">별점 : 4 / 5</span>
+              </div>
+            </div>
+            <article class="review-body">
+              <p class="review-label">후기</p>
+              <p class="review-text">원래 유분도 엄청 많고 해서 맨날 화장 무너지고 또 속은 건조해서 어떡하지 고민했는데, 지금은 그런 생각 1도 안 해요 ㅎㅎ</p>
+            </article>
+          </div>
+
+        </div><!-- /review-cards -->
+
+        <!-- CTA 버튼 -->
+        <div class="review-cta-wrap">
+          <a href="aquaderm_Recommend.html" class="review-cta">
+            내 피부에 맞는 제품 확인하기
+            <svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M4 10h12M11 5l5 5-5 5" />
+            </svg>
+          </a>
+        </div>
+
+      </div><!-- /container -->
+    </section>
+
+    <!-- ═══════════════════════ SECTION 4: 재진단 배너 ═══════════════════════ -->
+    <section class="sec4">
+      <img src="../aquadream-img/Remainder-label.png" alt="" width="105" height="32">
+      <div class="rediag-box">
+        <!-- 배경 이미지: <img class="rediag-bg" src="assets/rediag-bg.png" alt=""> -->
+        <img class="rediag-bg" src="../aquadream-img/Reminder.png" alt="">
+        <a href="aquaderm_AI_Sub.html" class="rediag-btn">다시 진단하기</a>
+      </div>
+    </section>
+
+  </div><!-- /page-wrap -->
+
+  <!-- ───────── FOOTER ───────── -->
+  <footer>
+    <div class="footer-inner">
+
+      <div class="footer-left">
+        <div class="footer-logo">
+          <!-- <img src="assets/logo-white.png" alt="AQUADERM 로고" /> -->
+          <div class="footer-logo-placeholder">
+            <img src="../aquadream-img/foter_logo.png" alt="">
+          </div>
+        </div>
+        <p class="footer-tagline">데이터로 피부를 관리하는 AI 스킨케어 플랫폼</p>
+        <div class="footer-icons">
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A0B3C5" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="5" />
+              <circle cx="17.5" cy="6.5" r="1" fill="#A0B3C5" stroke="none" />
+            </svg>
+          </div>
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#A0B3C5">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </div>
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A0B3C5" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="5" width="20" height="14" rx="4" />
+              <polygon points="10,9 16,12 10,15" fill="#A0B3C5" stroke="none" />
+            </svg>
+          </div>
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#A0B3C5">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-menus">
+        <div class="footer-menu-col">
+          <p class="footer-menu-heading footer-accordion-btn">
+            서비스 메뉴
+            <svg class="footer-accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#A0B3C5" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </p>
+          <ul class="footer-menu-list">
+            <li>피부 진단</li>
+            <li>맞춤 추천</li>
+            <li>루틴 관리</li>
+            <li>제품</li>
+          </ul>
+        </div>
+        <div class="footer-menu-col">
+          <p class="footer-menu-heading footer-accordion-btn">
+            고객 지원
+            <svg class="footer-accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#A0B3C5" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </p>
+          <ul class="footer-menu-list">
+            <li>FAQ</li>
+            <li>문의</li>
+            <li>공지사항</li>
+            <li>이용 가이드</li>
+          </ul>
+        </div>
+        <div class="footer-menu-col">
+          <p class="footer-menu-heading footer-accordion-btn">
+            회사 정보
+            <svg class="footer-accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#A0B3C5" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </p>
+          <ul class="footer-menu-list">
+            <li>회사명</li>
+            <li>사업자 번호</li>
+            <li>이메일</li>
+            <li>주소</li>
+            <li>SNS</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script defer src="../js/aquadrem_Ai_Sub_End.js"></script>
+</body>
+
+</html>

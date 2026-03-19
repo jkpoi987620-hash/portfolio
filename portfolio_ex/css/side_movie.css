@@ -1,0 +1,335 @@
+header{
+  width: 100%;
+  height: 70px;
+  min-width: 1200px;
+  background-color: #080C19;
+  padding-top: 21px;
+}
+header>nav{
+  width: 1092px;
+  height: 28px;
+  margin: auto;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+}
+header>nav>.icon{
+  display: flex;
+  gap: 30px;
+  text-align: center;
+}
+header>nav>.icon>.call{
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+header>nav>.icon>.msg{
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+header>nav>.box>ul{
+  display: flex;
+  gap: 41px;
+  font-size: 20px;
+  cursor: pointer;
+}
+header>nav>.box>ul>li:hover{
+  opacity: 0.6;
+}
+
+
+/*탑내비 끝=====================================*/
+.bottom-nav{
+  width: 100%;
+  height: 73px;
+  min-width: 1200px;
+  background-color: #080C19;
+  border-top: 2px solid #253463;
+  border-bottom: 2px solid #253463;
+}
+.bottom-nav>nav{
+  width: 1091px;
+  height: 73px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.bottom-nav>nav>ul{
+  display: flex;
+  align-items: center;
+  gap: 61px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.bottom-nav>nav>ul>li:hover{
+  opacity: 0.6;
+}
+.bottom-nav>nav>.right{
+  width: 130px;
+  height: 33px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  background: linear-gradient(-90deg, #e60800, #f86a3f);
+  margin-top: 22px;
+  cursor: pointer;
+}
+/*바텀내비 끝================================*/
+main{
+  width: 100%;
+  height: 2241px;
+  min-width: 1200px;
+  background-color: #080C18;
+  padding-top: 110px;
+}
+main>#hot>.inner{
+  width: 1007px;
+  height: 668px;
+  margin: auto;
+}
+main>#hot>.inner>.box{
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+}
+.search-wrap {
+  position: relative;
+  width: 221px;
+  height: 40px;
+  margin-top: 80px;
+}
+
+.search-wrap input {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  padding-left: 12px;   /* 왼쪽 글자 여백 */
+  padding-right: 36px;  /* 오른쪽 아이콘 여백 */
+
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.search-wrap .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* 아이콘 클릭 막기 */
+  font-size: 16px;
+  color: #888;
+}
+main>#hot>.inner>.box>.txt>.title{
+  width: 110px;
+  height: 28px;
+  background-color: #971B1B;
+  color: #FB5151;
+  border: 1px solid #F51D1D;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 7px;
+}
+main>#hot>.inner>.box>.txt>h2{
+  font-size: 30px;
+  font-weight: normal;
+  background: linear-gradient(-81deg, #1D2B56, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 19px;
+}
+main>#hot>.inner>.box>.txt>.ex{
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.6;
+  margin-top: 8px;
+}
+main>#hot>.inner>.card{
+  display: flex;
+  gap: 70px;
+}
+main>#hot>.inner>.card>.hue{
+  margin-top: 63px;
+  cursor: pointer;
+  width: 200px;
+  height: 390px;
+  border-radius: 10px;
+  position:relative;
+  overflow: hidden;
+}
+main>#hot>.inner>.card>.hue:hover{
+  border: 1px solid red;
+}
+
+main>#hot>.inner>.card>.hue>.moc{
+  position: relative;
+  width: 200px;
+  height: 300px;
+}
+main>#hot>.inner>.card>.hue>.moc>.red{
+  position: absolute;
+  width: 34px;
+  height: 24px;
+  background-color: #E60013;
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 13px; left: 9px;
+  border-radius: 5px;
+}
+  main>#hot>.inner>.card>.hue>.moc>.wd{
+  width: 58px;
+  height: 24px;
+  background-color: #E60013;
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 13px; left: 9px;
+  border-radius: 5px;
+  position: absolute;
+  }
+  main>#hot>.inner>.card>.hue>.moc>.on{
+  width: 38px;
+  height: 24px;
+  background-color: #E60013;
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 13px; left: 9px;
+  border-radius: 5px;
+  position: absolute;
+  }
+
+main>#hot>.inner>.card>.hue>.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 199px;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main>#hot>.inner>.card>.hue:hover>.overlay{
+  opacity: 1;
+}
+main>#hot>.inner>.card>.hue>.overlay>span{
+  width: 135px;
+  height: 35px;
+  background-color: #e60013;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:100px;
+}
+main>#hot>.inner>.card>.hue>.moc>img{
+  display: block;
+  width:100%;
+  border-radius: 10px 10px 0 0;
+}
+main>#hot>.inner>.card>.hue>.t-box{
+  width: 199px;
+  height: 89px;
+  background-color: #121C38;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px 8px 0 12px;
+}
+main>#hot>.inner>.card>.hue>.t-box>.sm{
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  gap: 66px;
+  
+}
+main>#hot>.inner>.card>.hue>.t-box>.sm>h3{
+  font-size: 14px;
+  font-weight: bold;
+  width: 88px;
+}
+main>#hot>.inner>.card>.hue>.t-box>.sm>p{
+  font-size: 12px;
+  font-weight: normal;
+}
+main>#hot>.inner>.card>.hue>.t-box>p{
+  font-size: 13px;
+  color: #fff;
+  opacity: 0.6;
+  margin-top: 4px;
+}
+main>#hot>.inner>.card>.hue>.t-box>.star-clock{
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.8;
+  margin-top: 6px;
+}
+main>#hot>.inner>.card>.hue>.t-box>.star-clock>.star{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+main>#hot>.inner>.card>.hue>.t-box>.star-clock>.star>i{
+  color: gold;
+}
+main>#hot>.inner>.card>.hue>.t-box>.star-clock>.clock{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.more-wrap {
+  margin-top: 38px;
+  width: 1005px;
+  height: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 6px;
+
+  background-color: #131D3D;
+  cursor: pointer;
+
+  font-size: 14px;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.more-wrap:hover {
+  background-color: #192650;
+  color: #ddd;
+}
+footer{
+  width: 100%;
+  height: 410px;
+  min-width: 1200px;
+  padding-top: 66px;
+  background-color: #0c1225;
+}
+footer>ul{
+  color: #fff;
+  width: 1046px;
+  height: 216px;
+  margin: auto;
+  font-size: 20px;
+  line-height: 2;
+}

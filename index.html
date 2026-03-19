@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seobin's Web Design Portfolio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+</head>
+
+<body>
+  <div class="menu-dim" id="menuDim"></div>
+  <div class="page" id="page-main">
+    <nav>
+      <div class="nav-inner">
+        <div class="nav-left">
+          <a href="#" data-page="main" class="active">Works</a>
+          <a href="#" data-page="about">About/Contact</a>
+        </div>
+        <span class="nav-logo" data-page="main">Seobin's</span>
+        <div class="nav-right">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="0.8" fill="#111827" stroke="none" />
+            </svg></a>
+          <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg></a>
+          <a href="#" aria-label="Mail"><svg viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg></a>
+        </div>
+        <button class="nav-hamburger" id="hamburgerBtn" aria-label="메뉴 열기">
+          <svg viewBox="0 0 24 24">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#" data-page="main">Works</a>
+        <a href="#" data-page="about">About/Contact</a>
+        <a href="#">Instagram <svg viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="0.8" fill="#fff" stroke="none" />
+          </svg></a>
+        <a href="#">GitHub <svg viewBox="0 0 24 24">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+          </svg></a>
+        <a href="#">Messenger <svg viewBox="0 0 24 24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg></a>
+      </div>
+    </nav>
+    <div class="banner"><img src="img/seobin_banner.png" alt="Banner" /></div>
+    <div class="banner-mobile"><img src="img/seobin_banner.png" alt="모바일 배너" /></div>
+    <section class="slider-section" id="works">
+      <div class="slider-stage" id="sliderStage">
+        <a class="slide-card" href="#aqua" data-work="aquaderm" data-index="0"><img src="img/aquadream.png"
+            alt="AQUAFARM" />
+          <div class="overlay"></div>
+        </a>
+        <a class="slide-card" href="#cineq" data-work="cineq" data-index="1"><img src="img/cineq.png" alt="CINE Q" />
+          <div class="overlay"></div>
+        </a>
+        <a class="slide-card" href="#tempur" data-work="tempur" data-index="2"><img src="img/tempur.png" alt="TEMPUR" />
+          <div class="overlay"></div>
+        </a>
+        <a class="slide-card" href="#melon" data-work="melon" data-index="3"><img src="img/melon.png" alt="MELON" />
+          <div class="overlay"></div>
+        </a>
+        <a class="slide-card" href="#ssense" data-work="ssense" data-index="4"><img src="img/ssense_thum.png"
+            alt="SSENSE" />
+          <div class="overlay"></div>
+        </a>
+      </div>
+      <div class="slider-caption" id="sliderCaption">
+        <div class="caption-item" data-index="0">AQUAFARM WEBSITE<br>PROJECT</div>
+        <div class="caption-item" data-index="1">CINEQ WEBSITE<br>REDESIGN</div>
+        <div class="caption-item" data-index="2">TEMPUR WEBSITE<br>REDESIGN</div>
+        <div class="caption-item" data-index="3">MELON WEBSITE<br>REDESIGN</div>
+        <div class="caption-item" data-index="4">SSENSE WEBSITE<br>PROJECT</div>
+      </div>
+      <div class="slider-arrows">
+        <button class="arrow-btn" id="prevBtn"><svg viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" />
+          </svg></button>
+        <button class="arrow-btn" id="nextBtn"><svg viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6" />
+          </svg></button>
+      </div>
+      <div class="swipe-dots" id="swipeDots">
+        <div class="swipe-dot active"></div>
+        <div class="swipe-dot"></div>
+        <div class="swipe-dot"></div>
+        <div class="swipe-dot"></div>
+        <div class="swipe-dot"></div>
+      </div>
+    </section>
+    <footer>
+      <a href="#" class="back-to-top">Back to Top <svg viewBox="0 0 24 24">
+          <line x1="12" y1="19" x2="12" y2="5" />
+          <polyline points="5 12 12 5 19 12" />
+        </svg></a>
+      <p>© 2026. Seobin JUNG. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <div class="page" id="page-about">
+    <div class="container">
+      <nav>
+        <div class="nav-inner">
+          <div class="nav-left">
+            <a href="#" data-page="main">Works</a>
+            <a href="#" data-page="about" class="active">About/Contact</a>
+          </div>
+          <span class="nav-logo" data-page="main">Seobin's</span>
+          <div class="nav-right">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.8" fill="#111827" stroke="none" />
+              </svg></a>
+            <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg></a>
+            <a href="#" aria-label="Mail"><svg viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg></a>
+          </div>
+          <button class="nav-hamburger" id="hamburgerBtn2" aria-label="메뉴 열기">
+            <svg viewBox="0 0 24 24">
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu2">
+          <a href="#" data-page="main">Works</a>
+          <a href="#" data-page="about">About/Contact</a>
+          <a href="#">Instagram <svg viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="0.8" fill="#fff" stroke="none" />
+            </svg></a>
+          <a href="#">GitHub <svg viewBox="0 0 24 24">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg></a>
+          <a href="#">Messenger <svg viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg></a>
+        </div>
+      </nav>
+      <section class="about-intro">
+        <div class="intro-image anim-el from-left"><img src="img/Frame_117.png" alt="정서빈 프로필 사진" /></div>
+        <div class="intro-text">
+          <p class="intro-headline anim-el from-bottom">안녕하세요, 저는 <strong>디자인과 개발</strong>을 사랑하고,<br>끊기와 성실함을 바탕으로 끝까지
+            완성하는 정서빈입니다.</p>
+          <p class="intro-body anim-el from-bottom">디자인과 개발 전반에 깊은 흥미를 가지고 있으며,<br>단순한 구현을 넘어<br>사용자 경험을 고민하고 더 나은 방향을
+            스스로 탐구합니다.<br><br>쉽게 포기하지 않는 태도로 문제를 끝까지 해결하며,<br>작은 부분까지 개선해 나가며 지속적으로 성장해 나가는<br>사람입니다.<br><br>팀워크와 협업을
+            중요하게 생각하며, 함께 성장하는 문화를<br>만들어가고 싶습니다.</p>
+        </div>
+      </section>
+      <section class="about-bottom">
+        <div class="skills-block">
+          <h2 class="section-title anim-el from-left">SKILLS</h2>
+          <div class="skills-grid">
+            <img src="img/CSS3.png" alt="CSS3" class="skill-icon anim-el from-bottom" />
+            <img src="img/JavaScript.png" alt="JavaScript" class="skill-icon anim-el from-bottom" />
+            <img src="img/Html_5.png" alt="HTML5" class="skill-icon anim-el from-right" />
+            <img src="img/Figma.png" alt="Figma" class="skill-icon anim-el from-left" />
+            <img src="img/Adobe Photoshop.png" alt="Photoshop" class="skill-icon anim-el from-bottom" />
+            <img src="img/Adobe Illustrator.png" alt="Illustrator" class="skill-icon anim-el from-right" />
+            <img src="img/ChatGPT.png" alt="ChatGPT" class="skill-icon anim-el from-bottom" />
+            <img src="img/Claude Ai.png" alt="Claude" class="skill-icon anim-el from-left" />
+          </div>
+        </div>
+        <div class="info-block">
+          <h2 class="section-title anim-el from-right">개인정보</h2>
+          <ul class="info-list">
+            <li class="anim-el from-right">생년월일 : 2004.06.30</li>
+            <li class="anim-el from-right">e-mail : <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                data-cfemail="137978637c7a2a2b2425212353747e727a7f3d707c7e">[email&#160;protected]</a></li>
+            <li class="anim-el from-right">phone : 010-4576-4703</li>
+            <li class="anim-el from-right">학력사항 : 복정고등학교 졸업</li>
+            <li class="anim-el from-right">이름 : 정서빈</li>
+          </ul>
+        </div>
+      </section>
+      <footer>
+        <a href="#" class="back-to-top">Back to Top <svg viewBox="0 0 24 24">
+            <line x1="12" y1="19" x2="12" y2="5" />
+            <polyline points="5 12 12 5 19 12" />
+          </svg></a>
+        <p>© 2026. Seobin JUNG. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <div class="page" id="page-works">
+    <nav>
+      <div class="nav-inner">
+        <div class="nav-left">
+          <a href="#" data-page="main">Works</a>
+          <a href="#" data-page="about">About/Contact</a>
+        </div>
+        <span class="nav-logo" data-page="main">Seobin's</span>
+        <div class="nav-right">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="0.8" fill="#111827" stroke="none" />
+            </svg></a>
+          <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg></a>
+          <a href="#" aria-label="Mail"><svg viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg></a>
+        </div>
+        <button class="nav-hamburger" id="hamburgerBtn3" aria-label="메뉴 열기">
+          <svg viewBox="0 0 24 24">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu3">
+        <a href="#" data-page="main">Works</a>
+        <a href="#" data-page="about">About/Contact</a>
+        <a href="#">Instagram <svg viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="0.8" fill="#fff" stroke="none" />
+          </svg></a>
+        <a href="#">GitHub <svg viewBox="0 0 24 24">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+          </svg></a>
+        <a href="#">Messenger <svg viewBox="0 0 24 24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg></a>
+      </div>
+    </nav>
+    <div class="works-subnav">
+      <div class="works-subnav-inner">
+        <div class="subnav-items">
+          <a href="#" class="subnav-item" data-work="cineq">CINE Q</a>
+          <a href="#" class="subnav-item" data-work="tempur">TEMPUR</a>
+          <a href="#" class="subnav-item" data-work="melon">MELON</a>
+          <a href="#" class="subnav-item" data-work="aquaderm">AQUADERM</a>
+          <a href="#" class="subnav-item" data-work="ssense">SSENSE</a>
+        </div>
+      </div>
+    </div>
+    <div class="work-pdf"><img id="workPdfImg" src="" alt="Portfolio PDF" /></div>
+    <div class="work-cta">
+      <div class="work-cta-inner" style="margin: auto;">
+        <p class="work-cta-text">본 프로젝트는 Figma로 디자인하고 HTML, CSS, JavaScript로 구현되었습니다.<br>실제 인터랙션을 확인해 보세요.</p>
+        <a id="workCtaBtn" href="#" class="work-cta-btn">View Live Website<svg viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg></a>
+      </div>
+    </div>
+    <footer>
+      <a href="#" class="back-to-top">Back to Top <svg viewBox="0 0 24 24">
+          <line x1="12" y1="19" x2="12" y2="5" />
+          <polyline points="5 12 12 5 19 12" />
+        </svg></a>
+      <p>© 2026. Seobin JUNG. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script defer src="js/portfolio.js"></script>
+</body>
+
+</html>

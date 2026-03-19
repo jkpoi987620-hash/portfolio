@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEMPUR</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- =============================================
+       HEADER
+  ============================================= -->
+  <header id="header">
+    <nav class="gnb">
+      <div class="logo">
+        <a href="index.html">TEMPUR</a>
+      </div>
+
+      <!-- PC 전용 메뉴 -->
+      <ul class="menu">
+        <li><a href="event.html">EVENT</a></li>
+        <li><a href="product.html">PRODUCT</a></li>
+        <li>REVIEW</li>
+        <li>MAGAZINE</li>
+        <li>고객센터</li>
+      </ul>
+
+      <div class="icon">
+        <!-- 마이페이지 (모바일 숨김) -->
+        <a href="#" aria-label="마이페이지" class="user-icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+          </svg>
+        </a>
+        <!-- 장바구니 (모바일 숨김) -->
+        <a href="#" aria-label="장바구니" class="cart-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 01-8 0" />
+          </svg>
+        </a>
+        <!-- 검색 -->
+        <div class="search-wrap">
+          <a href="#" aria-label="검색" id="searchToggle">
+            <svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="7" />
+              <line x1="16.5" y1="16.5" x2="22" y2="22" />
+            </svg>
+          </a>
+          <div class="search-box" id="searchBox">
+            <svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="7" />
+              <line x1="16.5" y1="16.5" x2="22" y2="22" />
+            </svg>
+            <input type="text" placeholder="검색어를 입력하세요" id="searchInput">
+          </div>
+        </div>
+        <!-- 햄버거 버튼 (모바일 전용) -->
+        <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 모바일 드로어 메뉴 -->
+  <nav class="mobile-drawer" id="mobileDrawer">
+    <ul>
+      <li><a href="event.html">EVENT</a></li>
+      <li><a href="product.html">PRODUCT</a></li>
+      <li>REVIEW</li>
+      <li>MAGAZINE</li>
+      <li>고객센터</li>
+    </ul>
+  </nav>
+
+
+  <!-- =============================================
+       TOP BANNER
+  ============================================= -->
+  <section class="top">
+    <!-- 모바일 배경 이미지 -->
+    <img src="img/temperMobile-banner.png" alt="배너 이미지" class="top-bg-img">
+
+    <div class="txt">
+      <!-- PC 텍스트 -->
+      <h1 class="top-title-pc">TEMPUR</h1>
+      <p class="top-sub-pc">매일 밤 편안한 숙면을 위하여</p>
+
+      <!-- 모바일 텍스트 -->
+      <h1 class="top-title-mo">TEMPUR 신제품<br>출시이벤트!</h1>
+
+      <!-- 더보기 버튼 -->
+      <a href="#" class="top-btn">
+        더보기
+        <svg viewBox="0 0 24 24">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </a>
+
+      <!-- 슬라이드 인디케이터 바 -->
+      <div class="top-slide-bar">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       BEST 배너
+  ============================================= -->
+  <section class="best-banner fade-in">
+    <div class="box" id="bestBannerBox">
+      <!-- PC 배경 레이어 -->
+      <div class="bg-layer active" style="background-image: url('img/event-bed.jpg')"></div>
+      <div class="bg-layer" style="background-image: url('img/desk-bed.png')"></div>
+      <div class="bg-layer" style="background-image: url('img/sofa-bed.png')"></div>
+      <div class="bg-layer" style="background-image: url('img/shelf-bed.png')"></div>
+
+      <div class="txt" style="position:relative; z-index:1;">
+        <h2>BEST</h2>
+        <h3 id="bestTitle">Bed</h3>
+      </div>
+
+      <ul class="category" id="categoryTabs" style="z-index:1;">
+        <li class="active" data-index="0">Bed</li>
+        <li data-index="1">Desk</li>
+        <li data-index="2">Sofa</li>
+        <li data-index="3">Shelf</li>
+      </ul>
+
+      <!-- 모바일 전용 제품 카드 -->
+      <div class="best-product-card">
+        <!-- 243×181 이미지 + 위 텍스트 -->
+        <div class="product-img-wrap">
+          <img src="img/event-bed.jpg" alt="BEST 제품 이미지">
+          <span class="img-label" id="bestImgLabel">Bed</span>
+        </div>
+        <!-- 상품 정보 -->
+        <div class="product-info">
+          <p class="product-name" id="bestProductName">TEMPUR PRO AIR</p>
+          <p class="product-sub" id="bestProductSub">템퍼 프로 에어</p>
+          <a href="#" class="view-btn">
+            View more
+            <span class="btn-icon">
+              <svg viewBox="0 0 24 24">
+                <polyline points="8 4 16 12 8 20" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       ONLY FOR YOU
+  ============================================= -->
+  <section class="ofy fade-in">
+    <div class="box">
+      <div class="txt">
+        <h2>ONLY FOR YOU</h2>
+        <ul class="filter-tabs" id="filterTabs">
+          <!-- 윗줄: 2개 -->
+          <div class="tab-row">
+            <li class="active">HELLO2026</li>
+            <li>매트리스</li>
+          </div>
+          <!-- 아랫줄: 3개 -->
+          <div class="tab-row">
+            <li>베개</li>
+            <li>침대</li>
+            <li>액세서리</li>
+          </div>
+        </ul>
+      </div>
+      <div class="img">
+        <!-- PC용 이미지 -->
+        <img src="img/TEMPUR1.png" alt="TEMPUR 제품 1" class="ofy-pc-img">
+        <img src="img/TEMPUR2.png" alt="TEMPUR 제품 2" class="ofy-pc-img">
+        <img src="img/TEMPUR3.png" alt="TEMPUR 제품 3" class="ofy-pc-img">
+        <!-- 모바일용 2×2 카드 -->
+        <div class="ofy-item">
+          <img src="img/temperMobile-card1.png" alt="TEMPUR PRO">
+          <span class="ofy-label">TEMPUR PRO</span>
+        </div>
+        <div class="ofy-item">
+          <img src="img/temperMobile-card2.png" alt="TEMPUR 프리마">
+          <span class="ofy-label">TEMPUR 프리마</span>
+        </div>
+        <div class="ofy-item">
+          <img src="img/temperMobile-card3.png" alt="TEMPUR FORM">
+          <span class="ofy-label">TEMPUR FORM</span>
+        </div>
+        <div class="ofy-item">
+          <img src="img/temperMobile-card4.png" alt="TEMPUR 이즈">
+          <span class="ofy-label">TEMPUR 이즈</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       SELECTION
+  ============================================= -->
+  <section class="selection fade-in">
+    <div class="section-header">
+      <h2>SELECTION</h2>
+    </div>
+    <div class="banner">
+
+      <!-- PC 전용 main-img -->
+      <div class="main-img">
+        <button class="pc-plus-btn"><svg viewBox="0 0 10 10">
+            <line x1="5" y1="1" x2="5" y2="9" />
+            <line x1="1" y1="5" x2="9" y2="5" />
+          </svg></button>
+        <button class="pc-plus-btn"><svg viewBox="0 0 10 10">
+            <line x1="5" y1="1" x2="5" y2="9" />
+            <line x1="1" y1="5" x2="9" y2="5" />
+          </svg></button>
+        <button class="pc-plus-btn"><svg viewBox="0 0 10 10">
+            <line x1="5" y1="1" x2="5" y2="9" />
+            <line x1="1" y1="5" x2="9" y2="5" />
+          </svg></button>
+        <div class="slider-controls">
+          <i class="fas fa-chevron-left" id="prevDot"></i>
+          <ul class="dots" id="sliderDots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <i class="fas fa-chevron-right" id="nextDot"></i>
+        </div>
+      </div>
+
+      <!-- 모바일 전용 이미지 + 플러스 버튼 + 닷 -->
+      <div class="sel-mo-wrap">
+        <div class="sel-mo-img-box">
+          <img src="img/temperMobile_selec.png" alt="SELECTION 이미지">
+          <!-- 버튼1: top 108px, left 45px -->
+          <button class="sel-plus-btn">
+            <svg viewBox="0 0 10 10">
+              <line x1="5" y1="1" x2="5" y2="9" />
+              <line x1="1" y1="5" x2="9" y2="5" />
+            </svg>
+          </button>
+          <!-- 버튼2: top 172px, left 138px -->
+          <button class="sel-plus-btn">
+            <svg viewBox="0 0 10 10">
+              <line x1="5" y1="1" x2="5" y2="9" />
+              <line x1="1" y1="5" x2="9" y2="5" />
+            </svg>
+          </button>
+          <!-- 버튼3: top 231px, left 53px -->
+          <button class="sel-plus-btn">
+            <svg viewBox="0 0 10 10">
+              <line x1="5" y1="1" x2="5" y2="9" />
+              <line x1="1" y1="5" x2="9" y2="5" />
+            </svg>
+          </button>
+        </div>
+        <!-- 닷 버튼 -->
+        <ul class="sel-mo-dots">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <!-- PC 전용 서브 카드 -->
+      <div class="sub-img">
+        <div class="card">
+          <img src="img/selection1.png" alt="TEMPUR 모션베드">
+          <div class="overlay"></div>
+          <span class="label-default">Click!</span>
+          <div class="label-hover">
+            <h2>TEMPUR 모션베드</h2>
+            <p>가정용 침대를 다양하게 둘러보십시오</p>
+            <a href="#">View more</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/selection2.png" alt="TEMPUR 프로">
+          <div class="overlay"></div>
+          <span class="label-default">Click!</span>
+          <div class="label-hover">
+            <h2>TEMPUR 프로</h2>
+            <p>매일 밤 편안한 숙면을 위하여</p>
+            <a href="#">View more</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       EVENT BANNER
+  ============================================= -->
+  <section class="evt fade-in">
+    <div class="box">
+      <div class="txt">
+        <h1>2026 침대 연말결산</h1>
+        <p>침대최대 30% 할인 + 사은품 증정</p>
+      </div>
+      <div class="img">
+        <img src="img/event-page.png" alt="이벤트 이미지">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       STORE BANNER
+  ============================================= -->
+  <section class="store-banner fade-in">
+    <div class="inner">
+
+      <!-- PC 전용 텍스트+화살표+글래스 -->
+      <div class="txt store-txt-pc">
+        <h1>STORE</h1>
+        <p><b>직접 만지고 느껴보세요</b><br>매일 밤 편안한 숙면을 위하여</p>
+        <div class="btn">
+          <a href="#">View more</a>
+          <svg class="store-btn-icon" viewBox="0 0 24 24" fill="none" stroke="#F48251" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 8 16 12 12 16" />
+            <line x1="8" y1="12" x2="16" y2="12" />
+          </svg>
+        </div>
+      </div>
+      <div class="box">
+        <svg class="store-arrow" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+        <div class="glass">
+          <h3>서울</h3><img src="img/seoul-img.png" alt="서울 매장">
+        </div>
+        <svg class="store-arrow" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </div>
+
+      <!-- 모바일 전용 텍스트 -->
+      <div class="txt store-txt-mo">
+        <h1>STORE</h1>
+        <span class="store-sub1">직접 만지고 느껴보세요</span>
+        <span class="store-sub2">매일 밤 편안한 숙면을 위하여</span>
+        <a href="#" class="store-btn">
+          View more
+          <span class="btn-icon">
+            <svg viewBox="0 0 24 24">
+              <polyline points="8 4 16 12 8 20" />
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <!-- 모바일 전용 카드 슬라이더 -->
+      <div class="store-mo-slider" id="storeMoSlider">
+        <div class="store-mo-card">
+          <span class="card-city">서울</span>
+          <img src="img/temper_mobile_store1.png" alt="서울 매장" class="card-img">
+        </div>
+        <div class="store-mo-card">
+          <span class="card-city">판교</span>
+          <img src="img/temper_mobile_store2.png" alt="판교 매장" class="card-img">
+        </div>
+        <div class="store-mo-card">
+          <span class="card-city">부산</span>
+          <img src="img/temper_mobile_store4.png" alt="부산 매장" class="card-img">
+        </div>
+        <div class="store-mo-card">
+          <span class="card-city">대구</span>
+          <img src="img/temper_mobile_store3.png" alt="대구 매장" class="card-img">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer>
+    <div class="inner">
+      <h1>TEMPUR</h1>
+      <div class="link-box">
+        <ul id="footerMenu1">
+          <li><b>고객센터</b></li>
+          <li>고객센터</li>
+          <li>사용상 주의사항</li>
+          <li>품질보증</li>
+          <li>배송, 교환 및 환불 정책</li>
+          <li>매장찾기</li>
+          <li>FAQ</li>
+        </ul>
+        <ul id="footerMenu2">
+          <li><b>회사소개</b></li>
+          <li>브랜드 스토리</li>
+          <li>사용상 주의사항</li>
+          <li>품질보증</li>
+          <li>배송, 교환 및 환불 정책</li>
+          <li>매장찾기</li>
+          <li>채용안내</li>
+        </ul>
+        <ul id="footerMenu3">
+          <li><b>이용약관</b></li>
+          <li>개인정보 취급방침</li>
+          <li>판매이용약관</li>
+        </ul>
+      </div>
+      <p class="footer-copy">
+        Copyright © 2025 TEMPUR Sealy International Limited.<br>
+        All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- 스크롤 TOP 버튼 -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="맨 위로">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="https://kit.fontawesome.com/632d3e2496.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

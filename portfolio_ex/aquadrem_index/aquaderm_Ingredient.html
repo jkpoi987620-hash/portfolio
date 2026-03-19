@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AQUADERM - 성분 분석</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../aquadrem_css/aquaderm_Ingredient.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════ NAV ═══════════════════════ -->
+  <nav>
+    <div class="nav-inner">
+      <button class="nav-dots-btn" id="navDotsBtn"><span></span><span></span><span></span></button>
+      <div class="nav-dots-menu" id="navDotsMenu">
+        <a href="aquaderm_AI_Sub.html">피부진단</a>
+        <a href="aquaderm_Recommend.html">맞춤추천</a>
+        <a href="aquaderm_Ingredient.html">성분분석</a>
+        <a href="#">커뮤니티</a><a href="#">쇼핑</a><a href="#">이벤트</a>
+      </div>
+      <div class="nav-left">
+        <a href="aquaderm_AI_Sub.html">피부진단</a>
+        <a href="aquaderm_Recommend.html">맞춤추천</a>
+        <a href="#" class="active">성분분석</a>
+        <a href="#">커뮤니티</a>
+        <a href="#">쇼핑</a>
+        <a href="#">이벤트</a>
+      </div>
+      <div class="nav-logo">
+        <a href="aquaderm.html">
+          <div class="nav-logo-placeholder">
+            <img src="../aquadream-img/top_logo.png" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="nav-right">
+        <a href="#">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="7" cy="7" r="4.5" />
+            <line x1="10.5" y1="10.5" x2="14" y2="14" />
+          </svg>검색
+        </a>
+        <a href="#">로그인</a>
+        <a href="#">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="8" cy="5.5" r="2.5" />
+            <path d="M2.5 14c0-3 2.5-5 5.5-5s5.5 2 5.5 5" />
+          </svg>마이페이지
+        </a>
+        <a href="#">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M1 1h2l1.5 7.5h7L13 4H4" />
+            <circle cx="6.5" cy="13" r="1" />
+            <circle cx="11" cy="13" r="1" />
+          </svg>장바구니
+        </a>
+      </div>
+      <button class="nav-hamburger" id="navHamburger"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-mobile-menu" id="navMobileMenu">
+      <button class="nav-mobile-close" id="navMobileClose">✕</button>
+      <a href="aquaderm_AI_Sub.html">피부진단</a>
+      <a href="aquaderm_Recommend.html">맞춤추천</a>
+      <a href="aquaderm_Ingredient.html">성분분석</a>
+      <a href="#">커뮤니티</a><a href="#">쇼핑</a><a href="#">이벤트</a>
+      <a href="#">로그인</a><a href="#">마이페이지</a><a href="#">장바구니</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════ BANNER ═══════════════════════ -->
+  <div class="banner">
+    <img class="banner-bg" src="../aquadream-img/aquadrem_ingredient-banner.png" alt="배너 배경">
+    <div class="banner-inner">
+      <h1 class="banner-title">화장품 성분 분석</h1>
+      <p class="banner-desc">화장품 성분을 분석하여<br>피부에 미치는 영향을 쉽게 확인해보세요</p>
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 20 20" fill="none" stroke="#9CA3AF" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="9" r="5.5" />
+          <line x1="13.5" y1="13.5" x2="18" y2="18" />
+        </svg>
+        <input class="search-input" type="text" placeholder="성분 분석">
+        <div class="search-divider"></div>
+        <button class="search-btn">분석 하기</button>
+      </div>
+      <p class="banner-hint">예)히알루론산 · 판테놀 · 나이아신아마이드 · 세라마이드</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ SECTION 1: 인기 성분 ═══════════════════════ -->
+  <section class="sec1">
+    <div class="container">
+      <div class="sec1-header">
+        <div class="sec1-left">
+          <h2 class="sec-title">인기 성분</h2>
+          <p class="sec-desc">많이 검색되는 화장품 성분을 확인해보세요</p>
+        </div>
+        <button class="more-btn">
+          성분 더보기
+          <svg viewBox="0 0 14 14" fill="none" stroke="#6B85A6" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M5 2l5 5-5 5" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="ingredient-cards">
+        <!-- 카드 1: 히알루론산 (기본 활성화) -->
+        <div class="ingredient-card active" onclick="selectIngredient('hyaluronic')">
+          <img class="ingredient-card-img" src="../aquadream-img/aquadrem_ingredient-card1.png" alt="히알루론산"
+            style="width:147px;height:147px;">
+          <span class="ingredient-card-name">히알루론산</span>
+          <span class="ingredient-card-sub">보습 · 피부 탄력</span>
+        </div>
+        <!-- 카드 2: 나이아신아마이드 -->
+        <div class="ingredient-card" onclick="selectIngredient('niacinamide')">
+          <img class="ingredient-card-img" src="../aquadream-img/aquadrem_ingredient-card2.png" alt="나이아신아마이드"
+            style="width:147px;height:147px;">
+          <span class="ingredient-card-name">나이아신아마이드</span>
+          <span class="ingredient-card-sub">지루 홍· 피부 진정 관리 성분</span>
+        </div>
+        <!-- 카드 3: 판테놀 -->
+        <div class="ingredient-card" onclick="selectIngredient('panthenol')">
+          <img class="ingredient-card-img" src="../aquadream-img/aquadrem_ingredient-card3.png" alt="판테놀"
+            style="width:147px;height:147px;">
+          <span class="ingredient-card-name">판테놀</span>
+          <span class="ingredient-card-sub">피부 진정과 탄력 균일 성분</span>
+        </div>
+        <!-- 카드 4: 세라마이드 -->
+        <div class="ingredient-card" onclick="selectIngredient('ceramide')">
+          <img class="ingredient-card-img" src="../aquadream-img/aquadrem_ingredient-card4.png" alt="세라마이드"
+            style="width:140px;height:123px;">
+          <span class="ingredient-card-name">세라마이드</span>
+          <span class="ingredient-card-sub">피부 장벽 강화 보습 성분</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SECTION 2: 성분 상세 이미지 ═══════════════════════ -->
+  <section class="sec2">
+    <img id="detail-img" class="ingredient-detail-img" src="../aquadream-img/aquadrem_ingredient-sec2.png" alt="성분 상세 정보">
+  </section>
+
+  <!-- ═══════════════════════ SECTION 3: 이 성분이 포함된 제품 ═══════════════════════ -->
+  <section class="sec3">
+    <div class="container">
+      <div class="sec3-header">
+        <div class="sec3-left">
+          <h2 class="sec-title">이 성분이 포함된 제품</h2>
+          <p class="sec-desc">히알루론산이 포함된 인기 화장품을<br class="mobile-br"> 확인해보세요</p>
+        </div>
+        <button class="more-btn">
+          제품 더보기
+          <svg viewBox="0 0 14 14" fill="none" stroke="#6B85A6" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M5 2l5 5-5 5" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="product-cards" id="product-cards">
+        <!-- JS로 동적 렌더링 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SECTION 4: 다른 성분 분석 배너 ═══════════════════════ -->
+  <section class="sec4">
+    <div class="analysis-box">
+      <img class="analysis-bg" src="../aquadream-img/aquadrem_ingredient-sec4-bg.png" alt="배경 이미지">
+      <div class="analysis-inner">
+        <h2 class="analysis-title">다른 성분도 분석해보세요</h2>
+        <p class="analysis-desc">수백 가지 화장품 성분을 검색하고<br>피부에 맞는 성분을 확인해보세요</p>
+        <button class="analysis-btn">
+          성분 검색하기
+          <svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M4 10h12M11 5l5 5-5 5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+
+      <div class="footer-left">
+        <div class="footer-logo">
+          <!-- <img src="assets/logo-white.png" alt="AQUADERM 로고" /> -->
+          <div class="footer-logo-placeholder">
+            <img src="../aquadream-img/foter_logo.png" alt="">
+          </div>
+        </div>
+        <p class="footer-tagline">데이터로 피부를 관리하는 AI 스킨케어 플랫폼</p>
+        <div class="footer-icons">
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A0B3C5" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="5" />
+              <circle cx="17.5" cy="6.5" r="1" fill="#A0B3C5" stroke="none" />
+            </svg>
+          </div>
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#A0B3C5">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </div>
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A0B3C5" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="5" width="20" height="14" rx="4" />
+              <polygon points="10,9 16,12 10,15" fill="#A0B3C5" stroke="none" />
+            </svg>
+          </div>
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#A0B3C5">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-menus">
+        <div class="footer-menu-col">
+          <p class="footer-menu-heading footer-accordion-btn">서비스 메뉴<svg class="footer-accordion-icon" width="12"
+              height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#A0B3C5" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></p>
+          <ul class="footer-menu-list">
+            <li>피부 진단</li>
+            <li>맞춤 추천</li>
+            <li>루틴 관리</li>
+            <li>제품</li>
+          </ul>
+        </div>
+        <div class="footer-menu-col">
+          <p class="footer-menu-heading footer-accordion-btn">고객 지원<svg class="footer-accordion-icon" width="12"
+              height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#A0B3C5" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></p>
+          <ul class="footer-menu-list">
+            <li>FAQ</li>
+            <li>문의</li>
+            <li>공지사항</li>
+            <li>이용 가이드</li>
+          </ul>
+        </div>
+        <div class="footer-menu-col">
+          <p class="footer-menu-heading footer-accordion-btn">회사 정보<svg class="footer-accordion-icon" width="12"
+              height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#A0B3C5" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></p>
+          <ul class="footer-menu-list">
+            <li>회사명</li>
+            <li>사업자 번호</li>
+            <li>이메일</li>
+            <li>주소</li>
+            <li>SNS</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script defer src="../js/aquaderm_Ingredient.js"></script>
+</body>
+
+</html>

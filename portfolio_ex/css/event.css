@@ -1,0 +1,642 @@
+
+
+header{
+  width: 100%;
+  min-width: 1200px;
+  height: 74px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+header>.gnb>.menu>.on{
+  opacity: 0.5;
+}
+.gnb{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: #111;
+  align-items: center;
+}
+.gnb>.menu{
+  display: flex;
+  gap: 40px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.gnb>.icon{
+  font-size: 24px;
+  margin-top: 10px;
+}
+.gnb>.logo{
+  font-size: 35px;
+  margin-top: 10px;
+}
+/*nav부분 끝*/
+.top-banner{
+  width: 100%;
+  min-width: 1200px;
+  height: 1254px;
+  background: linear-gradient(57deg, #ffc9b2, #cff1f1, #f8e0d6, #f9c6b0);
+  animation: gradient 5s ease infinite;
+  background-size: 170% 170%;
+}
+.top-banner>.box{
+  width: 1194px;
+  height: 1165px;
+  margin: auto;
+  position: relative;
+}
+.top-banner>.box>.txt-box1{
+  width: 322px;
+  height: 73px;
+  font-size: 20px;
+  color: #273324;
+  border-radius: 100px;
+  background: linear-gradient(-64deg, #cbefef, #efffff);
+  border: 3px solid rgba(255,255,255,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 165px;
+  top: 70px; rotate: 26.1deg;
+}
+.top-banner>.box>.txt-box2{
+  width: 322px;
+  height: 73px;
+  font-size: 20px;
+  color: #273324;
+  border-radius: 100px;
+  background: linear-gradient(-64deg, #cbefef, #efffff);
+  border: 3px solid rgba(255,255,255,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 30px; top: 300px; rotate: -40deg;
+}
+.top-banner>.box>.inner{
+  text-align: center;
+  padding-top: 184px;
+}
+.top-banner>.box>.inner>h3{
+  font-size: 36px;
+  font-weight: normal;
+  color: #273324;
+}
+.top-banner>.box>.inner>p{
+  font-size: 24px;
+  font-weight: bold;
+  color: #95c7cd;
+  margin-top: 22px;
+}
+.top-banner>.box>.inner>h1{
+  font-size: 150px;
+  font-weight: normal;
+  font-family: "Noto Serif KR";
+  margin-top: 58px;
+  background: linear-gradient(36deg, #293728, #456143,#5a894f);
+  -webkit-background-clip: text;/*배경색을 글자 모양으로 자름*/
+  -webkit-text-fill-color: transparent;/*글자색 투명하게 만들어서 배경색이 채워짐*/
+}
+@keyframes gradient{
+  0%{background-position: 0% 50%;}
+  50%{background-position: 100% 50%;}
+  100%{background-position: 0% 50%;}
+}
+.top-banner>.box>.content{
+  width: 1000px;
+  height: 411px;
+  display: block;
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
+  bottom: -20px;
+}
+
+/*여기부터 수정 여백 글씨 크기 다 줄이자*/
+/*middle*/
+.middle{
+  width: 100%;
+  min-width: 1200px;
+  height: 60px;
+  background-color: #ed9835;
+  padding-top: 14px;
+}
+.middle>ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 129px;
+  font-size: 20px;
+  font-weight: bold
+}
+.middle>ul>.on{
+  border-bottom: 3px solid #111;
+  opacity: 1;
+}
+.middle>ul>li{
+  opacity: 0.5;
+  cursor: pointer;
+}
+/*maim(전체)*/
+main{
+  width: 100%;
+  min-width: 1200px;
+  height: 4787px;
+  background-color: #273324;
+  padding-top: 123px;
+}
+main>.top{
+  width: 100%;
+  min-width: 1200px;
+  height: 1412px;
+}
+main>.top>.container{
+  width: 990px;
+  height: 1412px;
+  margin: auto;
+}
+main>.top>.container>.inner{
+  width: 291px;
+  height: 58px;
+  background-color: #ed9835;
+  border: 5px solid #d98018;
+  font-size: 16px;
+  color: #273324;
+  text-align: center;
+  padding: 5px 20px;
+  border-radius: 100px;
+  margin: auto;
+}
+main>.top>.container>.txt{
+  margin-top: 74px;
+  text-align: center;
+  color: #fff;
+}
+main>.top>.container>.txt>h1{
+  font-size: 42px;
+}
+main>.top>.container>.txt>p{
+  font-size: 26px;
+  margin-top: 38px;
+  font-weight: 400;
+}
+main>.top>.container>.card{
+  display: flex;
+  justify-content: center;
+  gap: 171px;
+  margin-top: 74px;
+}
+main>.top>.container>.card>.img>h3{
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  margin-top: 22px;
+}
+main>.top>.container>.card>.img>.sail{
+  margin-top: 9px;
+  display: flex;
+  justify-content: space-between;
+}
+main>.top>.container>.card>.img>.sail>p{
+  font-size: 20px;
+  font-weight: bold;
+  color: #ed9835;
+  margin-top: 33px;
+}
+main>.top>.container>.card>.img>.sail>.title{
+  font-size: 20px;
+  color: #fff;
+  text-align: right;
+  line-height: 1.7;
+}
+main>.top>.container>.card>.img>.sail>.title>p{
+  font-size: 17px;
+  opacity: 0.6;
+  /*텍스트에 취소선 넣는 효과*/
+  text-decoration: line-through;
+  text-decoration-color: #fff;
+  text-decoration-thickness: 2px;
+}
+main>.top>.container>.banner{
+  margin-top: 122px;
+  width: 990px;
+  height: 165px;
+  background: url(../img/bottom-card.png) center/cover;
+  text-align: right;
+  padding-top: 76px;
+  padding-right: 19px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #273324;
+}
+/*템퍼 20%할인 세일*/
+main>#container{
+  width: 100%;
+  min-width: 1200px;
+  height: 1972px;
+  margin-top: 80px;
+}
+main>#container>.content{
+  width: 843px;
+  height: 2162px;
+  margin: auto;
+  
+}
+main>#container>.content>.inner{
+  width: 291px;
+  height: 58px;
+  background-color: #ed9835;
+  border: 5px solid #d98018;
+  font-size: 16px;
+  color: #273324;
+  text-align: center;
+  padding: 5px 20px;
+  border-radius: 100px;
+  margin: auto;
+}
+main>#container>.content>.txt{
+  margin-top: 74px;
+  text-align: center;
+  color: #fff;
+}
+main>#container>.content>.txt>h1{
+  font-size: 42px;
+}
+main>#container>.content>.txt>p{
+  font-size: 26px;
+  margin-top: 38px;
+  font-weight: 400;
+}
+
+
+main>#container>.content>.card1{
+  display: flex;
+  justify-content: center;
+  gap: 171px;
+  margin-top: 74px;
+}
+main>#container>.content>.card1>.img>h3{
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  margin-top: 22px;
+}
+main>#container>.content>.card1>.img>.sail{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+}
+main>#container>.content>.card1>.img>.sail>p{
+  font-size: 20px;
+  font-weight: bold;
+  color: #ed9835;
+  margin-top: 33px;
+}
+main>#container>.content>.card1>.img>.sail>.title{
+  font-size: 20px;
+  color: #fff;
+  text-align: right;
+  line-height: 1.7;
+}
+main>#container>.content>.card1>.img>.sail>.title>p{
+  font-size: 17px;
+  opacity: 0.6;
+  /*텍스트에 취소선 넣는 효과*/
+  text-decoration: line-through;
+  text-decoration-color: #fff;
+  text-decoration-thickness: 2px;
+}
+
+
+
+
+main>#container>.content>.card2{
+  display: flex;
+  justify-content: center;
+  gap: 171px;
+  margin-top: 121px;
+}
+main>#container>.content>.card2>.img>h3{
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  margin-top: 22px;
+}
+main>#container>.content>.card2>.img>.sail{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+}
+main>#container>.content>.card2>.img>.sail>p{
+  font-size: 20px;
+  font-weight: bold;
+  color: #ed9835;
+  margin-top: 33px;
+}
+main>#container>.content>.card2>.img>.sail>.title{
+  font-size: 20px;
+  color: #fff;
+  text-align: right;
+  line-height: 1.7;
+}
+main>#container>.content>.card2>.img>.sail>.title>p{
+  font-size: 17px;
+  opacity: 0.6;
+  /*텍스트에 취소선 넣는 효과*/
+  text-decoration: line-through;
+  text-decoration-color: #fff;
+  text-decoration-thickness: 2px;
+}
+
+
+main>#container>.content>.item{
+  width: 843px;
+  height: 188px;
+  margin: auto;
+  position: relative;
+  margin-top: 250px;
+}
+main>#container>.content>.item>.plus{
+  width: 39px;
+  height: 39px;
+  background-color: #d9d9d9;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 25px;
+  margin: auto;
+  color: #273324;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+main>#container>.content>.item>.banner{
+  width: 843px;
+  height: 168px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ddd;
+  border-radius: 18px;
+  padding: 0 49px;
+  cursor: pointer;
+}
+main>#container>.content>.item>.banner:hover{
+  background-color: #bdbaba;
+}
+main>#container>.content>.item>.banner>.icon{
+  display: flex;
+  position: relative;
+}
+main>#container>.content>.item>.banner>.icon>.box1{
+  width: 206px; height: 101px;
+  background-color: #f36a38;
+  border-radius: 13px;
+  color: #fff;
+  padding: 12px 12px;
+  line-height: 1.5;
+  border-right: 2px dotted #fff;
+}
+main>#container>.content>.item>.banner>.icon>.box1>b{
+  font-size: 12px;
+}
+main>#container>.content>.item>.banner>.icon>.box1>h2{
+  font-size: 20px;
+  font-weight: normal;
+}
+main>#container>.content>.item>.banner>.icon>.box1>p{
+  font-size: 12px;
+  opacity: 0.8;
+}
+main>#container>.content>.item>.banner>.icon>.box2{
+  width: 101px;
+  height: 33px;
+  background-color: #f36a38;
+  border-radius: 5px;
+  text-align: center;
+  rotate: -90deg;
+  color: #fff;
+  font-weight: normal;
+  font-size: 12px;
+  letter-spacing: 6px;
+  padding-top: 7px;
+  position: absolute;
+  left: 172px;
+  top: 34%;
+}
+
+main>#container>.content>.item>.banner>.txt{
+  color: #111;
+  font-size: 25px;
+  line-height: 3;
+  text-align: right;
+}
+main>#container>.content>.item>.banner>.txt>.on{
+  font-weight: bold;
+}
+
+/*블프 혜택*/
+main>.bottom{
+  height: 1000px;
+  width: 100%;
+  margin-top: 200px;
+  min-width: 1200px
+}
+main>.bottom>.box{
+  width: 491px;
+  height: 1022px;
+  margin: auto;
+}
+main>.bottom>.box>.inner{
+  width: 291px;
+  height: 58px;
+  background-color: #ed9835;
+  border: 5px solid #d98018;
+  font-size: 16px;
+  color: #273324;
+  text-align: center;
+  padding: 5px 20px;
+  border-radius: 100px;
+  margin: auto;
+}
+main>.bottom>.box>.txt{
+  margin-top: 74px;
+  text-align: center;
+  color: #fff;
+}
+main>.bottom>.box>.txt>h1{
+  font-size: 42px;
+}
+main>.bottom>.box>.txt>p{
+  font-size: 26px;
+  margin-top: 38px;
+  font-weight: 400;
+}
+
+main>.bottom>.box>.card{
+  display: flex;
+  justify-content: center;
+  gap: 171px;
+  margin-top: 74px;
+}
+main>.bottom>.box>.card>.img>h3{
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  margin-top: 22px;
+}
+main>.bottom>.box>.card>.img>.sail{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+}
+main>.bottom>.box>.card>.img>.sail>p{
+  font-size: 20px;
+  font-weight: bold;
+  color: #ed9835;
+  margin-top: 3px;
+}
+main>.bottom>.box>.card>.img>.sail>.title{
+  font-size: 20px;
+  color: #fff;
+  text-align: right;
+  line-height: 1.7;
+}
+main>.bottom>.box>.card>.img>.sail>.title>p{
+  font-size: 17px;
+  opacity: 0.6;
+  /*텍스트에 취소선 넣는 효과*/
+  text-decoration: line-through;
+  text-decoration-color: #fff;
+  text-decoration-thickness: 2px;
+}
+/*연말 결산 페이지*/
+#content{
+  width: 100%;
+  min-width: 1200px;
+  height: 550px;
+  margin-top: 57px;
+}
+#content>.box{
+  width: 810px;
+  height: 609px;
+  margin: auto;
+}
+#content>.box>.title{
+  font-size: 50px;
+  text-align: center;
+  color: #273324;
+}
+#content>.box>.title>.org{
+  color: #ed9835;
+}
+#content>.box>.card{
+  margin-top: 80px;
+}
+#content>.box>.card>.inner{
+  display: flex;
+  justify-content: space-between;
+}
+#content>.box>.card>.inner>.txt1>h3{
+  margin-top: 30px;
+  font-size: 20px;
+  color: #111;
+}
+#content>.box>.card>.inner>.txt1>p{
+  margin-top: 20px;
+  font-size: 16px;
+  color: #111;
+  opacity: 0.6;
+}
+#content>.box>.card>.inner>.txt2{
+  margin-top: 39px;
+  text-align: right;
+}
+#content>.box>.card>.inner>.txt2>.down{
+  font-size: 16px;
+  text-decoration: line-through;
+  text-decoration-color: #111;
+  text-decoration-thickness: 2px;
+  color: #111;
+  opacity: 0.6;
+}
+#content>.box>.card>.inner>.txt2>.on{
+  font-size: 20px;
+  font-weight: bold;
+  color: #ed9835;
+}
+#content>.box>.card>.inner>.txt2>.on>b{
+  margin-right: 100px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*바텀메뉴*/
+.bottom-menu{
+  width: 100%;
+  min-width: 1200px;
+  height: 379px;
+  background-color: #273324;
+  margin-top: 305px;
+}
+.bottom-menu>.menu{
+  width: 801px;
+  height: 360px;
+  margin: auto;
+  padding: 60px 0;
+  color: #fff;
+}
+.bottom-menu>.menu>.content{
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-menu>.menu>.content>.icon{
+  display: flex;
+  gap: 18px;
+  font-size: 20px;
+}
+.bottom-menu>.menu>h2{
+  font-size: 20px;
+}
+.bottom-menu>.menu>.box>ul>li{
+  margin-top: 26px;
+  font-size: 18px;
+}

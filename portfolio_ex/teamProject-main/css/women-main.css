@@ -1,0 +1,646 @@
+body {
+    min-width: 1200px;
+    overflow-x: hidden;
+}
+
+/* 공통 속성 .view-more-btn */
+.view-more-btn {
+    width: 203px;
+    height: 46px;
+    background-color: rgba(17, 17, 17, 0.4);
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+}
+
+.view-more-btn a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    gap: 10px;
+}
+
+.view-more-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.view-more-btn:hover {
+    background-color: rgba(17, 17, 17, 0.6);
+}
+
+/* 배너 */
+#hero {
+    width: 100%;
+    height: 550px;
+    margin: auto;
+}
+
+#hero .hero-wrap {
+    display: flex;
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#hero .banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero .banner-img {
+    position: relative;
+    overflow: hidden;
+}
+
+#hero .banner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.6s ease;
+}
+
+/* hover용 이미지 겹치기 */
+#hero .img-hover {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+/* hover 시 전환 */
+#hero .banner:hover .img-hover {
+    opacity: 1;
+}
+
+#hero .banner:hover .img-default {
+    opacity: 0;
+}
+
+#hero .banner-txt {
+    position: absolute;
+    left: 75%;
+    z-index: 10;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease-in-out;
+}
+
+#hero .banner-txt h2 {
+    font-weight: 700;
+    font-size: 40px;
+    color: white;
+}
+
+#hero .view-more-btn {
+    position: absolute;
+    left: 68%;
+    z-index: 10;
+    bottom: 15%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    
+}
+
+/* hover */
+#hero .banner:hover .banner-txt {
+    top: 48%;
+}
+
+#hero .banner:hover .view-more-btn {
+    bottom: 35%;
+    opacity: 100;
+}
+
+/* 카테고리 레이아웃 */
+#cats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+/* 왼쪽 큰이미지*/
+#cats .left {
+    aspect-ratio: 1 / 1;   /* 정사각형 */
+    position: relative;
+    overflow: hidden;
+}
+
+#cats .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+
+}
+
+/* 오른쪽 */
+#cats .right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+#cats .right .item {
+    aspect-ratio: 1 / 1;   /* 정사각형 */
+    position: relative;
+    overflow: hidden;
+}
+
+#cats .right .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+
+
+}
+
+/* 카테고리 텍스트 */
+#cats .label {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    font-size: 34px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+#cats .item::after,
+#cats .left::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0); /* 기본은 투명 */
+    transition: 0.4s ease;
+}
+
+#cats .item:hover::after,
+#cats .left:hover::after {
+    background: rgba(0, 0, 0, 0.3); /* hover시에만 어두워짐 */
+}
+
+#cats .item:hover img,
+#cats .left:hover img {
+    
+    transition: 0.5s;
+    filter: brightness(1.15);
+}
+
+
+
+/* 신제품 */
+.cards {
+    width: 100%;
+    padding-top: 150px;
+    margin: 0 auto;
+}
+
+.cards .cards-title {
+    width: 100%;
+    max-width: 1190px;
+    text-align: left;
+    margin: 0 auto 59px;
+}
+
+.cards .cards-title h2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: #111;
+}
+
+.cards .cards-wrap {
+    margin: auto;
+    width: 100%;
+    max-width: 1190px;
+    display: flex;
+    gap: 52px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards .card {
+    width: 252px;
+    height: 457px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.cards .card-img {
+    width: 100%;
+    height: 327px;
+    overflow: hidden;
+}
+
+.cards .card-img img {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.cards .card-txt-name span {
+    font-size: 20px;
+    font-weight: 500;
+    color: #111;
+}
+
+.cards .card-txt-price {
+    padding-top: 6px;
+}
+
+.cards .card-txt-price span {
+    font-weight: 500;
+    font-size: 20px;
+    color: #111;
+}
+
+.cards .card-txt-num {
+    padding-top: 13px;
+}
+
+.cards .card-txt-num span {
+    font-size: 16px;
+    color: rgba(17, 17, 17, 0.7);
+}
+
+/* hover */
+.cards .card-img:hover img {
+    transform: scale(1.05);
+}
+
+/* 작은 배너 */
+#mini-banners {
+    width: 100%;
+    padding: 140px 0 150px;
+    margin: 0 auto;
+}
+
+#mini-banners .mini-banners-wrap {
+    margin: auto;
+    width: 100%;
+    max-width: 1190px;
+    display: flex;
+    gap: 40px;
+}
+
+#mini-banners .mini-banner {
+    width: 575px;
+    height: 125px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f2f2;
+}
+
+#mini-banners .mini-banner-txt {
+    margin-left: 22px;
+}
+
+#mini-banners .mini-banner-txt-title h3 {
+    font-weight: 600;
+    font-size: 22px;
+    color: #111;
+}
+
+#mini-banners .mini-banner-txt-desc {
+    margin-top: 23px;
+}
+
+#mini-banners .mini-banner-txt-desc span {
+    font-size: 22px;
+    color: #111;
+}
+
+#mini-banners .mini-banner-img {
+    width: 110px;      
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#mini-banners .mini-banner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+    display: block;
+}
+
+#mini-banners .mini-banner {
+    padding: 0 30px;
+}
+
+
+/* 추천 제품 */
+#featured {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f8f2f2;
+    overflow: hidden;
+}
+
+#featured .featured-wrap {
+    width: 100%;
+    max-width: 1190px;
+    height: 446px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+#featured .featured-txt {
+    color: #111;
+    width: 454px;
+    flex-shrink: 0;
+    margin-right: 141px;
+}
+
+#featured .featured-txt-title h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+#featured .featured-txt-name {
+    margin-top: 60px;
+}
+
+#featured .featured-txt-name h3 {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+#featured .featured-txt-desc {
+    margin-top: 10px;
+}
+
+#featured .featured-txt-desc span {
+    opacity: 0.7;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+#featured .view-more-btn {
+    margin-top: 28px;
+}
+
+#featured .featured-img {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-shrink: 0;
+}
+
+#featured .featured-img a {
+    background-size: cover;
+    background-position: center;
+    display: block;
+    width: 254px;
+    height: 293px;
+    position: relative;
+    transition: 0.5s;
+}
+
+#featured .featured-img a::after {
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.18);
+    transition: 0.5s;
+}
+
+#featured .featured-img .img-bg1 {
+    background-image: url(../img/women/collect01.png);
+}
+
+#featured .featured-img .img-bg2 {
+    background-image: url(../img/women/collect02.png);
+}
+
+#featured .featured-img .img-bg3 {
+    background-image: url(../img/women/collect03.png);
+}
+
+#featured .featured-img .img-bg4 {
+    background-image: url(../img/women/collect04.png);
+}
+
+/* hover */
+#featured .featured-img a.on,
+#featured a:hover {
+    width: 295px;
+    height: 340px;
+}
+
+#featured .featured-img a.on::after,
+#featured a:hover::after {
+    opacity: 0;
+}
+
+/* 프로모션 */
+#promos {
+    width: 100%;
+    margin: 0 auto;
+    padding: 160px 0 180px;
+}
+
+#promos .promos-title {
+    width: 100%;
+    max-width: 1190px;
+    margin: 0 auto 59px;
+    text-align: center;
+}
+
+#promos .promos-title h2 {
+    font-weight: 500;
+    font-size: 40px;
+    color: #111;
+}
+
+#promos .promos-wrap {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#promos .promo {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 500 / 370;
+    position: relative;
+}
+
+#promos .promo .promo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#promos .promo:nth-of-type(1) .promo-img {
+    background-image: url(../img/women/promo01.jpeg);
+}
+
+#promos .promo:nth-of-type(2) .promo-img {
+    background-image: url(../img/women/promo02.jpg);
+}
+
+#promos .promo:nth-of-type(3) .promo-img {
+    background-image: url(../img/women/promo03.jpg);
+}
+
+#promos .promo .promo-img::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+}
+
+#promos .promo-txt {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    margin: 0 20px 20px;
+}
+
+#promos .promo-txt-title {
+    margin-bottom: 16px;
+}
+
+#promos .promo-txt-title h3 {
+    color: white;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+#promos .promo-txt-desc span {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* hover */
+#promos .promo:hover .promo-img::after {
+    opacity: 0.5;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 257px;
+    background-color: #f8f8f8;
+}
+
+.footer-wrap {
+    width: 100%;
+    max-width: 1190px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+/* 소셜 */
+.social {
+    position: absolute;
+    top: 22px;
+    right: 0;
+}
+
+.social ul {
+    display: flex;
+    gap: 30px;
+}
+
+.social a {
+    width: 24px;
+    height: 24px;
+}
+
+.social a img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 하단 로고 */
+.footer-logo {
+    margin-top: 41px;
+}
+
+.footer-logo span {
+    font-weight: bold;
+    font-size: 34px;
+    color: #333;
+}
+
+/* 슬로건 */
+.slogan {
+    margin-top: 36px;
+}
+
+.slogan span {
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+}
+
+/* 하단 기타 링크 */
+.links {
+    margin-top: 36px;
+}
+
+.links ul {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.links a {
+    color: #999;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.links a:hover,
+.links a b {
+    color: #333;
+}
+
+/* 저작권 */
+.copy {
+    margin-top: 22px;
+}
+
+.copy span {
+    font-size: 18px;
+    color: #999;
+}

@@ -1,0 +1,2060 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-primary: #111111;
+  --bg-card: #161D27;
+  --border-color: #1F2937;
+  --bg-search: #39424D;
+  --border-search: #6B7280;
+  --accent-green: #00CD3C;
+  --accent-green-bg: #021D0A;
+  --text-gray: #9CA3AF;
+  --font-main: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  background: #111111;
+  color: #fff;
+  min-width: 1200px;
+  overflow-x: auto;
+}
+
+/* ── TOP NAV ── */
+.top-nav {
+  width: 100%;
+  min-width: 1200px;
+  height: 59px;
+  background: var(--bg-primary);
+  border-bottom: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-nav__inner {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-nav__left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.top-nav__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.top-nav__item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color .2s;
+  white-space: nowrap;
+}
+
+.top-nav__item:hover {
+  color: var(--accent-green);
+}
+
+.top-nav__icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: color .2s;
+  padding: 4px;
+}
+
+.top-nav__icon-btn:hover {
+  color: var(--accent-green);
+}
+
+/* ── BOTTOM NAV ── */
+.bottom-nav {
+  width: 100%;
+  min-width: 1200px;
+  height: 92px;
+  background: var(--bg-primary);
+  border-bottom: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-nav__inner {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom-nav__logo-placeholder {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent-green);
+  letter-spacing: -1px;
+}
+
+.bottom-nav__search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 335px;
+  height: 38px;
+  background: var(--bg-search);
+  border: 1px solid var(--border-search);
+  border-radius: 4px;
+  padding: 0 14px;
+  cursor: text;
+  transition: border-color .2s;
+}
+
+.bottom-nav__search:hover,
+.bottom-nav__search:focus-within {
+  border-color: var(--accent-green);
+}
+
+.bottom-nav__search svg {
+  color: var(--text-gray);
+  flex-shrink: 0;
+}
+
+.bottom-nav__search input {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: var(--text-gray);
+  font-family: var(--font-main);
+  width: 100%;
+}
+
+.bottom-nav__search input::placeholder {
+  color: var(--text-gray);
+}
+
+/* ── MAIN ── */
+.main-content {
+  background: linear-gradient(90deg, #030712 0%, #000000 100%);
+  width: 100%;
+  min-width: 1200px;
+}
+
+.section-center {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── BANNER (1200px로 변경) ── */
+.banner-section {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-wrapper {
+  width: 1200px;
+  height: 306px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: url(../melon-img/banner.png) center/cover;
+}
+
+.banner-content {
+  position: absolute;
+  inset: 0;
+}
+
+.banner-title {
+  position: absolute;
+  left: 38px;
+  top: 151px;
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .5);
+}
+
+.banner-slogan {
+  position: absolute;
+  left: 38px;
+  top: 211px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, .7);
+}
+
+.banner-play-btn {
+  position: absolute;
+  left: 38px;
+  top: 249px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #00CD3C;
+  color: #111;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: var(--font-main);
+  cursor: pointer;
+  transition: background .2s, transform .15s;
+}
+
+.banner-play-btn:hover {
+  background: #00e644;
+  transform: scale(1.03);
+}
+
+/* ── SECTION 1: 자주 즐겨듣는 음악 ── */
+.favorites-section {
+  padding: 48px 0 60px;
+}
+
+.section-header {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 4px;
+  opacity: .8;
+}
+
+.favorites-cards {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* LEFT CARD */
+.card-left {
+  width: 680px;
+  height: 642px;
+  background: var(--bg-card);
+  border: 1px solid #1F2937;
+  border-radius: 12px;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.card-left__header {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 33px 0 32px;
+}
+
+.card-left__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.card-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 23px;
+  background: var(--accent-green-bg);
+  border: 1px solid var(--accent-green);
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--accent-green);
+  font-weight: 500;
+}
+
+.song-list {
+  position: absolute;
+  top: 77px;
+  bottom: 26px;
+  left: 0;
+  right: 0;
+  padding: 0 32px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.song-item {
+  display: flex;
+  align-items: center;
+  height: 77px;
+  border-radius: 8px;
+  padding: 0 8px 0 0;
+  cursor: pointer;
+  transition: background .2s;
+  position: relative;
+}
+
+.song-item:hover {
+  background: rgba(31, 41, 55, .5);
+}
+
+.song-item:hover .song-album-img {
+  opacity: .6;
+}
+
+.song-item:hover .song-play-overlay {
+  opacity: 1;
+}
+
+.song-num {
+  width: 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.song-album {
+  position: relative;
+  width: 45px;
+  height: 47px;
+  margin-left: 21px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #2a2a3e;
+}
+
+.song-album-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: opacity .2s;
+}
+
+.song-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .2s;
+  background: rgba(0, 0, 0, .3);
+}
+
+.song-info {
+  margin-left: 28px;
+  flex: 1;
+  min-width: 0;
+}
+
+.song-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.song-artist {
+  font-size: 14px;
+  color: rgba(255, 255, 255, .7);
+  margin-top: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* RIGHT CARD */
+.card-right {
+  flex: 1;
+  height: 642px;
+  background: var(--bg-card);
+  border: 1px solid #1F2937;
+  border-radius: 12px;
+  padding: 26px 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-right__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.artist-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  padding-top: 20px;
+  padding-bottom: 6px;
+}
+
+.artist-item {
+  display: flex;
+  align-items: center;
+  height: 77px;
+  border-radius: 8px;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: background .2s;
+  position: relative;
+}
+
+.artist-item:hover {
+  background: #1F2937;
+}
+
+.artist-item:hover .artist-num {
+  background: var(--accent-green);
+  color: #111;
+  border-color: var(--accent-green);
+}
+
+.artist-item:hover .artist-name {
+  color: var(--accent-green);
+}
+
+.artist-item:hover .artist-img-wrap {
+  outline: 1px solid var(--accent-green);
+}
+
+.artist-item:hover .artist-play-btn {
+  opacity: 1;
+}
+
+.artist-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid #4B5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--text-gray);
+  flex-shrink: 0;
+  transition: background .2s, color .2s, border-color .2s;
+}
+
+.artist-img-wrap {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  margin-left: 12px;
+  overflow: hidden;
+  background: #2a2a3e;
+  flex-shrink: 0;
+  transition: outline .2s;
+}
+
+.artist-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.artist-info {
+  margin-left: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.artist-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  transition: color .2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artist-plays {
+  font-size: 14px;
+  color: rgba(255, 255, 255, .7);
+  margin-top: 4px;
+}
+
+.artist-play-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity .2s;
+  margin-left: 8px;
+}
+
+.artist-play-btn svg {
+  color: #111;
+}
+
+/* ── SECTION 2: 멜론 TOP 100 ── */
+.top100-section {
+  padding-top: 94px;
+  padding-bottom: 80px;
+}
+
+.top100-header {
+  width: 990px;
+  margin: 0 auto 24px auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.top100-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.top100-more {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, .6);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color .2s;
+}
+
+.top100-more:hover {
+  color: #fff;
+}
+
+.top100-card {
+  width: 990px;
+  height: 768px;
+  background: var(--bg-card);
+  border: 1px solid #1F2937;
+  border-radius: 33px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* 트랙 행 */
+.track-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 96px;
+  padding: 0 42px 0 20px;
+  cursor: pointer;
+  transition: background .2s;
+  position: relative;
+  border-bottom: 1px solid #1F2937;
+}
+
+.track-item:last-child {
+  border-bottom: none;
+}
+
+.track-item:hover {
+  background: rgba(31, 41, 55, .5);
+}
+
+.track-item:hover .track-actions {
+  opacity: 1;
+}
+
+.track-num {
+  width: 28px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.track-num.green {
+  color: var(--accent-green);
+}
+
+.track-num.white {
+  color: rgba(255, 255, 255, .6);
+}
+
+.track-dash {
+  margin-left: 17px;
+  flex-shrink: 0;
+  font-size: 16px;
+  color: rgba(255, 255, 255, .6);
+}
+
+.track-album {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 18px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.track-album div.album-bg {
+  width: 100%;
+  height: 100%;
+}
+
+.track-album-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .4);
+  opacity: 0;
+  transition: opacity .2s;
+  border-radius: 10px;
+}
+
+.track-item:hover .track-album-overlay {
+  opacity: 1;
+}
+
+.track-info {
+  margin-left: 26px;
+  flex-shrink: 0;
+}
+
+.track-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.track-artist {
+  font-size: 14px;
+  color: rgba(255, 255, 255, .7);
+  margin-top: 5px;
+  white-space: nowrap;
+}
+
+.track-album-name {
+  margin-left: 129px;
+  flex: 1;
+  font-size: 14px;
+  color: rgba(255, 255, 255, .7);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  right: 42px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.track-action-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(47, 65, 94, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* 더미 색상 */
+.t1 {
+  background: #1e3a5f;
+}
+
+.t2 {
+  background: #3d1e5f;
+}
+
+.t3 {
+  background: #1e5f3a;
+}
+
+.t4 {
+  background: #5f3d1e;
+}
+
+.t5 {
+  background: #5f1e3d;
+}
+
+.t6 {
+  background: #1e5f5f;
+}
+
+.t7 {
+  background: #5f5f1e;
+}
+
+.t8 {
+  background: #3a1e5f;
+}
+
+.c1 {
+  background: #2a3a5a;
+}
+
+.c2 {
+  background: #3a2a5a;
+}
+
+.c3 {
+  background: #2a5a3a;
+}
+
+.c4 {
+  background: #5a3a2a;
+}
+
+.c5 {
+  background: #5a2a4a;
+}
+
+.a1 {
+  background: #2e3a50;
+}
+
+.a2 {
+  background: #50302e;
+}
+
+.a3 {
+  background: #2e5038;
+}
+
+.a4 {
+  background: #50482e;
+}
+
+.a5 {
+  background: #3e2e50;
+}
+
+/* ══════════════════════════════════════
+      SECTION 3 — 장르별 음악
+    ══════════════════════════════════════ */
+.genre-section {
+  padding-top: 104px;
+  padding-bottom: 80px;
+}
+
+/* 카드 3개 × 333px + gap 37px × 2 = 1073px */
+.genre-header {
+  width: 1171px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.genre-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.genre-more {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, .6);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color .2s;
+  line-height: 1;
+  padding-bottom: 2px;
+}
+
+.genre-more:hover {
+  color: #fff;
+}
+
+/* 장르 필터 버튼 */
+.genre-tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.genre-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 105px;
+  height: 40px;
+  border-radius: 38px;
+  background: #111827;
+  border: 1px solid #1F2937;
+  color: #9CA3AF;
+  font-size: 16px;
+  font-family: var(--font-main);
+  cursor: pointer;
+  transition: background .2s, color .2s, box-shadow .2s;
+  white-space: nowrap;
+  outline: none;
+}
+
+.genre-tab:hover,
+.genre-tab.active {
+  background: #00CD3C;
+  color: #111111;
+  border-color: #00CD3C;
+  box-shadow: 0 4px 16px rgba(0, 205, 60, .25);
+}
+
+/* 장르 카드 목록 */
+.genre-cards {
+  display: flex;
+  gap: 37px;
+}
+
+.genre-card {
+  width: 366px;
+  height: 180px;
+  background: linear-gradient(-52deg, #161D27 0%, #1a2233 100%);
+  border: 1px solid #1F2937;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: background .2s, box-shadow .2s, transform .15s;
+  flex-shrink: 0;
+}
+
+.genre-card:hover {
+  background: linear-gradient(-52deg, #1e2840 0%, #222d42 100%);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .4);
+  transform: translateY(-2px);
+}
+
+.genre-card__img {
+  width: 115px;
+  height: 115px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.genre-card__img div {
+  width: 100%;
+  height: 100%;
+}
+
+.genre-card__info {
+  margin-left: 28px;
+  min-width: 0;
+}
+
+.genre-card__tag {
+  font-size: 16px;
+  color: #6B7280;
+  margin-bottom: 6px;
+}
+
+.genre-card__name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 6px;
+}
+
+.genre-card__artist {
+  font-size: 18px;
+  color: #9CA3AF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 장르 카드 더미 이미지 색상 */
+.g1 {
+  background: linear-gradient(135deg, #c9a96e 0%, #8b6914 100%);
+}
+
+.g2 {
+  background: linear-gradient(135deg, #e84393 0%, #c2185b 100%);
+}
+
+.g3 {
+  background: linear-gradient(135deg, #1565c0 0%, #0d2f6e 100%);
+}
+
+/* ══════════════════════════════════════
+      SECTION 4 — 오늘의 추천 플레이리스트
+    ══════════════════════════════════════ */
+.playlist-section {
+  padding-top: 114px;
+  padding-bottom: 80px;
+}
+
+.playlist-header {
+  width: 1171px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 64px;
+}
+
+.playlist-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+/* 카드 그리드 */
+.playlist-cards {
+  display: flex;
+  gap: 37px;
+}
+
+/* 플레이리스트 카드 */
+.pl-card {
+  width: 265px;
+  height: 358px;
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pl-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .5);
+}
+
+.pl-card:hover .pl-title {
+  color: #00CD3C;
+}
+
+.pl-card:hover .pl-play-btn {
+  opacity: 1;
+}
+
+/* 이미지 영역 */
+.pl-img {
+  width: 265px;
+  height: 252px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.pl-img div.pl-img-bg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Melon DJ 뱃지 - 패딩으로 자연스럽게 */
+.pl-badge {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  height: 23px;
+  padding: 0 12px;
+  border-radius: 28px;
+  border: 1px solid rgba(0, 205, 60, .3);
+  background: rgba(17, 17, 17, .7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #00CD3C;
+  font-family: var(--font-main);
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+/* 호버 재생 버튼 - 크기 키움 */
+.pl-play-btn {
+  position: absolute;
+  bottom: 13px;
+  right: 13px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #00CD3C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.pl-play-btn svg {
+  color: #111111;
+  margin-left: 3px;
+}
+
+/* 카드 텍스트 영역 */
+.pl-info {
+  padding: 15px 15px 0 15px;
+  flex: 1;
+}
+
+.pl-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+  transition: color .2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pl-desc {
+  font-size: 14px;
+  color: #9CA3AF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 하단 메타 */
+.pl-meta {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 10px 15px 14px 15px;
+}
+
+.pl-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #6B7280;
+}
+
+.pl-meta-item+.pl-meta-item {
+  margin-left: 21px;
+}
+
+.pl-meta-item svg {
+  flex-shrink: 0;
+}
+
+/* 카드 더미 이미지 배경 */
+.p1 {
+  background: linear-gradient(135deg, #2c2c2c 0%, #4a4a4a 100%);
+}
+
+.p2 {
+  background: linear-gradient(135deg, #1a1a2e 0%, #e50914 60%, #1a1a2e 100%);
+}
+
+.p3 {
+  background: linear-gradient(135deg, #ff80ab 0%, #ea80fc 50%, #82b1ff 100%);
+}
+
+.p4 {
+  background: linear-gradient(135deg, #ff6f61 0%, #ffb347 50%, #87ceeb 100%);
+}
+
+/* ══════════════════════════════════════
+       SECTION 5 — 진행중인 이벤트
+    ══════════════════════════════════════ */
+.event-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* 이벤트 섹션 내부 컨테이너 — 카드 4개 너비에 맞춤 */
+.event-inner {
+  width: 1163px;
+  margin: 0 auto;
+}
+
+.event-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 72px;
+}
+
+.event-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+/* 이벤트 카드 4개 */
+.event-cards {
+  display: flex;
+  gap: 37px;
+  margin-bottom: 41px;
+}
+
+.ev-card {
+  width: 263px;
+  height: 210px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.ev-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .5);
+}
+
+/* 카드 배경 이미지 더미 */
+.ev-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.ev1 {
+  background: linear-gradient(135deg, #d4a017 0%, #b8860b 40%, #8b6914 100%);
+}
+
+.ev2 {
+  background: linear-gradient(135deg, #0d1b4b 0%, #1a3a8a 50%, #0077b6 100%);
+}
+
+.ev3 {
+  background: linear-gradient(135deg, #7b0000 0%, #c0392b 50%, #e74c3c 100%);
+}
+
+.ev4 {
+  background: linear-gradient(135deg, #2d0060 0%, #7b2ff7 50%, #a855f7 100%);
+}
+
+/* 카드 오버레이 (텍스트 가독성) */
+.ev-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, .55) 40%, transparent 100%);
+}
+
+/* 아이콘 동그라미 뱃지 */
+.ev-icon-wrap {
+  position: absolute;
+  top: 17px;
+  left: 14px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ev-grad1 {
+  background: linear-gradient(270deg, #9333EA 0%, #DB2777 100%);
+}
+
+.ev-grad2 {
+  background: linear-gradient(270deg, #2563EB 0%, #0891B2 100%);
+}
+
+.ev-grad3 {
+  background: linear-gradient(270deg, #EA580C 0%, #DC2626 100%);
+}
+
+.ev-grad4 {
+  background: linear-gradient(270deg, #16A34A 0%, #059669 100%);
+}
+
+.ev-card__title {
+  position: absolute;
+  bottom: 45px;
+  left: 14px;
+  right: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.ev-card__desc {
+  position: absolute;
+  bottom: 18px;
+  left: 14px;
+  right: 14px;
+  font-size: 14px;
+  color: #D1D5DB;
+}
+
+/* ── 프로모션 배너 ── */
+.promo-banner {
+  width: 1163px;
+  height: 340px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* 흐르는 그라데이션 배경 */
+.promo-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-90deg, #9333EA, #EC4899, #F97316, #EC4899, #9333EA);
+  background-size: 300% 100%;
+  animation: flowGrad 6s ease infinite;
+}
+
+.promo-bg2 {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-75deg, rgba(0, 205, 60, .8), rgba(16, 185, 129, .7), rgba(6, 182, 212, .6), rgba(16, 185, 129, .7), rgba(0, 205, 60, .8));
+  background-size: 300% 100%;
+  animation: flowGrad2 8s ease infinite;
+  mix-blend-mode: overlay;
+}
+
+@keyframes flowGrad {
+
+  0%,
+  100% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+}
+
+@keyframes flowGrad2 {
+
+  0%,
+  100% {
+    background-position: 100% 50%
+  }
+
+  50% {
+    background-position: 0% 50%
+  }
+}
+
+/* 떠다니는 동그라미들 */
+.promo-bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .6);
+  animation: floatBubble var(--dur, 6s) ease-in-out infinite;
+}
+
+@keyframes floatBubble {
+
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: .6;
+  }
+
+  33% {
+    transform: translateY(-18px) translateX(8px);
+    opacity: .4;
+  }
+
+  66% {
+    transform: translateY(10px) translateX(-6px);
+    opacity: .7;
+  }
+}
+
+/* 배너 콘텐츠 */
+.promo-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 46px;
+}
+
+/* 왼쪽 텍스트 */
+.promo-left {}
+
+.promo-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: 141px;
+  height: 39px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, .6);
+  background: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  font-size: 16px;
+  color: #fff;
+  font-family: var(--font-main);
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.promo-headline {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.promo-headline .line1 {
+  color: #fff;
+  display: block;
+}
+
+.promo-headline .line2 {
+  display: block;
+  background: linear-gradient(270deg, #FEF08A 0%, #FEF9C3 50%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.promo-sub {
+  font-size: 18px;
+  color: rgba(255, 255, 255, .9);
+  margin-bottom: 18px;
+}
+
+.promo-note {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.promo-tags {
+  display: flex;
+  gap: 31px;
+}
+
+.promo-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  padding: 0 16px;
+  border-radius: 9px;
+  border: 1px solid rgba(255, 255, 255, .6);
+  background: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  font-size: 14px;
+  color: #fff;
+  font-family: var(--font-main);
+  white-space: nowrap;
+}
+
+/* 이벤트 카드 뱃지 폰트 줄이기 */
+.ev-badge-new {
+  position: absolute;
+  top: 17px;
+  right: 14px;
+  width: 45px;
+  height: 21px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #fff;
+  font-family: var(--font-main);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* 오른쪽 타이머 + 버튼 — 세로 가운데 정렬 */
+.promo-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding-right: 0;
+}
+
+.promo-timer-label {
+  font-size: 15px;
+  color: rgba(255, 255, 255, .8);
+  margin-bottom: 5px;
+}
+
+.promo-timer-box {
+  width: 120px;
+  height: 36px;
+  border-radius: 9px;
+  background: rgba(17, 17, 17, .6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: #FCD34D;
+  font-family: var(--font-main);
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.promo-btn {
+  width: 157px;
+  height: 44px;
+  border-radius: 14px;
+  background: linear-gradient(270deg, #00CD3C 0%, #34D399 100%);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+  font-family: var(--font-main);
+  transition: opacity .2s, transform .15s;
+}
+
+.promo-btn:hover {
+  opacity: .9;
+  transform: scale(1.03);
+}
+
+/* ══════════════════════════════════════
+      SECTION 6 — 최신 음악
+    ══════════════════════════════════════ */
+.latest-section {
+  padding-top: 116px;
+  padding-bottom: 100px;
+  margin-left: 36px;
+}
+
+.latest-header {
+  width: 1147px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 52px;
+}
+
+.latest-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+/* 상단 2열 레이아웃 */
+.latest-top {
+  display: flex;
+  gap: 29px;
+  align-items: flex-start;
+  margin-bottom: 87px;
+}
+
+/* ── 큰 피처 카드 ── */
+.feat-card {
+  width: 720px;
+  height: 394px;
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.feat-card__bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1a2a3a 0%, #2d4a5f 50%, #1a3a2a 100%);
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+}
+
+.feat-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, .75) 50%, transparent 100%);
+}
+
+.feat-card__content {
+  position: absolute;
+  left: 32px;
+  bottom: 0;
+  padding-bottom: 32px;
+}
+
+.feat-card__date {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 16px;
+  color: #00CD3C;
+  margin-bottom: 9px;
+}
+
+.feat-card__song {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 9px;
+}
+
+.feat-card__artist {
+  font-size: 14px;
+  color: #D1D5DB;
+  margin-bottom: 24px;
+}
+
+.feat-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.feat-play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 84px;
+  height: 34px;
+  background: #00CD3C;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #111;
+  font-family: var(--font-main);
+  font-weight: 600;
+  transition: background .2s;
+}
+
+.feat-play-btn:hover {
+  background: #00e644;
+}
+
+.feat-icon-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #111827;
+  border: 1px solid #1F2937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color .2s;
+}
+
+.feat-icon-btn:hover {
+  border-color: #00CD3C;
+}
+
+/* ── 오른쪽 소형 카드 3개 ── */
+.mini-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  flex: 1;
+}
+
+.mini-card {
+  width: 398px;
+  height: 120px;
+  background: #111827;
+  border: 1px solid #1F2937;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: border-color .2s, box-shadow .2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.mini-card:hover {
+  border-color: #00CD3C;
+  box-shadow: 0 0 0 1px #00CD3C;
+}
+
+.mini-card:hover .mini-song-name {
+  color: #00CD3C;
+}
+
+.mini-card:hover .mini-album-img {
+  opacity: .5;
+}
+
+.mini-card:hover .mini-play-overlay {
+  opacity: 1;
+}
+
+.mini-album {
+  width: 88px;
+  height: 88px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #2a3040;
+  position: relative;
+}
+
+.mini-album-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: opacity .2s;
+}
+
+.mini-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .3);
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.mini-meta {
+  margin-left: 21px;
+  flex: 1;
+  min-width: 0;
+}
+
+.mini-top-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 10px;
+}
+
+.mini-new-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 23px;
+  border-radius: 7px;
+  background: rgba(0, 205, 60, .2);
+  border: 1px solid #00CD3C;
+  font-size: 14px;
+  color: #00CD3C;
+  font-family: var(--font-main);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.mini-date {
+  font-size: 14px;
+  color: #6B7280;
+}
+
+.mini-song-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+  transition: color .2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-artist {
+  font-size: 16px;
+  color: #9CA3AF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 오른쪽 액션 버튼들 */
+.mini-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.mini-action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9CA3AF;
+  transition: color .2s;
+  padding: 2px;
+}
+
+.mini-action-btn:hover {
+  color: #fff;
+}
+
+/* ── 하단 라이브 카드 5개 ── */
+.live-cards {
+  display: flex;
+  gap: 37px;
+  justify-content: center;
+  margin-right: 50px;
+}
+
+.live-card {
+  width: 200px;
+  height: 189px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #1F2937;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.live-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .6);
+}
+
+.live-card__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.live-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, .3) 55%, transparent 100%);
+}
+
+/* LIVE 뱃지 */
+.live-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 38px;
+  height: 23px;
+  border-radius: 8px;
+  background: #00CD3C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111111;
+  font-family: var(--font-main);
+}
+
+.live-card__info {
+  position: absolute;
+  bottom: 12px;
+  left: 15px;
+  right: 10px;
+}
+
+.live-card__date {
+  font-size: 14px;
+  color: #BCD2FF;
+  margin-bottom: 7px;
+}
+
+.live-card__song {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.live-card__artist {
+  font-size: 16px;
+  color: #D8E1EF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 라이브 카드 더미 배경 */
+.lv1 {
+  background: linear-gradient(135deg, #1a0533 0%, #6d28d9 60%, #ec4899 100%);
+}
+
+.lv2 {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #1d4ed8 100%);
+}
+
+.lv3 {
+  background: linear-gradient(135deg, #0a0a0a 0%, #374151 60%, #6b7280 100%);
+}
+
+.lv4 {
+  background: linear-gradient(135deg, #3b0764 0%, #7e22ce 60%, #a855f7 100%);
+}
+
+.lv5 {
+  background: linear-gradient(135deg, #0c0a09 0%, #292524 60%, #57534e 100%);
+}
+
+/* 미니카드 더미 배경 */
+.ma1 {
+  background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+}
+
+.ma2 {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d5986 100%);
+}
+
+.ma3 {
+  background: linear-gradient(135deg, #3b1f5e 0%, #6b3fa0 100%);
+}
+
+/* ══════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════ */
+.site-footer {
+  background: #111111;
+  width: 100%;
+  min-width: 1200px;
+  border-top: 1px solid #1F2937;
+}
+
+/* 상단 푸터 */
+.footer-top {
+  padding: 64px 0 56px;
+  border-bottom: 1px solid #1F2937;
+}
+
+.footer-top__inner {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* 로고 + 슬로건 + SNS */
+.footer-brand {
+  flex-shrink: 0;
+  width: 260px;
+}
+
+.footer-logo {
+  margin-bottom: 16px;
+}
+
+.footer-logo-text {
+  font-size: 32px;
+  font-weight: 800;
+  color: #00CD3C;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: #6B7280;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.footer-sns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-sns-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #374151;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+  color: #9CA3AF;
+}
+
+.footer-sns-btn:hover {
+  border-color: #00CD3C;
+  color: #00CD3C;
+  background: rgba(0, 205, 60, .08);
+}
+
+/* 링크 컬럼 */
+.footer-links {
+  display: flex;
+  gap: 100px;
+}
+
+.footer-col {}
+
+.footer-col__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer-col__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-col__item a {
+  font-size: 15px;
+  color: #9CA3AF;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.footer-col__item a:hover {
+  color: #fff;
+}
+
+.footer-col__item a.bold {
+  font-weight: 700;
+  color: #fff;
+}
+
+/* 하단 푸터 */
+.footer-bottom {
+  padding: 32px 0 40px;
+}
+
+.footer-bottom__inner {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-legal {
+  max-width: 680px;
+}
+
+.footer-legal p {
+  font-size: 13px;
+  color: #6B7280;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.footer-legal p+p {
+  margin-top: 4px;
+}
+
+.footer-legal .copyright {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #4B5563;
+}
+
+/* 멜론 스튜디오 드롭다운 */
+.footer-studio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 16px;
+  background: #1F2937;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  font-family: var(--font-main);
+  transition: background .2s;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.footer-studio:hover {
+  background: #263344;
+}

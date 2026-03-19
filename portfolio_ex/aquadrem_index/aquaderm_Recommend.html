@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AQUADERM - 맞춤 추천</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../aquadrem_css/aquaderm_Recommend.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════ NAV ═══════════════════════ -->
+  <header>
+    <nav>
+      <div class="nav-inner">
+        <button class="nav-dots-btn" id="navDotsBtn"><span></span><span></span><span></span></button>
+        <div class="nav-dots-menu" id="navDotsMenu">
+          <a href="aquaderm_AI_Sub.html">피부진단</a>
+          <a href="aquaderm_Recommend.html">맞춤추천</a>
+          <a href="aquaderm_Ingredient.html">성분분석</a>
+          <a href="#">커뮤니티</a><a href="#">쇼핑</a><a href="#">이벤트</a>
+        </div>
+        <div class="nav-left">
+          <a href="aquaderm_AI_Sub.html">피부진단</a>
+          <a href="#" class="active">맞춤추천</a>
+          <a href="aquaderm_Ingredient.html">성분분석</a>
+          <a href="#">커뮤니티</a>
+          <a href="#">쇼핑</a>
+          <a href="#">이벤트</a>
+        </div>
+        <div class="nav-logo">
+          <a href="aquaderm.html">
+            <div class="nav-logo-placeholder">
+              <img src="../aquadream-img/top_logo.png" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="nav-right">
+          <a href="#">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="7" cy="7" r="4.5" />
+              <line x1="10.5" y1="10.5" x2="14" y2="14" />
+            </svg>검색
+          </a>
+          <a href="#">로그인</a>
+          <a href="#">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="8" cy="5.5" r="2.5" />
+              <path d="M2.5 14c0-3 2.5-5 5.5-5s5.5 2 5.5 5" />
+            </svg>마이페이지
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M1 1h2l1.5 7.5h7L13 4H4" />
+              <circle cx="6.5" cy="13" r="1" />
+              <circle cx="11" cy="13" r="1" />
+            </svg>장바구니
+          </a>
+        </div>
+        <button class="nav-hamburger" id="navHamburger"><span></span><span></span><span></span></button>
+      </div>
+      <div class="nav-mobile-menu" id="navMobileMenu">
+        <button class="nav-mobile-close" id="navMobileClose">✕</button>
+        <a href="aquaderm_AI_Sub.html">피부진단</a>
+        <a href="aquaderm_Recommend.html">맞춤추천</a>
+        <a href="aquaderm_Ingredient.html">성분분석</a>
+        <a href="#">커뮤니티</a><a href="#">쇼핑</a><a href="#">이벤트</a>
+        <a href="#">로그인</a><a href="#">마이페이지</a><a href="#">장바구니</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════ SECTION 1: 피부 분석 결과 ═══════════════════════ -->
+  <section class="sec1">
+    <div class="container center">
+      <div class="sec-label" style="width:79px;">AI 맞춤 추천</div>
+      <h2 class="sec-title">당신의 피부에 맞는 제품을 추천해드립니다</h2>
+      <p class="sec-desc">피부 타입, 고민, 생활 습관을 분석해 가장 적합한 스킨케어 루틴을 추천합니다.</p>
+
+      <div class="skin-cards">
+        <!-- 카드 1: 피부 타입 -->
+        <div class="skin-card card-shadow">
+          <div class="skin-card-label">
+            <img src="../aquadream-img/AI_Re_1.png" alt="피부 타입">
+          </div>
+          <span class="skin-card-value">복합성</span>
+        </div>
+        <!-- 카드 2: 수분 지수 -->
+        <div class="skin-card card-shadow">
+          <div class="skin-card-label">
+            <img src="../aquadream-img/AI_Re_2.png" alt="수분 지수">
+          </div>
+          <span class="skin-card-value">48%</span>
+        </div>
+        <!-- 카드 3: 유분 지수 -->
+        <div class="skin-card card-shadow">
+          <div class="skin-card-label">
+            <img src="../aquadream-img/AI_Re_3.png" alt="유분 지수">
+          </div>
+          <span class="skin-card-value">63%</span>
+        </div>
+        <!-- 카드 4: 민감도 -->
+        <div class="skin-card card-shadow">
+          <div class="skin-card-label">
+            <img src="../aquadream-img/AI_Re_4.png" alt="민감도">
+          </div>
+          <span class="skin-card-value">보통</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SECTION 2: 스킨케어 루틴 ═══════════════════════ -->
+  <section class="sec2">
+    <div class="container center">
+      <div class="sec-label" style="width:109px;">맞춤 스킨케어 루틴</div>
+      <h2 class="sec-title">당신의 피부에 맞는 스킨케어 루틴</h2>
+      <p class="sec-desc">피부 타입과 고민을 분석해 아침과 저녁에 최적화된 스킨케어 루틴을 추천합니다.</p>
+
+      <div class="routine-cards">
+        <!-- 아침 루틴 -->
+        <div class="routine-card card-shadow">
+          <p class="routine-card-title">아침 루틴</p>
+          <div class="routine-items">
+            <div class="routine-item">
+              <img class="routine-img" src="../aquadream-img/rotin1.png" alt="클렌저">
+              <div class="routine-icon-wrap">
+                <div class="routine-num">1</div>
+                <span class="routine-text">클렌저</span>
+              </div>
+            </div>
+            <div class="routine-item">
+              <img class="routine-img" src="../aquadream-img/rotin2.png" alt="토너">
+              <div class="routine-icon-wrap">
+                <div class="routine-num">2</div>
+                <span class="routine-text">토너</span>
+              </div>
+            </div>
+            <div class="routine-item">
+              <img class="routine-img" src="../aquadream-img/rotin3.png" alt="앰플">
+              <div class="routine-icon-wrap">
+                <div class="routine-num">3</div>
+                <span class="routine-text">앰플</span>
+              </div>
+            </div>
+            <div class="routine-item">
+              <img class="routine-img" src="../aquadream-img/rotin4.png" alt="선크림">
+              <div class="routine-icon-wrap">
+                <div class="routine-num">4</div>
+                <span class="routine-text">선크림</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 저녁 루틴 -->
+        <div class="routine-card card-shadow">
+          <p class="routine-card-title">저녁 루틴</p>
+          <div class="routine-items">
+            <div class="routine-item">
+              <img class="routine-img" src="../aquadream-img/rotin1.png" alt="클렌저">
+              <div class="routine-icon-wrap">
+                <div class="routine-num">1</div>
+                <span class="routine-text">클렌저</span>
+              </div>
+            </div>
+            <div class="routine-item">
+              <img class="routine-img" src="../aquadream-img/rotin2.png" alt="토너">
+              <div class="routine-icon-wrap">
+                <div class="routine-num">2</div>
+                <span class="routine-text">토너</span>
+              </div>
+            </div>
+            <div class="routine-item">
+              <img class="routine-img" src="../aquadream-img/rotin3.png" alt="세럼">
+              <div class="routine-icon-wrap">
+                <div class="routine-num">3</div>
+                <span class="routine-text">세럼</span>
+              </div>
+            </div>
+            <div class="routine-item">
+              <img class="routine-img" src="../aquadream-img/rotin4.png" alt="크림">
+              <div class="routine-icon-wrap">
+                <div class="routine-num">4</div>
+                <span class="routine-text">크림</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="routine-note">각 단계에 맞는 제품을 아래에서 확인할 수 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SECTION 3: 제품 추천 ═══════════════════════ -->
+  <section class="sec3">
+    <div class="container center">
+      <div class="sec-label" style="width:89px;">맞춤 제품 추천</div>
+      <h2 class="sec-title">당신의 피부에 맞는 제품을 추천합니다</h2>
+      <p class="sec-desc">피부 타입과 고민을 분석해 각 단계에 가장 적합한 제품을 추천합니다.</p>
+
+      <div class="product-cards">
+        <!-- 카드 1 -->
+        <div class="product-card card-shadow">
+          <img class="product-img" src="../aquadream-img/skin_1.png" alt="SUM37">
+          <div class="product-info">
+            <span class="product-brand">SUM37</span>
+            <span class="product-desc">미세각질 제거부터 묵은 각질까지 해결</span>
+            <span class="product-price">28,000원</span>
+            <button class="product-btn">제품 자세히 보기</button>
+          </div>
+        </div>
+        <!-- 카드 2 -->
+        <div class="product-card card-shadow">
+          <img class="product-img" src="../aquadream-img/skin_2.png" alt="만티세빔">
+          <div class="product-info">
+            <span class="product-brand">만티세빔 화이트닝 스킨</span>
+            <span class="product-desc">재생기능과 탄력을 관리하지 한번에 해결</span>
+            <span class="product-price">30,000원</span>
+            <button class="product-btn">제품 자세히 보기</button>
+          </div>
+        </div>
+        <!-- 카드 3 -->
+        <div class="product-card card-shadow">
+          <img class="product-img" src="../aquadream-img/skin_3.png" alt="물무진 앰플">
+          <div class="product-info">
+            <span class="product-brand">물무진 앰플</span>
+            <span class="product-desc">피부 관리와 탄력 추진 개선</span>
+            <span class="product-price">32,000원</span>
+            <button class="product-btn">제품 자세히 보기</button>
+          </div>
+        </div>
+        <!-- 카드 4 -->
+        <div class="product-card card-shadow">
+          <img class="product-img" src="../aquadream-img/skin_4.png" alt="YON-KA">
+          <div class="product-info">
+            <span class="product-brand">YON-KA 크림93</span>
+            <span class="product-desc">재미있고 좋은가 빠른데 심세한 한이 활용</span>
+            <span class="product-price">29,000원</span>
+            <button class="product-btn">제품 자세히 보기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SECTION 4: AI 추천 근거 ═══════════════════════ -->
+  <section class="sec4">
+    <div class="container center">
+      <div class="sec-label" style="width:65px;">추천 이유</div>
+      <h2 class="sec-title">AI가 분석한 추천 근거</h2>
+      <p class="sec-desc">피부 타입과 고민을 분석해 가장 적합한 성분과 제품을 추천합니다.</p>
+
+      <div class="reason-cards">
+        <!-- 카드 1 -->
+        <div class="reason-card card-shadow">
+          <img class="reason-label-img" src="../aquadream-img/view_label1.png" alt="수분 보충">
+          <p class="reason-text">현재 <b>피부 수분 지수가 낮은</b> 상태로 분석되었습니다.<br>추천 제품에는 <b>히알루론산</b>과 같은 보습 성분이 포함되어<br>피부 수분
+            유지와 건조함 개선에 도움을 줍니다.<br>지속적인 수분 공급으로 피부 장벽을<br>건강하게 유지할 수 있습니다.</p>
+        </div>
+        <!-- 카드 2 -->
+        <div class="reason-card card-shadow">
+          <img class="reason-label-img" src="../aquadream-img/view_label2.png" alt="피부 진정">
+          <p class="reason-text">피부 <b>민감도 분석 결과 외부 자극에 비교적 민감하게 반응</b>하는 것으로 나타났습니다.<br>추천 제품에는 <b>병풀 추출물</b>과 같은
+            <br>피부 진정 성분이 포함되어 있어<b>붉어짐과 자극 완화에 도움을 줄 수 있습니다.</b>꾸준한 사용으로 피부 컨디션을 안정적으로 유지할 수 있습니다. 무향료 제품으로 피부 컨디션을
+            추천합니다.
+          </p>
+        </div>
+        <!-- 카드 3 -->
+        <div class="reason-card card-shadow">
+          <img class="reason-label-img" src="../aquadream-img/view_label3.png" alt="유수분 조절">
+          <p class="reason-text">피부 <b>유분 지수가 평균보다 높게</b> 나타나고 있습니다.<br>피부 유수분 밸런스를 조절하는 제품을 추천합니다.<br>가벼운 텍스처의 포뮬러가 과도한
+            유분을 조절하고<br>피부를 산뜻하게 유지하도록 도와줍니다.<br><b>장기적으로 모공 관리에도 긍정적인 영향을 줄 수 있습니다.</b></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SECTION 5: CTA ═══════════════════════ -->
+  <section class="sec5">
+    <div class="container center">
+      <h2 class="sec-title">맞춤 추천 제품을 확인해보세요</h2>
+      <p class="sec-desc">AI 분석을 기반으로 추천된 제품을 확인하고자하시면 맞는 스킨케어 루틴을 완성해보세요.</p>
+      <button class="cta-btn">추천 제품 더보기</button>
+      <p class="cta-note">추천 결과는 피부 상태에 따라 달라질 수 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- ───────── FOOTER ───────── -->
+  <footer>
+    <div class="footer-inner">
+
+      <div class="footer-left">
+        <div class="footer-logo">
+          <!-- <img src="assets/logo-white.png" alt="AQUADERM 로고" /> -->
+          <div class="footer-logo-placeholder">
+            <img src="../aquadream-img/foter_logo.png" alt="">
+          </div>
+        </div>
+        <p class="footer-tagline">데이터로 피부를 관리하는 AI 스킨케어 플랫폼</p>
+        <div class="footer-icons">
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A0B3C5" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="5" />
+              <circle cx="17.5" cy="6.5" r="1" fill="#A0B3C5" stroke="none" />
+            </svg>
+          </div>
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#A0B3C5">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </div>
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A0B3C5" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="5" width="20" height="14" rx="4" />
+              <polygon points="10,9 16,12 10,15" fill="#A0B3C5" stroke="none" />
+            </svg>
+          </div>
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#A0B3C5">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-menus">
+        <div class="footer-menu-col">
+          <p class="footer-menu-heading footer-accordion-btn">
+            서비스 메뉴
+            <svg class="footer-accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#A0B3C5" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </p>
+          <ul class="footer-menu-list">
+            <li>피부 진단</li>
+            <li>맞춤 추천</li>
+            <li>루틴 관리</li>
+            <li>제품</li>
+          </ul>
+        </div>
+        <div class="footer-menu-col">
+          <p class="footer-menu-heading footer-accordion-btn">
+            고객 지원
+            <svg class="footer-accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#A0B3C5" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </p>
+          <ul class="footer-menu-list">
+            <li>FAQ</li>
+            <li>문의</li>
+            <li>공지사항</li>
+            <li>이용 가이드</li>
+          </ul>
+        </div>
+        <div class="footer-menu-col">
+          <p class="footer-menu-heading footer-accordion-btn">
+            회사 정보
+            <svg class="footer-accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#A0B3C5" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </p>
+          <ul class="footer-menu-list">
+            <li>회사명</li>
+            <li>사업자 번호</li>
+            <li>이메일</li>
+            <li>주소</li>
+            <li>SNS</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script defer src="../js/aquaderm_Recommend.js"></script>
+</body>
+
+</html>
