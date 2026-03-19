@@ -18,7 +18,7 @@ body {
   color: #111827;
   overflow-x: hidden;
 }
-
+a{text-decoration: none; color: inherit;}
 /* ════════════════════════════════
    BOOK-FLIP 페이지 전환
 ════════════════════════════════ */
