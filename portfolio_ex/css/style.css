@@ -214,7 +214,7 @@ header.scrolled {
   width: 100%;
   /* min-width removed */
   height: 553px;
-  background: #5a7a6a url('../img/베드.jpg') center / cover no-repeat;
+  background: #5a7a6a url('../img/big-bed.jpg') center / cover no-repeat;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -2054,7 +2054,7 @@ footer .inner .link-box ul li b {
   .top {
     min-width: 0;
     height: 440px;
-    background: #5a7a6a url('../img/베드.jpg') center / cover no-repeat;
+    background: #5a7a6a url('../img/big-bed.jpg') center / cover no-repeat;
     display: flex;
     justify-content: center;
   }
