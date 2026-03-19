@@ -204,6 +204,11 @@ const workCtaBtn = document.getElementById('workCtaBtn');
 const isLocal = location.hostname === 'localhost';
 const base = isLocal ? './' : '/portfolio/';
 
+function path(p) {
+  return isLocal ? p : `${base}${p}`;
+}
+
+
 // 초기 숨김 (resetPage와 동일 방식)
 pageWorks.style.cssText = 'position:absolute;top:0;left:0;width:100%;transform:translateX(100%);opacity:0;pointer-events:none;z-index:1;visibility:hidden;height:0;overflow:hidden;';
 
