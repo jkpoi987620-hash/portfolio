@@ -1478,6 +1478,11 @@ footer {
     white-space: normal;
   }
 
+  .result-wrap{
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
   .result-label-wrap {
     padding-top: 50px;
   }

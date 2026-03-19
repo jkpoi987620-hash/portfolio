@@ -462,7 +462,7 @@ font-weight: 300;
 #recommended .content .bestItem{
   width: 555px;
   height: 654px;
-  background: url("../img/mainpage/AiProductCard-1.png") center / cover no-repeat;
+  background: url("../img/mainpage/AiProductCard\ \(1\).png") center / cover no-repeat;
   position: relative;
 }
 #recommended .content .bestItem .itemtxt{
