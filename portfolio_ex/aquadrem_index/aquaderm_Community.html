@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AQUADERM - 커뮤니티</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../aquadrem_css/aquaderm_Community.css" />
+</head>
+
+<body>
+
+  <!-- ───────── NAV ───────── -->
+  <nav>
+    <div class="nav-inner">
+
+      <div class="nav-left">
+        <a href="aquaderm_AI_Sub.html">피부진단</a>
+        <a href="aquaderm_Recommend.html">맞춤추천</a>
+        <a href="aquaderm_Ingredient.html">성분분석</a>
+        <a href="aquaderm_Community.html">커뮤니티</a>
+        <a href="aquaderm_Shopping.html">쇼핑</a>
+        <a href="#">이벤트</a>
+      </div>
+
+      <!-- 태블릿용 3dot 버튼 -->
+      <button class="nav-dots-btn" id="navDotsBtn" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-dots-menu" id="navDotsMenu">
+        <a href="aquaderm_AI_Sub.html">피부진단</a>
+        <a href="aquaderm_Recommend.html">맞춤추천</a>
+        <a href="aquaderm_Ingredient.html">성분분석</a>
+        <a href="aquaderm_Community.html">커뮤니티</a>
+        <a href="aquaderm_Shopping.html">쇼핑</a>
+        <a href="#">이벤트</a>
+      </div>
+
+      <div class="nav-logo">
+        <a href="aquaderm.html">
+          <div class="nav-logo-placeholder">
+            <img src="../aquadream-img/top_logo.png" alt="">
+          </div>
+        </a>
+      </div>
+
+      <div class="nav-right">
+        <a href="#">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="7" cy="7" r="4.5" />
+            <line x1="10.5" y1="10.5" x2="14" y2="14" />
+          </svg>
+          검색
+        </a>
+        <a href="#">로그인</a>
+        <a href="#">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="8" cy="5.5" r="2.5" />
+            <path d="M2.5 14c0-3 2.5-5 5.5-5s5.5 2 5.5 5" />
+          </svg>
+          마이페이지
+        </a>
+        <a href="#">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M1 1h2l1.5 7.5h7L13 4H4" />
+            <circle cx="6.5" cy="13" r="1" />
+            <circle cx="11" cy="13" r="1" />
+          </svg>
+          장바구니
+        </a>
+        <!-- 모바일 햄버거 버튼 -->
+        <button class="nav-hamburger" id="navHamburger" aria-label="메뉴 열기">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- 모바일 풀스크린 메뉴 -->
+      <div class="nav-mobile-menu" id="navMobileMenu">
+        <button class="nav-mobile-close" id="navMobileClose">✕</button>
+        <a href="aquaderm_AI_Sub.html">피부진단</a>
+        <a href="aquaderm_Recommend.html">맞춤추천</a>
+        <a href="aquaderm_Ingredient.html">성분분석</a>
+        <a href="aquaderm_Community.html">커뮤니티</a>
+        <a href="aquaderm_Shopping.html">쇼핑</a>
+        <a href="#">이벤트</a>
+        <a href="#">로그인</a>
+        <a href="#">마이페이지</a>
+        <a href="#">장바구니</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════ BANNER ═══════════════════════ -->
+  <div class="banner">
+    <img class="banner-bg" src="../aquadream-img/aquadrem_comunity-banner.png" alt="배너 배경">
+    <div class="banner-inner">
+      <h1 class="banner-title">피부 고민을 함께 나누는 공간</h1>
+      <p class="banner-desc">다른 사용자들과 피부 고민을 공유하고<br>정보를 확인해보세요</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ SECTION 1: 인기 이야기 ═══════════════════════ -->
+  <section class="sec1">
+    <div class="container">
+      <div class="sec-header">
+        <h2 class="sec-title">지금 인기 있는 이야기</h2>
+        <p class="sec-desc">지금 가장 많이 공감받고 있는 피부 고민</p>
+      </div>
+      <div class="hot-cards">
+        <div class="hot-card">
+          <div class="hot-card-left">
+            <span class="hot-card-category">피부고민</span>
+            <p class="hot-card-title">나이아신아마이드 효과 본 사람 있어?</p>
+            <p class="hot-card-text">피지 조절에 도움된 것 같은데<br>다른 분들은 어떤지 궁금해요...</p>
+          </div>
+          <div class="hot-card-counts">
+            <div class="count-item">
+              <img class="count-icon" src="../aquadream-img/aquadrem_good-icon.png"
+                alt="좋아요">
+              <span class="count-num">124</span>
+            </div>
+            <div class="count-item">
+              <img class="count-icon" src="../aquadream-img/aquadrem_qus.png"
+                alt="댓글">
+              <span class="count-num">32</span>
+            </div>
+          </div>
+        </div>
+        <div class="hot-card">
+          <div class="hot-card-left">
+            <span class="hot-card-category">제품추천</span>
+            <p class="hot-card-title">수분크림 추천 좀 해주세요 ㅜㅜ</p>
+            <p class="hot-card-text">건성인데 끈적이지 않으면서<br>보습 오래 가는 제품 찾고 있어요!</p>
+          </div>
+          <div class="hot-card-counts">
+            <div class="count-item">
+              <img class="count-icon" src="../aquadream-img/aquadrem_good-icon.png"
+                alt="좋아요">
+              <span class="count-num">135</span>
+            </div>
+            <div class="count-item">
+              <img class="count-icon" src="../aquadream-img/aquadrem_qus.png"
+                alt="댓글">
+              <span class="count-num">44</span>
+            </div>
+          </div>
+        </div>
+        <div class="hot-card">
+          <div class="hot-card-left">
+            <span class="hot-card-category">후기</span>
+            <p class="hot-card-title">요즘 갑자기 트러블 올라오는 이유 뭘까요?</p>
+            <p class="hot-card-text">최근에 화장품 바꾼 건 없는데<br>갑자기 올라와서 이유를 모르겠어요ㅠㅠ</p>
+          </div>
+          <div class="hot-card-counts">
+            <div class="count-item">
+              <img class="count-icon" src="../aquadream-img/aquadrem_good-icon.png"
+                alt="좋아요">
+              <span class="count-num">110</span>
+            </div>
+            <div class="count-item">
+              <img class="count-icon" src="../aquadream-img/aquadrem_qus.png"
+                alt="댓글">
+              <span class="count-num">38</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- ═══════════════════════ SECTION 2: 게시글 목록 ═══════════════════════ -->
+  <section class="sec2">
+    <div class="container">
+      <div class="sec2-inner">
+        <div class="sec-header">
+          <h2 class="sec-title">원하는 이야기를 찾아보세요</h2>
+          <p class="sec-desc">관심 있는 주제를 선택하여 관련 게시글을 확인해보세요</p>
+        </div>
+        <div class="filter-wrap">
+          <button class="filter-btn active" onclick="filterPosts(this, '전체')">전체</button>
+          <button class="filter-btn" onclick="filterPosts(this, '피부고민')">피부고민</button>
+          <button class="filter-btn" onclick="filterPosts(this, '제품추천')">제품추천</button>
+          <button class="filter-btn" onclick="filterPosts(this, '후기')">후기</button>
+          <button class="filter-btn" onclick="filterPosts(this, '성분질문')">성분질문</button>
+        </div>
+        <div class="post-list" id="postList">
+          <div class="post-item">
+            <div class="post-left">
+              <div class="post-top">
+                <p class="post-category">[성분질문]</p>
+                <p class="post-title"><span class="blue">나이아신아마이드</span> 효과 본 사람 있어요?</p>
+                <p class="post-text">피지 줄어든 느낌은 있는데<br>트러블에도 효과 있는지 궁금해요...</p>
+              </div>
+              <p class="post-author">skincare_lover · 2시간 전</p>
+            </div>
+            <div class="post-counts">
+              <div class="count-item">
+                <img class="count-icon" src="../aquadream-img/aquadrem_good-icon.png"
+                  alt="좋아요">
+                <span class="count-num">124</span>
+              </div>
+              <div class="count-item">
+                <img class="count-icon" src="../aquadream-img/aquadrem_qus.png"
+                  alt="댓글">
+                <span class="count-num">82</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-item">
+            <div class="post-left">
+              <div class="post-top">
+                <p class="post-category">[피부고민]</p>
+                <p class="post-title">요즘 갑자기 트러블 올라오는 이유 뭘까요?</p>
+                <p class="post-text">최근에 화장품 바꾼 건 없는데<br>갑자기 올라와서 이유를 모르겠어요ㅠㅠ</p>
+              </div>
+              <p class="post-author">MINI123 · 1시간 전</p>
+            </div>
+            <div class="post-counts">
+              <div class="count-item">
+                <img class="count-icon" src="../aquadream-img/aquadrem_good-icon.png"
+                  alt="좋아요">
+                <span class="count-num">150</span>
+              </div>
+              <div class="count-item">
+                <img class="count-icon" src="../aquadream-img/aquadrem_qus.png"
+                  alt="댓글">
+                <span class="count-num">62</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-item">
+            <div class="post-left">
+              <div class="post-top">
+                <p class="post-category">[제품추천]</p>
+                <p class="post-title"><span class="blue">수분크림</span> 추천 좀 해주세요 ㅠㅠ</p>
+                <p class="post-text">건성인데 끈적이지 않으면서<br>보습 오래 가는 제품 찾고 있어요!</p>
+              </div>
+              <p class="post-author">beautyholic · 30분 전</p>
+            </div>
+            <div class="post-counts">
+              <div class="count-item">
+                <img class="count-icon" src="../aquadream-img/aquadrem_good-icon.png"
+                  alt="좋아요">
+                <span class="count-num">134</span>
+              </div>
+              <div class="count-item">
+                <img class="count-icon" src="../aquadream-img/aquadrem_qus.png"
+                  alt="댓글">
+                <span class="count-num">32</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-item">
+            <div class="post-left">
+              <div class="post-top">
+                <p class="post-category">[후기]</p>
+                <p class="post-title">이 세럼 쓰고 피부 좋아졌는데 저만 그런가요?</p>
+                <p class="post-text">요즘 피부결이 부드러워진 느낌인데<br>다른 분들도 효과 보셨는지 궁금해요!</p>
+              </div>
+              <p class="post-author">glow_skin · 3시간 전</p>
+            </div>
+            <div class="post-counts">
+              <div class="count-item">
+                <img class="count-icon" src="../aquadream-img/aquadrem_good-icon.png"
+                  alt="좋아요">
+                <span class="count-num">154</span>
+              </div>
+              <div class="count-item">
+                <img class="count-icon" src="../aquadream-img/aquadrem_qus.png"
+                  alt="댓글">
+                <span class="count-num">22</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-item">
+            <div class="post-left">
+              <div class="post-top">
+                <p class="post-category">[성분질문]</p>
+                <p class="post-title"><span class="blue">세라마이드</span> 제품 진짜 차이 있나요?</p>
+                <p class="post-text">보습에는 좋다고 들었는데<br>실제로 써보신 분들 후기 궁금해요!</p>
+              </div>
+              <p class="post-author">derma_user · 5시간 전</p>
+            </div>
+            <div class="post-counts">
+              <div class="count-item">
+                <img class="count-icon" src="../aquadream-img/aquadrem_good-icon.png"
+                  alt="좋아요">
+                <span class="count-num">132</span>
+              </div>
+              <div class="count-item">
+                <img class="count-icon" src="../aquadream-img/aquadrem_qus.png"
+                  alt="댓글">
+                <span class="count-num">52</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="write-wrap">
+          <button class="write-btn">글쓰기</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── FOOTER ───────── -->
+  <footer>
+    <div class="footer-inner">
+
+      <div class="footer-left">
+        <div class="footer-logo">
+          <!-- <img src="assets/logo-white.png" alt="AQUADERM 로고" /> -->
+          <div class="footer-logo-placeholder">
+            <img src="../aquadream-img/foter_logo.png" alt="">
+          </div>
+        </div>
+        <p class="footer-tagline">데이터로 피부를 관리하는 AI 스킨케어 플랫폼</p>
+        <div class="footer-icons">
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A0B3C5" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="5" />
+              <circle cx="17.5" cy="6.5" r="1" fill="#A0B3C5" stroke="none" />
+            </svg>
+          </div>
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#A0B3C5">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </div>
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A0B3C5" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="5" width="20" height="14" rx="4" />
+              <polygon points="10,9 16,12 10,15" fill="#A0B3C5" stroke="none" />
+            </svg>
+          </div>
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#A0B3C5">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-menus">
+        <div class="footer-menu-col">
+          <p class="footer-menu-heading footer-accordion-btn">
+            서비스 메뉴
+            <svg class="footer-accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#A0B3C5" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </p>
+          <ul class="footer-menu-list">
+            <li>피부 진단</li>
+            <li>맞춤 추천</li>
+            <li>루틴 관리</li>
+            <li>제품</li>
+          </ul>
+        </div>
+        <div class="footer-menu-col">
+          <p class="footer-menu-heading footer-accordion-btn">
+            고객 지원
+            <svg class="footer-accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#A0B3C5" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </p>
+          <ul class="footer-menu-list">
+            <li>FAQ</li>
+            <li>문의</li>
+            <li>공지사항</li>
+            <li>이용 가이드</li>
+          </ul>
+        </div>
+        <div class="footer-menu-col">
+          <p class="footer-menu-heading footer-accordion-btn">
+            회사 정보
+            <svg class="footer-accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#A0B3C5" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </p>
+          <ul class="footer-menu-list">
+            <li>회사명</li>
+            <li>사업자 번호</li>
+            <li>이메일</li>
+            <li>주소</li>
+            <li>SNS</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script defer src="../js/aquaderm_Community.js"></script>
+</body>
+
+</html>

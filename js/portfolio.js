@@ -203,6 +203,7 @@ const workPdfImg = document.getElementById('workPdfImg');
 const workCtaBtn = document.getElementById('workCtaBtn');
 
 
+
 // 초기 숨김 (resetPage와 동일 방식)
 pageWorks.style.cssText = 'position:absolute;top:0;left:0;width:100%;transform:translateX(100%);opacity:0;pointer-events:none;z-index:1;visibility:hidden;height:0;overflow:hidden;';
 
@@ -211,27 +212,32 @@ const workData = {
   cineq: {
     pdf: `${BASE}/img/CINEQ_PORTFOLIO.jpg`,
     link: `${BASE}/portfolio_ex/movie.html`,
-    bg: `${BASE}/img/CINEQ_CTA-bg.png`
+    bg: `${BASE}/img/CINEQ_CTA-bg.png`,
+    text: '본 프로젝트는 Figma로 디자인하고 HTML, CSS로 구현되었습니다.'
   },
   tempur: {
     pdf: `${BASE}/img/TEMPUR_PORTFOLIO.png`,
     link: `${BASE}/portfolio_ex/index.html`,
-    bg: `${BASE}/img/TEMPUR_CTA-bg.png`
+    bg: `${BASE}/img/TEMPUR_CTA-bg.png`,
+    text: '본 프로젝트는 Figma로 디자인하고 HTML, CSS, JavaScript로 구현되었습니다.'
   },
   melon: {
     pdf: `${BASE}/img/MELON_PORTFOLIO.jpg`,
     link: `${BASE}/portfolio_ex/melon.html`,
-    bg: `${BASE}/img/MELON_CTA-bg.png`
+    bg: `${BASE}/img/MELON_CTA-bg.png`,
+    text: '본 프로젝트는 Figma로 디자인하고 HTML, CSS, JavaScript로 구현되었습니다.'
   },
   aquaderm: {
     pdf: `${BASE}/img/AQUADREM_PORTFOLIO.jpg`,
     link: `${BASE}/portfolio_ex/aquadrem_index/aquaderm.html`,
-    bg: `${BASE}/img/AQUA_CTA-bg.png`
+    bg: `${BASE}/img/AQUA_CTA-bg.png`,
+    text: '본 프로젝트는 Figma로 디자인하고 HTML, CSS, JavaScript로 구현되었습니다.'
   },
   ssense: {
     pdf: `${BASE}/img/SSENSE_PORTFOLIO.png`,
     link: `${BASE}/portfolio_ex/teamProject-main/index.html`,
-    bg: `${BASE}/img/SSENSE_CTA-bg.png`
+    bg: `${BASE}/img/SSENSE_CTA-bg.png`,
+    text: '본 프로젝트는 Figma로 디자인하고 HTML, CSS, JavaScript로 구현되었습니다.'
   }
 };
 
@@ -244,6 +250,7 @@ function openWork(workKey) {
     workPdfImg.src = data.pdf;
     workCtaBtn.href = data.link;
     document.querySelector('.work-cta').style.backgroundImage = data.bg ? `url(${data.bg})` : '';
+    document.querySelector('.work-cta-text').innerHTML = data.text;
   }
   document.querySelectorAll('.subnav-item').forEach(item => {
     item.classList.toggle('active', item.dataset.work === workKey);
@@ -281,6 +288,7 @@ document.querySelectorAll('.subnav-item').forEach(item => {
       workPdfImg.src = data.pdf;
       workCtaBtn.href = data.link;
       document.querySelector('.work-cta').style.backgroundImage = data.bg ? `url(${data.bg})` : '';
+      document.querySelector('.work-cta-text').innerHTML = data.text;
     }
     document.querySelectorAll('.subnav-item').forEach(i => i.classList.remove('active'));
     item.classList.add('active');
