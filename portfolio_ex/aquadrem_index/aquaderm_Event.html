@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AQUADERM - 이벤트</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../aquadrem_css/aquaderm_Event.css" />
+</head>
+
+<body>
+
+  <!-- ───────── NAV ───────── -->
+  <nav>
+    <div class="nav-inner">
+
+      <div class="nav-left">
+        <a href="aquaderm_AI_Sub.html">피부진단</a>
+        <a href="aquaderm_Recommend.html">맞춤추천</a>
+        <a href="aquaderm_Ingredient.html">성분분석</a>
+        <a href="aquaderm_Community.html">커뮤니티</a>
+        <a href="aquaderm_Shopping.html">쇼핑</a>
+        <a href="aquaderm_Event.html" class="active">이벤트</a>
+      </div>
+
+      <!-- 태블릿용 3dot 버튼 -->
+      <button class="nav-dots-btn" id="navDotsBtn" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-dots-menu" id="navDotsMenu">
+        <a href="aquaderm_AI_Sub.html">피부진단</a>
+        <a href="aquaderm_Recommend.html">맞춤추천</a>
+        <a href="aquaderm_Ingredient.html">성분분석</a>
+        <a href="aquaderm_Community.html">커뮤니티</a>
+        <a href="aquaderm_Shopping.html">쇼핑</a>
+        <a href="aquaderm_Event.html">이벤트</a>
+      </div>
+
+      <div class="nav-logo">
+        <a href="aquaderm.html">
+          <div class="nav-logo-placeholder">
+            <img src="../aquadream-img/top_logo.png" alt="">
+          </div>
+        </a>
+      </div>
+
+      <div class="nav-right">
+        <a href="#">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="7" cy="7" r="4.5" />
+            <line x1="10.5" y1="10.5" x2="14" y2="14" />
+          </svg>
+          검색
+        </a>
+        <a href="#">로그인</a>
+        <a href="#">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="6" cy="5" r="3" />
+            <path d="M1 14c0-3 2.5-5 5-5s5 2 5 5" />
+          </svg>
+          마이페이지
+        </a>
+        <a href="#">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M2 3h1.5l1.8 7.5h7l1.5-5.5H5" />
+            <circle cx="6.5" cy="12.5" r="1" />
+            <circle cx="11.5" cy="12.5" r="1" />
+          </svg>
+          장바구니
+        </a>
+      </div>
+
+      <!-- 모바일 햄버거 -->
+      <button class="nav-hamburger" id="navHamburger" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+    <!-- 모바일 풀스크린 메뉴 -->
+    <div class="nav-mobile-menu" id="navMobileMenu">
+      <button class="nav-mobile-close" id="navMobileClose">✕</button>
+      <a href="aquaderm_AI_Sub.html">피부진단</a>
+      <a href="aquaderm_Recommend.html">맞춤추천</a>
+      <a href="aquaderm_Ingredient.html">성분분석</a>
+      <a href="aquaderm_Community.html">커뮤니티</a>
+      <a href="aquaderm_Shopping.html">쇼핑</a>
+      <a href="aquaderm_Event.html" class="active">이벤트</a>
+    </div>
+  </nav>
+
+  <!-- ───────── BANNER ───────── -->
+  <div class="banner">
+    <img src="../aquadream-img/aquadrem_event-banner.png" alt="이벤트 배너" class="banner-bg" />
+    <div class="banner-overlay"></div>
+    <div class="banner-inner">
+      <p class="banner-sub">SPRING EVENT</p>
+      <h1 class="banner-title">최대 50% 할인 + 특별 혜택</h1>
+      <p class="banner-desc">지금 가장 인기 있는 스킨케어를 특별한 가격으로 만나보세요</p>
+      <a href="#" class="banner-btn">
+        지금 참여하기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ───────── MAIN CONTENT ───────── -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- 이벤트 라벨 카드 3개 -->
+      <div class="event-labels">
+        <div class="event-label-card">
+          <div class="label-img">
+            <img src="../aquadream-img/aqa-event-icon1.png" alt="최대 50% 할인" />
+          </div>
+          <div class="label-text">
+            <p class="label-title">최대 50% 할인</p>
+            <p class="label-desc">인기 스킨케어 제품을<br>할인된 가격으로 만나보세요</p>
+          </div>
+        </div>
+        <div class="event-label-card">
+          <div class="label-img">
+            <img src="../aquadream-img/aqa-event-icon2.png" alt="무료 배송" />
+          </div>
+          <div class="label-text">
+            <p class="label-title">무료 배송</p>
+            <p class="label-desc">구매 금액과 상관없이<br>전 상품 무료 배송 혜택 제공</p>
+          </div>
+        </div>
+        <div class="event-label-card">
+          <div class="label-img">
+            <img src="../aquadream-img/aqa-event-icon3.png" alt="구매 시 사은품 증정" />
+          </div>
+          <div class="label-text">
+            <p class="label-title">구매 시 사은품 증정</p>
+            <p class="label-desc">구매하신 고객님께<br>특별한 선물을 드려요</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 이벤트 상품 섹션 -->
+      <div class="event-section">
+        <div class="sec-header">
+          <h2 class="sec-title">이벤트 상품</h2>
+          <a href="#" class="more-link">
+            이벤트 상품 더보기
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" width="17" height="17">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- 1행 -->
+        <div class="product-grid">
+          <div class="product-card">
+            <div class="card-img">
+              <span class="sale-badge">50%</span>
+              <img src="../aquadream-img/skin_5.png" alt="글로우 나이아신아마이드 세럼" />
+            </div>
+            <div class="card-info">
+              <div class="card-text">
+                <p class="card-brand">글로우 나이아신아마이드 세럼</p>
+                <p class="card-desc">피지 조절과 피부 톤 개선에 도움</p>
+              </div>
+              <div class="card-price-wrap">
+                <p class="card-price">12,500원</p>
+                <p class="card-original">25,000원</p>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="card-img">
+              <span class="sale-badge">50%</span>
+              <img src="../aquadream-img/skin_6.png" alt="데일리 클렌징 폼" />
+            </div>
+            <div class="card-info">
+              <div class="card-text">
+                <p class="card-brand">데일리 클렌징 폼</p>
+                <p class="card-desc">부드러운 거품으로 노폐물을 깨끗하게 제거</p>
+              </div>
+              <div class="card-price-wrap">
+                <p class="card-price">14,000원</p>
+                <p class="card-original">28,000원</p>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="card-img">
+              <span class="sale-badge">50%</span>
+              <img src="../aquadream-img/skin_7.png" alt="시카 진정 앰플" />
+            </div>
+            <div class="card-info">
+              <div class="card-text">
+                <p class="card-brand">시카 진정 앰플</p>
+                <p class="card-desc">민감해진 피부를 빠르게 진정</p>
+              </div>
+              <div class="card-price-wrap">
+                <p class="card-price">17,000원</p>
+                <p class="card-original">34,000원</p>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="card-img">
+              <span class="sale-badge">50%</span>
+              <img src="../aquadream-img/skin_8.png" alt="히알루론 수분 부스팅 토너" />
+            </div>
+            <div class="card-info">
+              <div class="card-text">
+                <p class="card-brand">히알루론 수분 부스팅 토너</p>
+                <p class="card-desc">건조한 피부에 깊은 수분을 채워주는 토너</p>
+              </div>
+              <div class="card-price-wrap">
+                <p class="card-price">16,500원</p>
+                <p class="card-original">33,000원</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2행 -->
+        <div class="product-grid">
+          <div class="product-card">
+            <div class="card-img">
+              <span class="sale-badge">50%</span>
+              <img src="../aquadream-img/skin_9.png" alt="코스알엑스 96 에센스" />
+            </div>
+            <div class="card-info">
+              <div class="card-text">
+                <p class="card-brand">코스알엑스 96 에센스</p>
+                <p class="card-desc">피부 장벽을 탄탄하게</p>
+              </div>
+              <div class="card-price-wrap">
+                <p class="card-price">13,500원</p>
+                <p class="card-original">27,000원</p>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="card-img">
+              <span class="sale-badge">50%</span>
+              <img src="../aquadream-img/skin_10.png" alt="라네즈 워터 슬리핑 마스크" />
+            </div>
+            <div class="card-info">
+              <div class="card-text">
+                <p class="card-brand">라네즈 워터 슬리핑 마스크</p>
+                <p class="card-desc">밤 사이 깊은 수분 충전</p>
+              </div>
+              <div class="card-price-wrap">
+                <p class="card-price">17,000원</p>
+                <p class="card-original">34,000원</p>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="card-img">
+              <span class="sale-badge">50%</span>
+              <img src="../aquadream-img/skin_11.png" alt="이니스프리 그린티 씨드 세럼" />
+            </div>
+            <div class="card-info">
+              <div class="card-text">
+                <p class="card-brand">이니스프리 그린티 씨드 세럼</p>
+                <p class="card-desc">산뜻하게 채우는 보습</p>
+              </div>
+              <div class="card-price-wrap">
+                <p class="card-price">14,500원</p>
+                <p class="card-original">29,000원</p>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="card-img">
+              <span class="sale-badge">50%</span>
+              <img src="../aquadream-img/skin_12.png" alt="설화수 자음생 크림" />
+            </div>
+            <div class="card-info">
+              <div class="card-text">
+                <p class="card-brand">설화수 자음생 크림</p>
+                <p class="card-desc">탄력 있는 피부 케어</p>
+              </div>
+              <div class="card-price-wrap">
+                <p class="card-price">15,000원</p>
+                <p class="card-original">30,000원</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ───────── MORE BAR ───────── -->
+  <div class="more-bar">
+    <p class="more-bar-title">지금 혜택을 놓치지 마세요</p>
+    <button class="more-bar-btn">더 많은 이벤트 보러 가기</button>
+  </div>
+
+  <!-- ───────── FOOTER ───────── -->
+  <footer>
+    <div class="footer-inner">
+
+      <div class="footer-left">
+        <div class="footer-logo">
+          <a href="aquaderm.html">
+            <div class="footer-logo-placeholder">
+              <img src="../aquadream-img/foter_logo.png" alt="">
+            </div>
+          </a>
+        </div>
+        <p class="footer-tagline">데이터로 피부를 관리하는 AI 스킨케어 플랫폼</p>
+        <div class="footer-icons">
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A0B3C5" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="5" />
+              <circle cx="17.5" cy="6.5" r="1" fill="#A0B3C5" stroke="none" />
+            </svg>
+          </div>
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#A0B3C5">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </div>
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A0B3C5" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="5" width="20" height="14" rx="4" />
+              <polygon points="10,9 16,12 10,15" fill="#A0B3C5" stroke="none" />
+            </svg>
+          </div>
+          <div class="footer-icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#A0B3C5">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-menus">
+        <div class="footer-menu-col">
+          <p class="footer-menu-heading footer-accordion-btn">
+            서비스 메뉴
+            <svg class="footer-accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#A0B3C5" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </p>
+          <ul class="footer-menu-list">
+            <li>피부 진단</li>
+            <li>맞춤 추천</li>
+            <li>루틴 관리</li>
+            <li>제품</li>
+          </ul>
+        </div>
+        <div class="footer-menu-col">
+          <p class="footer-menu-heading footer-accordion-btn">
+            고객 지원
+            <svg class="footer-accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#A0B3C5" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </p>
+          <ul class="footer-menu-list">
+            <li>FAQ</li>
+            <li>문의</li>
+            <li>공지사항</li>
+            <li>이용 가이드</li>
+          </ul>
+        </div>
+        <div class="footer-menu-col">
+          <p class="footer-menu-heading footer-accordion-btn">
+            회사 정보
+            <svg class="footer-accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 4l4 4 4-4" stroke="#A0B3C5" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </p>
+          <ul class="footer-menu-list">
+            <li>회사명</li>
+            <li>사업자 번호</li>
+            <li>이메일</li>
+            <li>주소</li>
+            <li>SNS</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="../js/aquaderm_Event.js"></script>
+</body>
+
+</html>
