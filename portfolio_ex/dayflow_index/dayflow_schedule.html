@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dayflow — 일정 만들기</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="../dayflow_css/dayflow_main.css" />
+  <link rel="stylesheet" href="../dayflow_css/dayflow_schedule.css" />
+</head>
+<body class="page-enter">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="dayflow_main.html" class="nav-logo">
+        <img src="https://www.figma.com/api/mcp/asset/07ab54da-823f-4d2b-a306-fb1ebff25198" alt="Dayflow" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Calendar</a></li>
+        <li><a href="#">AI Flow</a></li>
+        <li><a href="#">Insights</a></li>
+      </ul>
+      <div class="nav-actions">
+        <img src="https://www.figma.com/api/mcp/asset/66d2a38b-8edf-434b-9105-6a8f93152463" alt="알림" class="nav-icon" />
+        <img src="https://www.figma.com/api/mcp/asset/52ad47cd-78e6-45d6-a125-4d86d3060169" alt="프로필" class="nav-icon" />
+        <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SIDE MENU -->
+  <div class="side-overlay" id="sideOverlay"></div>
+  <aside class="side-menu" id="sideMenu">
+    <button class="side-close" id="sideClose" aria-label="메뉴 닫기">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <ul class="side-links">
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Calendar</a></li>
+      <li><a href="#">AI Flow</a></li>
+      <li><a href="#">Insights</a></li>
+    </ul>
+  </aside>
+
+  <!-- SCHEDULE SECTION -->
+  <section class="schedule-section">
+    <div class="schedule-container">
+      <div class="schedule-title">
+        <h1>내일 할 일을 입력해주세요</h1>
+        <p>AI가 당신의 하루를 최적화해드립니다</p>
+      </div>
+
+      <!-- 타임피커 팝업 (공유) -->
+      <div class="time-picker-popup" id="timePickerPopup">
+        <div class="tp-ampm">
+          <button class="tp-ampm-btn active" data-val="오전">오전</button>
+          <button class="tp-ampm-btn" data-val="오후">오후</button>
+        </div>
+        <div class="tp-selectors">
+          <div class="tp-spin">
+            <button class="tp-arrow" data-dir="up" data-type="hour">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+            </button>
+            <span class="tp-value" id="tpHour">12</span>
+            <button class="tp-arrow" data-dir="down" data-type="hour">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+          <span class="tp-colon">:</span>
+          <div class="tp-spin">
+            <button class="tp-arrow" data-dir="up" data-type="min">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+            </button>
+            <span class="tp-value" id="tpMin">00</span>
+            <button class="tp-arrow" data-dir="down" data-type="min">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+        </div>
+        <button class="tp-confirm" id="tpConfirm">확인</button>
+      </div>
+
+      <div class="schedule-card">
+        <div class="schedule-rows" id="scheduleRows">
+          <!-- Row 1 -->
+          <div class="schedule-row">
+            <input class="task-input" type="text" placeholder="예: 운동, 작업" />
+            <select class="task-select duration-select">
+              <option>1시간</option>
+              <option selected>2시간</option>
+              <option>3시간</option>
+              <option>4시간</option>
+              <option>5시간</option>
+            </select>
+            <button class="time-btn" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a1a1aa" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span class="time-display">00:00</span>
+            </button>
+            <select class="task-select grade-select">
+              <option value="">등급</option>
+              <option value="high">높음</option>
+              <option value="mid">중간</option>
+              <option value="low">낮음</option>
+            </select>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="toggle-track">
+                <span class="toggle-label off-label">OFF</span>
+                <span class="toggle-thumb"></span>
+                <span class="toggle-label on-label">ON</span>
+              </span>
+            </label>
+            <button class="delete-row-btn" type="button" aria-label="삭제">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a1a1aa" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <button class="add-row-btn" id="addRowBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a1a1aa" stroke-width="2" stroke-linecap="round">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+          일정추가
+        </button>
+      </div>
+
+      <button class="ai-btn" id="aiBtn">AI 일정 만들기</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img src="https://www.figma.com/api/mcp/asset/07ab54da-823f-4d2b-a306-fb1ebff25198" alt="Dayflow" />
+        </div>
+        <p>데이터로 일정과 패턴을 분석하는 AI 캘린더 플랫폼</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a0b3c5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="#a0b3c5" stroke="none"/>
+            </svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#a0b3c5">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L2.25 2.25h6.918l4.24 5.607 4.836-5.607zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#a0b3c5">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#a0b3c5">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <button class="footer-col-toggle">
+            <h4>서비스 메뉴</h4>
+            <svg class="toggle-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <ul>
+            <li><a href="#">일정 분석</a></li>
+            <li><a href="#">AI 추천</a></li>
+            <li><a href="#">루틴 설계</a></li>
+            <li><a href="#">패턴 리포트</a></li>
+            <li><a href="#">대시보드</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <button class="footer-col-toggle">
+            <h4>고객 지원</h4>
+            <svg class="toggle-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">문의</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">이용 가이드</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <button class="footer-col-toggle">
+            <h4>회사 정보</h4>
+            <svg class="toggle-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <ul>
+            <li><a href="#">회사명</a></li>
+            <li><a href="#">사업자 번호</a></li>
+            <li><a href="#">이메일</a></li>
+            <li><a href="#">주소</a></li>
+            <li><a href="#">SNS</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="../dayflow_js/dayflow_schedule.js"></script>
+</body>
+</html>
