@@ -1,0 +1,33 @@
+/* ── 비활성화 타이머 (arc 없이 테두리만) ── */
+.focus-circle--inactive {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 63.1%;
+  height: 63.1%;
+  border-radius: 50%;
+  border: 21px solid #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* arc 이미지 숨김 */
+.focus-wrap .focus-arc {
+  display: none;
+}
+
+/* 비활성화 상태 텍스트 색상 */
+.focus-circle--inactive .focus-clock {
+  color: #4b5563;
+}
+.focus-circle--inactive .focus-task {
+  color: #6b7280;
+  font-size: 14px;
+}
+.focus-circle--inactive .focus-remaining {
+  color: #4b5563;
+  font-size: 12px;
+}

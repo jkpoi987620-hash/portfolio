@@ -1,18 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ── 일정 끝내기 버튼 ──
-  const finishBtn = document.getElementById('finishBtn');
-  if (finishBtn) {
-    finishBtn.addEventListener('click', () => {
+  // ── 확인 버튼 → 메인으로 이동 ──
+  const confirmBtn = document.getElementById('confirmBtn');
+  if (confirmBtn) {
+    confirmBtn.addEventListener('click', () => {
       document.body.style.transition = 'opacity 0.5s ease';
       document.body.style.opacity = '0';
       setTimeout(() => {
-        window.location.href = 'dayflow_end.html';
+        window.location.href = 'dayflow_tomorrow.html';
       }, 500);
     });
   }
 
-  // ── HAMBURGER / SIDE MENU ──
+  // ── 햄버거 / 사이드 메뉴 ──
   const hamburger   = document.getElementById('hamburger');
   const sideMenu    = document.getElementById('sideMenu');
   const sideOverlay = document.getElementById('sideOverlay');
@@ -33,24 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (sideClose)   sideClose.addEventListener('click', closeMenu);
   if (sideOverlay) sideOverlay.addEventListener('click', closeMenu);
 
-  // ── FOOTER ACCORDION ──
+  // ── 푸터 아코디언 ──
   document.querySelectorAll('.footer-col-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
       const col = btn.closest('.footer-col');
       if (col) col.classList.toggle('open');
     });
   });
-
-  // ── LIVE CLOCK ──
-  const clockEl = document.getElementById('focusClock');
-  function updateClock() {
-    const now = new Date();
-    const h = String(now.getHours()).padStart(2, '0');
-    const m = String(now.getMinutes()).padStart(2, '0');
-    const s = String(now.getSeconds()).padStart(2, '0');
-    if (clockEl) clockEl.textContent = `${h}:${m}:${s}`;
-  }
-  updateClock();
-  setInterval(updateClock, 1000);
 
 });

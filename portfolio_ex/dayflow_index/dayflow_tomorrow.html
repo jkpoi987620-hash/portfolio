@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dayflow — Dashboard</title>
+  <title>Dayflow — Tomorrow</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css" />
   <link rel="stylesheet" href="../dayflow_css/dayflow_main.css" />
   <link rel="stylesheet" href="../dayflow_css/dayflow_dashboard.css" />
+  <link rel="stylesheet" href="../dayflow_css/dayflow_tomorrow.css" />
 </head>
 <body class="page-enter">
 
@@ -14,21 +15,19 @@
   <nav class="nav">
     <div class="nav-inner">
       <a href="dayflow_main.html" class="nav-logo">
-        <img src="https://www.figma.com/api/mcp/asset/07ab54da-823f-4d2b-a306-fb1ebff25198" alt="Dayflow" />
+        <img src="https://www.figma.com/api/mcp/asset/ccd40b8c-689d-497e-a20f-5a5c50317157" alt="Dayflow" />
       </a>
       <ul class="nav-links">
-        <li><a href="#" class="nav-active">Dashboard</a></li>
+        <li><a href="dayflow_dashboard.html" class="nav-active">Dashboard</a></li>
         <li><a href="#">Calendar</a></li>
         <li><a href="#">AI Flow</a></li>
         <li><a href="#">Insights</a></li>
       </ul>
       <div class="nav-actions">
-        <img src="https://www.figma.com/api/mcp/asset/66d2a38b-8edf-434b-9105-6a8f93152463" alt="알림" class="nav-icon" />
-        <img src="https://www.figma.com/api/mcp/asset/52ad47cd-78e6-45d6-a125-4d86d3060169" alt="프로필" class="nav-icon" />
+        <img src="https://www.figma.com/api/mcp/asset/c4840ef8-766a-4820-87c0-872d5e739310" alt="알림" class="nav-icon" />
+        <img src="https://www.figma.com/api/mcp/asset/78aa3eb2-89fd-4394-b918-b0d8a1b96958" alt="프로필" class="nav-icon" />
         <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
@@ -39,8 +38,7 @@
   <aside class="side-menu" id="sideMenu">
     <button class="side-close" id="sideClose" aria-label="메뉴 닫기">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
-        <line x1="18" y1="6" x2="6" y2="18"/>
-        <line x1="6" y1="6" x2="18" y2="18"/>
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
       </svg>
     </button>
     <ul class="side-links">
@@ -55,28 +53,28 @@
   <section class="dashboard-section">
     <div class="dashboard-inner">
 
-      <!-- 왼쪽: Today's Tasks -->
+      <!-- 왼쪽: Tomorrow's Tasks -->
       <div class="dashboard-col">
-        <p class="col-label">Today's Tasks</p>
+        <p class="col-label">Tomorrow's Tasks</p>
         <div class="task-list">
 
-          <div class="task-card active">
+          <div class="task-card">
             <div class="task-info">
               <p class="task-time">09:00</p>
-              <p class="task-name">과제하기</p>
+              <p class="task-name">출근</p>
             </div>
             <div class="task-progress-row">
               <div class="progress-bar">
-                <div class="progress-fill" style="width: 70%"></div>
+                <div class="progress-fill" style="width: 0%"></div>
               </div>
-              <span class="progress-pct">70%</span>
+              <span class="progress-pct">0%</span>
             </div>
           </div>
 
           <div class="task-card">
             <div class="task-info">
               <p class="task-time">11:00</p>
-              <p class="task-name">수업 듣기</p>
+              <p class="task-name">과제</p>
             </div>
             <div class="task-progress-row">
               <div class="progress-bar">
@@ -102,20 +100,18 @@
         </div>
       </div>
 
-      <!-- 중앙: Focus Time -->
+      <!-- 중앙: Focus Time (비활성화) -->
       <div class="dashboard-center">
         <p class="col-label">Focus Time</p>
         <div class="focus-wrap">
-          <img class="focus-arc" src="https://www.figma.com/api/mcp/asset/43bf9b6a-2c4d-42a5-9de3-7c7e66a83456" alt="" />
-          <div class="focus-circle">
+          <div class="focus-circle focus-circle--inactive">
             <div class="focus-inner">
-              <p class="focus-clock" id="focusClock">10:30:27</p>
-              <p class="focus-task">과제 진행 중</p>
-              <p class="focus-remaining">남은 시간 30분</p>
+              <p class="focus-clock" id="focusClock">22:50:27</p>
+              <p class="focus-task">아직 하루 시작 시간이 아니에요</p>
+              <p class="focus-remaining">시작 예정: 09:00</p>
             </div>
           </div>
         </div>
-        <button class="ai-btn" id="finishBtn">일정 끝내기</button>
       </div>
 
       <!-- 오른쪽: AI Flow -->
@@ -131,9 +127,9 @@
           <div class="ai-card">
             <p class="ai-card-title">일정 흐름 분석</p>
             <div class="ai-flow-row">
-              <span class="ai-flow-item">09:00 과제</span>
+              <span class="ai-flow-item">09:00 출근</span>
               <span class="ai-dot"></span>
-              <span class="ai-flow-item">11:00 수업</span>
+              <span class="ai-flow-item">11:00 과제</span>
               <span class="ai-dot"></span>
               <span class="ai-flow-item">13:00 점심</span>
             </div>
@@ -155,15 +151,13 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-logo-wrap">
-          <img src="https://www.figma.com/api/mcp/asset/07ab54da-823f-4d2b-a306-fb1ebff25198" alt="Dayflow" />
+          <img src="https://www.figma.com/api/mcp/asset/ccd40b8c-689d-497e-a20f-5a5c50317157" alt="Dayflow" />
         </div>
         <p>데이터로 일정과 패턴을 분석하는 AI 캘린더 플랫폼</p>
         <div class="footer-socials">
           <a href="#" class="social-btn" aria-label="Instagram">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a0b3c5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <circle cx="12" cy="12" r="4"/>
-              <circle cx="17.5" cy="6.5" r="1" fill="#a0b3c5" stroke="none"/>
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#a0b3c5" stroke="none"/>
             </svg>
           </a>
           <a href="#" class="social-btn" aria-label="Twitter">
@@ -178,7 +172,7 @@
           </a>
           <a href="#" class="social-btn" aria-label="Facebook">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#a0b3c5">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
             </svg>
           </a>
         </div>
@@ -187,9 +181,7 @@
         <div class="footer-col">
           <button class="footer-col-toggle">
             <h4>서비스 메뉴</h4>
-            <svg class="toggle-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
+            <svg class="toggle-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <ul>
             <li><a href="#">일정 분석</a></li>
@@ -202,9 +194,7 @@
         <div class="footer-col">
           <button class="footer-col-toggle">
             <h4>고객 지원</h4>
-            <svg class="toggle-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
+            <svg class="toggle-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <ul>
             <li><a href="#">FAQ</a></li>
@@ -216,9 +206,7 @@
         <div class="footer-col">
           <button class="footer-col-toggle">
             <h4>회사 정보</h4>
-            <svg class="toggle-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
+            <svg class="toggle-arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <ul>
             <li><a href="#">회사명</a></li>
@@ -232,6 +220,6 @@
     </div>
   </footer>
 
-  <script defer src="../dayflow_js/dayflow_dashboard.js"></script>
+  <script defer src="../dayflow_js/dayflow_tomorrow.js"></script>
 </body>
 </html>

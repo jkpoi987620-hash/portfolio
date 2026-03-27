@@ -1,0 +1,86 @@
+/* ── END SECTION ── */
+.end-section {
+  background: #0b0f1a;
+  min-height: calc(100vh - 74px - 282px);
+  margin-top: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.end-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  text-align: center;
+  max-width: 810px;
+  padding: 80px 24px;
+}
+
+/* ── 텍스트 등장 애니메이션 ── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.end-title {
+  font-size: 66px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+  font-family: 'Pretendard', sans-serif;
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.end-sub {
+  font-size: 30px;
+  font-weight: 400;
+  color: #a1a1aa;
+  line-height: 42px;
+  font-family: 'Pretendard', sans-serif;
+  white-space: nowrap;
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 1.1s;
+}
+
+.end-btn {
+  background: linear-gradient(to bottom, #4f46e5, #7c3aed);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 100px;
+  padding: 18px 32px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: 'Pretendard', sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 0 80px rgba(124, 58, 237, 0.3), 0 0 40px rgba(79, 70, 229, 0.5);
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 1.9s;
+  transition: opacity 0.2s;
+}
+.end-btn:hover {
+  opacity: 0.85;
+}
+
+/* ── 반응형 ── */
+@media (max-width: 768px) {
+  .end-title {
+    font-size: 36px;
+  }
+  .end-sub {
+    font-size: 20px;
+    white-space: normal;
+  }
+}
