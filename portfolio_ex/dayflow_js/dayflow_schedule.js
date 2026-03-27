@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
     aiBtn.addEventListener('click', () => {
       document.body.classList.add('page-exit');
       setTimeout(() => {
-        // window.location.href = 'dayflow_dashboard.html';
+        window.location.href = 'dayflow_loading.html';
       }, 500);
     });
   }

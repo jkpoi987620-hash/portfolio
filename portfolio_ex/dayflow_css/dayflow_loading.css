@@ -1,0 +1,102 @@
+/* ── LOADING SECTION ── */
+.loading-section {
+  background: #0b0f1a;
+  min-height: 596px;
+  margin-top: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 401px;
+}
+
+/* ── CIRCLE GRID (링 + 아이콘 겹치기) ── */
+.loading-circle-grid {
+  display: inline-grid;
+  position: relative;
+}
+
+.loading-ring {
+  grid-area: 1 / 1;
+  position: relative;
+  width: 273px;
+  height: 273px;
+}
+
+.ring-img-ext {
+  position: absolute;
+  inset: -29.3%;
+}
+
+.ring-img-ext img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  animation: ring-spin 1.8s linear infinite;
+}
+
+.loading-icon {
+  grid-area: 1 / 1;
+  position: relative;
+  margin-left: 68px;
+  margin-top: 68px;
+  width: 137px;
+  height: 137px;
+}
+
+.loading-icon img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: none;
+}
+
+/* ── 텍스트 ── */
+.loading-text {
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+  font-family: 'Pretendard', sans-serif;
+  line-height: normal;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+.loading-text.fade-out {
+  opacity: 0;
+}
+
+/* ── 스피너 애니메이션 ── */
+@keyframes ring-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .loading-ring {
+    width: 200px;
+    height: 200px;
+  }
+  .loading-icon {
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+  }
+  .loading-text {
+    font-size: 24px;
+  }
+  .loading-content {
+    width: auto;
+    padding: 0 24px;
+  }
+}

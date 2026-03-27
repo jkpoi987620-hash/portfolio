@@ -80,6 +80,11 @@ body.page-exit {
 .nav-links a:hover {
   color: #fff;
 }
+.nav-links a.nav-active {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2px;
+}
 .nav-actions {
   display: flex;
   align-items: center;
