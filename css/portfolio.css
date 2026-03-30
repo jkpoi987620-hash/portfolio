@@ -1264,13 +1264,24 @@ footer p {
   .works-subnav-inner {
     min-width: unset;
     height: 56px;
-    padding: 0 28px
+    padding: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .works-subnav-inner::-webkit-scrollbar {
+    display: none;
   }
 
   .subnav-items {
     position: static !important;
     transform: none !important;
-    margin-left: 0
+    margin-left: 0;
+    padding: 0 16px;
+    flex-wrap: nowrap;
+    min-width: max-content;
   }
 
   .subnav-item {

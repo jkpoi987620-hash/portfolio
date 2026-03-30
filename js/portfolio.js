@@ -261,6 +261,8 @@ function openWork(workKey) {
   document.querySelectorAll('.subnav-item').forEach(item => {
     item.classList.toggle('active', item.dataset.work === workKey);
   });
+  const activeSubnavItem = document.querySelector(`.subnav-item[data-work="${workKey}"]`);
+  if (activeSubnavItem) setTimeout(() => scrollSubnavToActive(activeSubnavItem), 760);
   pageWorks.style.cssText = 'position:absolute;top:0;left:0;width:100%;opacity:0;pointer-events:none;z-index:1;transform:translateX(100%);animation:none;visibility:visible;height:auto;';
   requestAnimationFrame(() => requestAnimationFrame(() => {
     pageMain.style.cssText = 'position:relative;z-index:2;animation:mainOut 0.72s cubic-bezier(0.77,0,0.18,1) forwards;';
@@ -298,9 +300,19 @@ document.querySelectorAll('.subnav-item').forEach(item => {
     }
     document.querySelectorAll('.subnav-item').forEach(i => i.classList.remove('active'));
     item.classList.add('active');
+    scrollSubnavToActive(item);
     window.scrollTo(0, 0);
   });
 });
+
+function scrollSubnavToActive(item) {
+  const inner = document.querySelector('.works-subnav-inner');
+  if (!inner) return;
+  const itemLeft = item.offsetLeft;
+  const itemWidth = item.offsetWidth;
+  const innerWidth = inner.offsetWidth;
+  inner.scrollTo({ left: itemLeft - innerWidth / 2 + itemWidth / 2, behavior: 'smooth' });
+}
 
 // page-works 햄버거
 setupHamburger('hamburgerBtn3', 'mobileMenu3');
