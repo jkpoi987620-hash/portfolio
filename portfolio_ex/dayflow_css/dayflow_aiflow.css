@@ -1,0 +1,325 @@
+/* ── AI FLOW SECTION ── */
+.aiflow-section {
+  position: relative;
+  min-height: 100vh;
+  margin-top: 74px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* ── 배경 ── */
+.aiflow-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.aiflow-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.aiflow-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+}
+
+/* ── 컨테이너 ── */
+.aiflow-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1190px;
+  padding: 80px 24px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+/* ── 타이틀 ── */
+.aiflow-title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.aiflow-title h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+}
+.aiflow-title p {
+  font-size: 16px;
+  color: #a1a1aa;
+}
+
+/* ── Before / After 비교 ── */
+.aiflow-compare {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.compare-block {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.compare-label {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.label-main {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+.label-sub {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ── 캘린더 카드 ── */
+.cal-card {
+  width: 100%;
+  border-radius: 16px;
+  padding: 20px 16px 16px;
+  overflow: hidden;
+}
+.cal-before {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.cal-after {
+  background: linear-gradient(160deg, rgba(79, 70, 229, 0.12), rgba(124, 58, 237, 0.12));
+  border: 1px solid #4f46e5;
+  box-shadow:
+    0 0 60px 0 rgba(124, 58, 237, 0.25),
+    0 0 30px 0 rgba(79, 70, 229, 0.35);
+}
+
+.cal-week-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+/* ── 주간 달력 레이아웃 ── */
+.cal-week-wrap {
+  display: flex;
+  gap: 0;
+}
+
+.cal-time-col {
+  display: flex;
+  flex-direction: column;
+  width: 34px;
+  flex-shrink: 0;
+  padding-top: 22px; /* day header 높이만큼 */
+}
+.time-label {
+  height: 20px;
+  font-size: 10px;
+  color: #a1a1a1;
+  text-align: right;
+  padding-right: 4px;
+  line-height: 20px;
+  flex-shrink: 0;
+}
+
+.cal-days-wrap {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cal-day-headers {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.day-header-cell {
+  height: 22px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  line-height: 22px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+.day-header-cell:last-child {
+  border-right: none;
+}
+
+.cal-grid-wrap {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+.day-col:last-child {
+  border-right: none;
+}
+
+/* ── 슬롯 ── */
+.slot {
+  height: 20px;
+  font-size: 10px;
+  color: #fff;
+  line-height: 20px;
+  padding-left: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.slot:last-child {
+  border-bottom: none;
+}
+.slot.empty {
+  background: transparent;
+}
+.slot.orange {
+  background: rgba(246, 128, 54, 0.2);
+  border-left: 3px solid rgba(246, 128, 54, 0.6);
+}
+.slot.red {
+  background: rgba(245, 29, 29, 0.2);
+  border-left: 3px solid rgba(245, 29, 29, 0.6);
+}
+.slot.purple {
+  background: rgba(208, 12, 226, 0.2);
+  border-left: 3px solid rgba(208, 12, 226, 0.6);
+}
+.slot.green {
+  background: rgba(0, 205, 60, 0.2);
+  border-left: 3px solid rgba(0, 205, 60, 0.6);
+}
+.slot.yellow {
+  background: rgba(249, 227, 59, 0.2);
+  border-left: 3px solid rgba(249, 227, 59, 0.6);
+}
+.slot.cyan {
+  background: rgba(60, 200, 200, 0.2);
+  border-left: 3px solid rgba(60, 200, 200, 0.6);
+}
+
+/* ── AI 추천 이유 ── */
+.aiflow-reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+.reason-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.reason-check {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.reason-item span {
+  font-size: 15px;
+  color: #a1a1a1;
+}
+
+/* ── 시작 버튼 ── */
+.aiflow-start-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #4f46e5, #7c3aed);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 100px;
+  padding: 18px 40px;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: 'Pretendard', sans-serif;
+  box-shadow:
+    0 0 80px 0 rgba(124, 58, 237, 0.3),
+    0 0 40px 0 rgba(79, 70, 229, 0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.aiflow-start-btn:hover {
+  transform: scale(1.04);
+  box-shadow:
+    0 0 100px 0 rgba(124, 58, 237, 0.5),
+    0 0 50px 0 rgba(79, 70, 229, 0.7);
+}
+
+/* ── 반응형 ── */
+@media (max-width: 900px) {
+  .aiflow-compare {
+    flex-direction: column;
+    align-items: center;
+  }
+  .compare-block {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .aiflow-title h1 {
+    font-size: 28px;
+  }
+  .aiflow-start-btn {
+    font-size: 18px;
+    padding: 14px 28px;
+  }
+  .reason-item span {
+    font-size: 13px;
+  }
+  .slot {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cal-card {
+    padding-bottom: 20px;
+  }
+  .cal-time-col {
+    width: 26px;
+    padding-top: 18px;
+  }
+  .time-label {
+    height: 17px;
+    line-height: 17px;
+    font-size: 8px;
+    padding-right: 2px;
+  }
+  .slot {
+    height: 17px;
+    font-size: 8px;
+    line-height: 17px;
+  }
+  .day-header-cell {
+    font-size: 10px;
+    height: 18px;
+    line-height: 18px;
+  }
+}
