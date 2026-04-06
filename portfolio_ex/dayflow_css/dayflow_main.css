@@ -49,19 +49,14 @@ body.page-exit {
   gap: 48px;
 }
 .nav-logo {
-  position: relative;
-  width: 54px;
-  height: 45px;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
 }
 .nav-logo img {
-  position: absolute;
-  width: 322.22%;
-  height: 257.78%;
-  left: -109.26%;
-  top: -73.33%;
-  max-width: none;
+  height: 36px;
+  width: auto;
+  display: block;
 }
 .nav-links {
   display: flex;
@@ -96,6 +91,7 @@ body.page-exit {
   cursor: pointer;
   opacity: 0.8;
   transition: opacity 0.2s;
+  color: white;
 }
 .nav-icon:hover {
   opacity: 1;
@@ -242,19 +238,14 @@ body.page-exit {
   max-width: 360px;
 }
 .footer-logo-wrap {
-  position: relative;
-  width: 62px;
-  height: 51px;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
 }
 .footer-logo-wrap img {
-  position: absolute;
-  width: 322.22%;
-  height: 257.78%;
-  left: -109.26%;
-  top: -73.33%;
-  max-width: none;
+  height: 36px;
+  width: auto;
+  display: block;
 }
 .footer-brand p {
   font-size: 14px;
