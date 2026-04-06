@@ -553,6 +553,7 @@ nav {
   font-weight: 700;
   color: #0F1730;
   letter-spacing: 0.01em;
+  margin: 0;
 }
 
 .skills-block {
@@ -596,6 +597,85 @@ nav {
   color: #111827;
   line-height: 1.4;
   letter-spacing: -0.01em;
+}
+
+/* ════════════════════════════════
+   PAGE 2 – EDUCATION + AWARDS
+════════════════════════════════ */
+.about-extra {
+  width: 100%;
+  min-width: 1200px;
+  margin-top: 120px;
+  padding: 0 67px 120px;
+  display: grid;
+  grid-template-columns: 382px 1fr;
+  column-gap: 368px;
+}
+
+.edu-block {
+  width: 382px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.edu-item {
+  margin-top: 37px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edu-period {
+  font-size: 15px;
+  color: #9CA3AF;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.edu-title {
+  font-size: 20px;
+  color: #111827;
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+.edu-org {
+  font-size: 15px;
+  color: #9CA3AF;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.award-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.award-item {
+  margin-top: 37px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.award-period {
+  font-size: 15px;
+  color: #9CA3AF;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.award-title {
+  font-size: 20px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.award-desc {
+  font-size: 16px;
+  color: #9CA3AF;
+  line-height: 1.7;
 }
 
 /* ════════════════════════════════
@@ -822,6 +902,27 @@ footer p {
 
   .info-list {
     gap: 28px;
+  }
+
+  .about-extra {
+    min-width: unset;
+    margin-top: 80px;
+    padding: 0 48px 80px;
+    grid-template-columns: 296px 1fr;
+    column-gap: 220px;
+  }
+
+  .edu-block {
+    width: auto;
+  }
+
+  .edu-title,
+  .award-title {
+    font-size: 17px;
+  }
+
+  .award-desc {
+    font-size: 14px;
   }
 
   footer {
@@ -1066,6 +1167,36 @@ footer p {
 
   .info-list li {
     font-size: 15px;
+  }
+
+  .about-extra {
+    min-width: unset;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    margin-top: 56px;
+    padding: 0 16px;
+    padding-bottom: 0;
+    gap: 56px;
+  }
+
+  .award-block {
+    margin-left: 0;
+  }
+
+  .edu-item,
+  .award-item {
+    margin-top: 24px;
+    gap: 8px;
+  }
+
+  .edu-title,
+  .award-title {
+    font-size: 15px;
+  }
+
+  .award-desc {
+    font-size: 13px;
+    line-height: 1.65;
   }
 
   footer {
