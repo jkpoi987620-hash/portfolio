@@ -141,7 +141,7 @@ resetPage();
 /* ════════════════════════════════
    슬라이더 – 버튼 + 터치 스와이프
 ════════════════════════════════ */
-const TOTAL = 6;
+const TOTAL = 7;
 let current = 0;
 const stage = document.getElementById('sliderStage');
 const caption = document.getElementById('sliderCaption');
@@ -243,6 +243,13 @@ const workData = {
     pdf: `${BASE}/img/DAYFLOW_PORTFOLIO.jpg`,
     link: `${BASE}/portfolio_ex/dayflow_index/dayflow_main.html`,
     bg: `${BASE}/img/DAYFLOW_CTA-bg.png`,
+    text: '본 프로젝트는 Figma로 디자인하고 HTML, CSS, JavaScript로 구현되었습니다.'
+  },
+  univeat
+  : {
+    pdf: `${BASE}/img/UNIV-EAT_PORTFOLIO.png`,
+    link: `${BASE}/portfolio_ex/dayflow_index/dayflow_main.html`,
+    bg: `${BASE}/img/UNIV_CTA-bg.png`,
     text: '본 프로젝트는 Figma로 디자인하고 HTML, CSS, JavaScript로 구현되었습니다.'
   },
 };
