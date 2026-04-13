@@ -139,62 +139,8 @@ resetPage();
 
 
 /* ════════════════════════════════
-   슬라이더 – 버튼 + 터치 스와이프
+   Works 그리드 클릭
 ════════════════════════════════ */
-const TOTAL = 7;
-let current = 0;
-const stage = document.getElementById('sliderStage');
-const caption = document.getElementById('sliderCaption');
-const cards = Array.from(stage.querySelectorAll('.slide-card'));
-const caps = Array.from(caption.querySelectorAll('.caption-item'));
-const dots = Array.from(document.querySelectorAll('.swipe-dot'));
-
-function posClass(offset) {
-  const m = ((offset % TOTAL) + TOTAL) % TOTAL;
-  if (m === 0) return 'pos-center';
-  if (m === 1) return 'pos-right';
-  if (m === TOTAL - 1) return 'pos-left';
-  if (m === 2) return 'pos-hidden-right';
-  return 'pos-hidden-left';
-}
-
-function updatePositions() {
-  cards.forEach((c, i) => { c.className = 'slide-card ' + posClass(((i - current) % TOTAL + TOTAL) % TOTAL); });
-  caps.forEach((c, i) => { c.classList.toggle('visible', i === current); });
-  dots.forEach((d, i) => { d.classList.toggle('active', i === current); });
-}
-
-function goTo(idx) {
-  current = ((idx % TOTAL) + TOTAL) % TOTAL;
-  updatePositions();
-}
-
-// 카드 클릭은 아래 Works 추가 코드에서 처리
-
-document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
-document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
-
-let touchStartX = 0, touchStartY = 0, isSwiping = false;
-
-stage.addEventListener('touchstart', e => {
-  touchStartX = e.touches[0].clientX;
-  touchStartY = e.touches[0].clientY;
-  isSwiping = false;
-}, { passive: true });
-
-stage.addEventListener('touchmove', e => {
-  const dx = e.touches[0].clientX - touchStartX;
-  const dy = e.touches[0].clientY - touchStartY;
-  if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 8) isSwiping = true;
-}, { passive: true });
-
-stage.addEventListener('touchend', e => {
-  if (!isSwiping) return;
-  const dx = e.changedTouches[0].clientX - touchStartX;
-  if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
-});
-
-updatePositions();
 
 
 /* ── Works 상세 페이지 추가 ── */
@@ -284,13 +230,10 @@ function openWork(workKey) {
   }, 750);
 }
 
-// 카드 클릭 이벤트 재등록 (기존 이벤트 위에 덮어씀)
-cards.forEach((c, i) => {
-  c.addEventListener('click', e => {
+document.querySelectorAll('.work-item').forEach(item => {
+  item.addEventListener('click', e => {
     e.preventDefault();
-    e.stopPropagation();
-    const off = ((i - current) % TOTAL + TOTAL) % TOTAL;
-    if (off === 0) { openWork(c.dataset.work); } else { goTo(i); }
+    openWork(item.dataset.work);
   });
 });
 
