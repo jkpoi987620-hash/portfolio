@@ -1,0 +1,293 @@
+/* =========================================
+   Univ-Eat — Signup Step 2
+   ========================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #0f1729;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+/* ── 폰 프레임 ── */
+.phone-wrap {
+  width: 390px;
+  min-height: 844px;
+  border-radius: 44px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── 스크린 ── */
+.screen {
+  width: 100%;
+  min-height: 844px;
+  background: #f7fafc;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── 헤더 ── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 56px;
+  padding: 0 16px;
+  flex-shrink: 0;
+}
+
+.header__back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 2px;
+}
+
+.header__title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f1729;
+  flex-shrink: 0;
+}
+
+/* 스텝 인디케이터 */
+.step-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 4px;
+}
+
+.step-indicator__bar {
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  background: #f1f4f9;
+}
+
+.step-indicator__bar:first-child {
+  width: 62px;
+}
+
+.step-indicator__bar:not(:first-child) {
+  width: 30px;
+}
+
+.step-indicator__bar--done {
+  background: #e2e8f0;
+}
+
+.step-indicator__bar--active {
+  background: linear-gradient(11.31deg, #3b82f6 14.639%, #1d4ede 85.361%);
+}
+
+/* ── 타이틀 ── */
+.page-title {
+  padding: 8px 16px 0;
+  flex-shrink: 0;
+}
+
+.page-title__step {
+  font-size: 11px;
+  font-weight: 500;
+  color: #94a2b8;
+  margin-bottom: 7px;
+}
+
+.page-title__heading {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f1729;
+  line-height: 32px;
+}
+
+/* ── 아바타 업로더 ── */
+.avatar-uploader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 16px 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.avatar-uploader__circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  background: linear-gradient(45deg, #3b82f6 14.639%, #1d4ede 85.361%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+
+.avatar-uploader__circle:hover {
+  opacity: 0.88;
+}
+
+.avatar-uploader__emoji {
+  font-size: 32px;
+  line-height: 1;
+  color: #fff;
+}
+
+.avatar-uploader__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-uploader__hint {
+  font-size: 11px;
+  font-weight: 500;
+  color: #94a2b8;
+}
+
+/* ── 폼 ── */
+.form {
+  padding: 16px 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+/* 인풋 그룹 */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group__label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #47576e;
+}
+
+.input-group__box {
+  height: 44px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  transition: border-color 0.18s;
+}
+
+.input-group__box:focus-within {
+  border-color: #3b82f6;
+  background: #fff;
+}
+
+.input-group__box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #0f1729;
+  outline: none;
+}
+
+.input-group__box input::placeholder {
+  color: #c0d1e1;
+}
+
+/* ── 성별 선택 ── */
+.gender-row {
+  display: flex;
+  gap: 10px;
+}
+
+.gender-btn {
+  flex: 1;
+  height: 44px;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  background: #f1f4f9;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #94a2b8;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+
+.gender-btn--active {
+  background: #eff6ff;
+  border-color: #3b82f6;
+  color: #3b82f6;
+  font-weight: 700;
+}
+
+/* ── 다음 버튼 ── */
+.btn-area {
+  padding: 20px 16px 40px;
+  flex-shrink: 0;
+}
+
+.btn-next {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(8.26deg, #3b82f6 14.639%, #1d4ede 85.361%);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-next:hover {
+  opacity: 0.92;
+}
+
+.btn-next:active {
+  transform: scale(0.98);
+}
+
+/* ── 반응형: 실제 모바일 ── */
+@media (max-width: 430px) {
+  body {
+    padding: 0;
+    background: #f7fafc;
+  }
+
+  .phone-wrap {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .screen {
+    min-height: 100vh;
+  }
+}

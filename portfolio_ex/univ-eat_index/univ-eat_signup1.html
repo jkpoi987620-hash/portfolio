@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Univ-Eat — 회원가입</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_transition.css" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_signup1.css" />
+</head>
+<body>
+
+  <div class="phone-wrap">
+    <div class="screen page-slide-in">
+
+      <!-- 헤더 -->
+      <header class="header">
+        <button class="header__back" id="btnBack" aria-label="뒤로가기">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0f1729" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+        <p class="header__title">회원가입</p>
+        <div class="step-indicator">
+          <span class="step-indicator__bar step-indicator__bar--active"></span>
+          <span class="step-indicator__bar"></span>
+          <span class="step-indicator__bar"></span>
+        </div>
+      </header>
+
+      <!-- 타이틀 -->
+      <div class="page-title">
+        <p class="page-title__step">1/3 기본 정보</p>
+        <h1 class="page-title__heading">이메일 주소와<br>비밀번호를 설정해주세요</h1>
+      </div>
+
+      <!-- 폼 -->
+      <form class="form" id="signupForm1" novalidate>
+
+        <!-- 이름 -->
+        <div class="input-group">
+          <label class="input-group__label" for="inputName">이름</label>
+          <div class="input-group__box">
+            <input type="text" id="inputName" placeholder="실명을 입력하세요" autocomplete="name" />
+          </div>
+        </div>
+
+        <!-- 이메일 + 인증 발송 -->
+        <div class="input-group">
+          <label class="input-group__label" for="inputEmail">이메일</label>
+          <div class="input-group__row">
+            <div class="input-group__box">
+              <input type="email" id="inputEmail" placeholder="이메일 주소" autocomplete="email" />
+            </div>
+            <button type="button" class="btn-send" id="btnSend">인증 발송</button>
+          </div>
+        </div>
+
+        <!-- 인증코드 -->
+        <div class="input-group">
+          <label class="input-group__label" for="inputCode">인증코드</label>
+          <div class="input-group__box">
+            <input type="text" id="inputCode" placeholder="6자리 코드 입력" maxlength="6" inputmode="numeric" />
+          </div>
+        </div>
+
+        <!-- 비밀번호 -->
+        <div class="input-group">
+          <label class="input-group__label" for="inputPw">비밀번호</label>
+          <div class="input-group__box input-group__box--pw">
+            <input type="password" id="inputPw" placeholder="영문+숫자 8자 이상" />
+            <button type="button" class="pw-toggle" data-target="inputPw" aria-label="비밀번호 표시">
+              <svg class="eye-icon eye-icon--off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a2b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+                <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+                <line x1="1" y1="1" x2="23" y2="23"/>
+              </svg>
+              <svg class="eye-icon eye-icon--on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a2b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- 비밀번호 확인 -->
+        <div class="input-group">
+          <label class="input-group__label" for="inputPwConfirm">비밀번호 확인</label>
+          <div class="input-group__box input-group__box--pw">
+            <input type="password" id="inputPwConfirm" placeholder="비밀번호를 다시 입력하세요" />
+            <button type="button" class="pw-toggle" data-target="inputPwConfirm" aria-label="비밀번호 표시">
+              <svg class="eye-icon eye-icon--off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a2b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+                <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+                <line x1="1" y1="1" x2="23" y2="23"/>
+              </svg>
+              <svg class="eye-icon eye-icon--on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a2b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- 다음 단계 버튼 -->
+      <div class="btn-area">
+        <button class="btn-next" id="btnNext">다음 단계로</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../univ-eat_js/univ-eat_transition.js"></script>
+  <script src="../univ-eat_js/univ-eat_signup1.js"></script>
+</body>
+</html>

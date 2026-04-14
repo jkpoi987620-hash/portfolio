@@ -1,0 +1,468 @@
+/* =========================================
+   Univ-Eat — 외식정보
+   ========================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #0f1729;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+/* ── 폰 프레임 ── */
+.phone-wrap {
+  width: 390px;
+  min-height: 844px;
+  border-radius: 44px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── 스크린 ── */
+.screen {
+  width: 100%;
+  min-height: 844px;
+  background: #f7fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── 지도 영역 ── */
+.map-area {
+  width: 100%;
+  height: 244px;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+/* Leaflet 지도 컨테이너 */
+#map {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Leaflet 기본 컨트롤 숨기기 */
+.leaflet-control-zoom,
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+/* 커스텀 가격 핀 마커 */
+.map-price-pin {
+  background: #fff;
+  border: 1.5px solid;
+  border-radius: 14px;
+  padding: 4px 8px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #0f1729;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(15, 23, 41, 0.12);
+}
+
+.map-price-pin--green { border-color: #10b981; }
+.map-price-pin--red   { border-color: #ef4444; }
+
+/* 내 위치 마커 */
+.map-my-location {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.map-my-location__dot {
+  position: absolute;
+  inset: 0;
+  background: #3b82f6;
+  border: 2.5px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.5);
+  z-index: 2;
+}
+
+.map-my-location__pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.4);
+  animation: locationPulse 2s ease-out infinite;
+  z-index: 1;
+}
+
+.map-my-location__pulse:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+@keyframes locationPulse {
+  0%   { transform: translate(-50%, -50%) scale(1);   opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(3.5); opacity: 0; }
+}
+
+/* 검색바 + 컨트롤 오버레이 */
+.map-overlay-top {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.map-overlay-top > * {
+  pointer-events: auto;
+}
+
+.map-search__bar {
+  flex: 1;
+  height: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(15, 23, 41, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  overflow: hidden;
+}
+
+.map-search__placeholder {
+  font-size: 13px;
+  font-weight: 400;
+  color: #94a2b8;
+  white-space: pre;
+}
+
+/* 맵 컨트롤 버튼 */
+.map-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 36px;
+}
+
+.map-ctrl-btn {
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(15, 23, 41, 0.1);
+  font-size: 15px;
+  color: #0f1729;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  font-family: 'Noto Sans KR', sans-serif;
+  transition: background 0.15s;
+}
+
+.map-ctrl-btn:hover { background: #f7fafc; }
+
+/* 원위치 버튼 — CSS 원 */
+.map-ctrl-btn--locate::before {
+  content: '';
+  display: block;
+  width: 13px;
+  height: 13px;
+  border: 2px solid #0f1729;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2.5px #fff, inset 0 0 0 4px #0f1729;
+}
+
+/* 비교 칩 */
+.map-compare {
+  position: absolute;
+  bottom: 16px;
+  left: 10px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: 0.5px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 4px 10px;
+  box-shadow: 0 2px 8px rgba(15, 23, 41, 0.08);
+}
+
+.map-compare__label {
+  font-size: 9px;
+  font-weight: 400;
+  color: #47576e;
+  white-space: nowrap;
+}
+
+.map-compare__badge {
+  background: #eff6ff;
+  color: #3b82f6;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+/* ── 피드 영역 ── */
+.feed-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 16px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.feed-area::-webkit-scrollbar { display: none; }
+
+/* 피드 헤더 */
+.feed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 36px;
+}
+
+.feed-header__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f1729;
+  white-space: nowrap;
+}
+
+/* 정렬 칩 */
+.feed-chips {
+  display: flex;
+  gap: 8px;
+}
+
+.chip {
+  background: #f1f4f9;
+  border: none;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  color: #94a2b8;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.chip--active {
+  background: #eff6ff;
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+/* 피드 그리드 */
+.feed-grid {
+  display: flex;
+  gap: 16px;
+}
+
+.feed-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+/* 피드 카드 */
+.feed-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(15, 23, 41, 0.07);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.feed-card__img {
+  position: relative;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.feed-card__img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feed-card__img-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px 12px 0 0;
+}
+
+.feed-card__tags {
+  position: absolute;
+  bottom: 4px;
+  left: 8px;
+  display: flex;
+  gap: 4px;
+  align-items: flex-end;
+}
+
+.feed-card__price {
+  background: rgba(15, 23, 41, 0.7);
+  border-radius: 6px;
+  padding: 3px 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.feed-card__rating {
+  background: #f59e0b;
+  border-radius: 10px;
+  padding: 3px 5px;
+  font-size: 9px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.feed-card__info {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.feed-card__name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f1729;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.feed-card__dist {
+  font-size: 10px;
+  font-weight: 400;
+  color: #94a2b8;
+  white-space: nowrap;
+}
+
+/* ── FAB ── */
+.fab-add {
+  position: absolute;
+  right: 16px;
+  bottom: 88px;
+  height: 48px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(-19.18deg, #10b981 14.645%, #0a6e4d 85.355%);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.45);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  z-index: 5;
+  transition: opacity 0.2s;
+}
+
+.fab-add:hover { opacity: 0.9; }
+.fab-add:active { opacity: 0.8; }
+
+/* ── 바텀 네비게이션 ── */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px;
+  gap: 6px;
+  z-index: 10;
+}
+
+.nav-item {
+  flex: 1;
+  height: 52px;
+  border: none;
+  background: transparent;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+  padding: 8px 10px;
+  transition: background 0.18s;
+}
+
+.nav-item--active {
+  background: #eff6ff;
+}
+
+.nav-item__icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.nav-item__label {
+  font-size: 9px;
+  font-weight: 400;
+  color: #94a2b8;
+  width: 47px;
+  text-align: center;
+}
+
+.nav-item--active .nav-item__label {
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+/* ── 반응형: 실제 모바일 ── */
+@media (max-width: 430px) {
+  body {
+    padding: 0;
+    background: #f7fafc;
+  }
+
+  .phone-wrap {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .screen { min-height: 100vh; }
+}

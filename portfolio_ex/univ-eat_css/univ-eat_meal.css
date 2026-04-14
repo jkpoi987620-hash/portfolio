@@ -1,0 +1,336 @@
+/* =========================================
+   Univ-Eat — 학식 정보
+   ========================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #0f1729;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+/* ── 폰 프레임 ── */
+.phone-wrap {
+  width: 390px;
+  min-height: 844px;
+  border-radius: 44px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── 스크린 ── */
+.screen {
+  width: 100%;
+  min-height: 844px;
+  background: #f7fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── 헤더 ── */
+.meal-header {
+  background: #fff;
+  padding: 20px 20px 0;
+  flex-shrink: 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.meal-header__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f1729;
+  margin-bottom: 16px;
+}
+
+/* ── 요일 탭 ── */
+.day-tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.day-tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 8px 4px 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.18s, color 0.18s;
+}
+
+.day-tab__label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #94a2b8;
+  transition: color 0.18s, font-weight 0.18s;
+}
+
+.day-tab__date {
+  font-size: 10px;
+  font-weight: 400;
+  color: #b0bece;
+  transition: color 0.18s;
+}
+
+.day-tab--active {
+  border-bottom-color: #3b82f6;
+}
+
+.day-tab--active .day-tab__label {
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+.day-tab--active .day-tab__date {
+  color: #3b82f6;
+}
+
+/* ── 콘텐츠 ── */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 16px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.content::-webkit-scrollbar { display: none; }
+
+/* ── 혼잡도 ── */
+.congestion-section {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(15, 23, 41, 0.06);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.congestion-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.congestion-row__dot {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+}
+
+.congestion-row__name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #0f1729;
+  flex: 1;
+}
+
+.congestion-row__status {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.congestion-row__status--green {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.congestion-row__status--orange {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+/* ── 식당 카드 ── */
+.meal-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(15, 23, 41, 0.06);
+  overflow: hidden;
+}
+
+.meal-card__header {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.meal-card__header--student {
+  background: linear-gradient(14.59deg, #1e3b8a 14.639%, #3b82f6 85.361%);
+}
+
+.meal-card__header--faculty {
+  background: linear-gradient(14.59deg, #5b2294 14.639%, #7c3aed 85.361%);
+}
+
+.meal-card__header-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.meal-card__header-sub {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.meal-card__body {
+  padding: 0 16px;
+}
+
+/* ── 메뉴 아이템 ── */
+.meal-item {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.meal-item--border {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.meal-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.meal-item__name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #0f1729;
+  white-space: nowrap;
+}
+
+.meal-item__kcal {
+  font-size: 11px;
+  font-weight: 400;
+  color: #94a2b8;
+}
+
+.meal-item__ai-tag {
+  flex-shrink: 0;
+  padding: 3px 8px;
+  border-radius: 10px;
+  background: linear-gradient(17.53deg, #3b82f6 14.639%, #7c3aed 85.361%);
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* ── 구독 버튼 ── */
+.btn-subscribe {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(6.65deg, #3b82f6 14.639%, #1d4ede 85.361%);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.btn-subscribe:hover { opacity: 0.9; }
+.btn-subscribe:active { opacity: 0.8; }
+
+/* ── 바텀 네비게이션 ── */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px;
+  gap: 6px;
+  z-index: 10;
+}
+
+.nav-item {
+  flex: 1;
+  height: 52px;
+  border: none;
+  background: transparent;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+  padding: 8px 10px;
+  transition: background 0.18s;
+}
+
+.nav-item--active {
+  background: #eff6ff;
+}
+
+.nav-item__icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.nav-item__label {
+  font-size: 9px;
+  font-weight: 400;
+  color: #94a2b8;
+  width: 47px;
+  text-align: center;
+}
+
+.nav-item--active .nav-item__label {
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+/* ── 반응형: 실제 모바일 ── */
+@media (max-width: 430px) {
+  body {
+    padding: 0;
+    background: #f7fafc;
+  }
+
+  .phone-wrap {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .screen { min-height: 100vh; }
+}

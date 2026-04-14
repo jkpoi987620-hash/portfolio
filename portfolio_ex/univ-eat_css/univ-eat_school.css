@@ -1,0 +1,466 @@
+/* =========================================
+   Univ-Eat — School Search
+   ========================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #0f1729;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+/* ── 폰 프레임 ── */
+.phone-wrap {
+  width: 390px;
+  min-height: 844px;
+  border-radius: 44px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── 스크린 ── */
+.screen {
+  width: 100%;
+  min-height: 844px;
+  background: #f7fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── 헤더 ── */
+.header {
+  position: relative;
+  height: 56px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 14px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.header__border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.header__back {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.header__back-circle {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: #f1f4f9;
+}
+
+.header__back svg {
+  position: relative;
+  z-index: 1;
+}
+
+.header__title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f1729;
+}
+
+/* ── 콘텐츠 ── */
+.content {
+  padding: 24px 16px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+/* ── 검색바 ── */
+.search-bar {
+  height: 46px;
+  background: #fff;
+  border: 1.5px solid #3b82f6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  flex-shrink: 0;
+}
+
+.search-bar__icon {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.search-bar__input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #0f1729;
+  outline: none;
+}
+
+.search-bar__input::placeholder {
+  color: #94a2b8;
+}
+
+/* ── 학교 목록 ── */
+.school-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── 학교 카드 ── */
+.school-card {
+  height: 66px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1.5px solid transparent;
+  box-shadow: 0 4px 16px rgba(15, 23, 41, 0.07);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: border-color 0.18s, background 0.18s, transform 0.12s;
+}
+
+.school-card:active {
+  transform: scale(0.98);
+}
+
+.school-card--selected {
+  background: #eff6ff;
+  border-color: #3b82f6;
+}
+
+.school-card__icon {
+  font-size: 24px;
+  width: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.school-card__info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.school-card__name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f1729;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.school-card__location {
+  font-size: 11px;
+  font-weight: 400;
+  color: #94a2b8;
+  white-space: nowrap;
+}
+
+/* 뱃지 */
+.school-card__badge {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.school-card__badge--green { background: #10b981; }
+.school-card__badge--gray  { background: #94a2b8; }
+
+/* ── 안내 배너 ── */
+.info-banner {
+  background: #fefce6;
+  border: 1px solid rgba(253, 209, 2, 0.6);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(15, 23, 41, 0.06);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-banner__top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.info-banner__icon-badge {
+  background: rgba(253, 209, 2, 0.2);
+  border-radius: 8px;
+  padding: 4px 6px;
+  font-size: 12px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.info-banner__title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #251901;
+}
+
+.info-banner__divider {
+  height: 1px;
+  background: rgba(253, 209, 2, 0.3);
+}
+
+.info-banner__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-banner__row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.info-banner__badge {
+  padding: 3px 6px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.info-banner__badge--green { background: #10b981; }
+.info-banner__badge--gray  { background: #94a2b8; }
+
+.info-banner__desc {
+  font-size: 11px;
+  font-weight: 500;
+  color: #251901;
+}
+
+/* ── 딤드 오버레이 ── */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 41, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  border-radius: 44px;
+}
+
+.overlay--show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── 바텀시트 모달 ── */
+.modal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 24px 24px 0 0;
+  padding: 16px 20px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 20;
+  transform: translateY(100%);
+  transition: transform 0.36s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.modal--show {
+  transform: translateY(0);
+}
+
+.modal__handle {
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: #e2e8f0;
+  margin-bottom: 16px;
+}
+
+.modal__emoji {
+  font-size: 44px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.modal__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f1729;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.modal__desc {
+  font-size: 13px;
+  font-weight: 400;
+  color: #47576e;
+  text-align: center;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.modal__btn-confirm {
+  width: 100%;
+  max-width: 319px;
+  height: 52px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(9.26deg, #3b82f6 14.639%, #1d4ede 85.361%);
+  box-shadow: 0 3px 16px rgba(15, 23, 41, 0.07);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: opacity 0.2s;
+}
+
+.modal__btn-confirm:hover { opacity: 0.9; }
+
+.modal__btn-cancel {
+  width: 100%;
+  max-width: 319px;
+  height: 52px;
+  border: none;
+  border-radius: 16px;
+  background: #f1f4f9;
+  box-shadow: 0 3px 16px rgba(15, 23, 41, 0.07);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #47576e;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.modal__btn-cancel:hover { opacity: 0.85; }
+
+/* ── 다음으로 버튼 영역 ── */
+.btn-next-area {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 16px 28px;
+  background: linear-gradient(to top, #f7fafc 70%, transparent);
+  z-index: 5;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn-next-area--show {
+  transform: translateY(0);
+}
+
+.btn-next {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(8.26deg, #3b82f6 14.639%, #1d4ede 85.361%);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-next:hover  { opacity: 0.92; }
+.btn-next:active { transform: scale(0.98); }
+
+/* 제휴완료 — 파란 그라데이션 */
+.btn-next--affiliated {
+  background: linear-gradient(8.26deg, #3b82f6 14.639%, #1d4ede 85.361%);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
+}
+
+/* 미가맹 — TODO: 미가맹 페이지 Figma 링크 받은 후 헤더 색상으로 교체 */
+.btn-next--unaffiliated {
+  background: linear-gradient(8.26deg, #99330d 14.639%, #e5590d 85.361%);
+  box-shadow: 0 8px 24px rgba(229, 89, 13, 0.35);
+}
+
+/* ── 검색 결과 없음 ── */
+.no-result {
+  text-align: center;
+  padding: 32px 0;
+  color: #94a2b8;
+  font-size: 13px;
+  font-weight: 400;
+  display: none;
+}
+
+/* ── 반응형: 실제 모바일 ── */
+@media (max-width: 430px) {
+  body {
+    padding: 0;
+    background: #f7fafc;
+  }
+
+  .phone-wrap {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .screen { min-height: 100vh; }
+
+  .overlay { border-radius: 0; }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Univ-Eat — 내 학교 찾기</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_transition.css" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_school.css" />
+</head>
+<body>
+
+  <div class="phone-wrap">
+    <div class="screen page-slide-in">
+
+      <!-- 헤더 -->
+      <header class="header">
+        <button class="header__back" id="btnBack" aria-label="뒤로가기">
+          <div class="header__back-circle"></div>
+          <svg width="10" height="16" viewBox="0 0 10 16" fill="none">
+            <polyline points="8 2 2 8 8 14" stroke="#0f1729" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <p class="header__title">내 학교 찾기</p>
+        <div class="header__border"></div>
+      </header>
+
+      <!-- 콘텐츠 -->
+      <div class="content">
+
+        <!-- 검색바 -->
+        <div class="search-bar" id="searchBar">
+          <span class="search-bar__icon">🔍</span>
+          <input type="text" class="search-bar__input" id="searchInput" placeholder="학교 검색..." />
+        </div>
+
+        <!-- 학교 카드 목록 -->
+        <ul class="school-list" id="schoolList">
+
+          <li class="school-card" data-type="affiliated" data-name="한국대학교">
+            <span class="school-card__icon">🏫</span>
+            <div class="school-card__info">
+              <p class="school-card__name">한국대학교</p>
+              <p class="school-card__location">📍 서울특별시</p>
+            </div>
+            <span class="school-card__badge school-card__badge--green">제휴완료</span>
+          </li>
+
+          <li class="school-card" data-type="affiliated" data-name="서울과학기술대학교">
+            <span class="school-card__icon">🏫</span>
+            <div class="school-card__info">
+              <p class="school-card__name">서울과학기술대학교</p>
+              <p class="school-card__location">📍 서울특별시</p>
+            </div>
+            <span class="school-card__badge school-card__badge--green">제휴완료</span>
+          </li>
+
+          <li class="school-card" data-type="pending" data-name="경희대학교">
+            <span class="school-card__icon">🏫</span>
+            <div class="school-card__info">
+              <p class="school-card__name">경희대학교</p>
+              <p class="school-card__location">📍 서울특별시</p>
+            </div>
+            <span class="school-card__badge school-card__badge--gray">협의중</span>
+          </li>
+
+          <li class="school-card" data-type="unaffiliated" data-name="한국예술대학교">
+            <span class="school-card__icon">🏫</span>
+            <div class="school-card__info">
+              <p class="school-card__name">한국예술대학교</p>
+              <p class="school-card__location">📍 서울특별시</p>
+            </div>
+            <span class="school-card__badge school-card__badge--gray">미제휴</span>
+          </li>
+
+        </ul>
+
+        <!-- 안내 배너 -->
+        <div class="info-banner">
+          <div class="info-banner__top">
+            <span class="info-banner__icon-badge">💡</span>
+            <p class="info-banner__title">학교별 이용 안내</p>
+          </div>
+          <div class="info-banner__divider"></div>
+          <div class="info-banner__rows">
+            <div class="info-banner__row">
+              <span class="info-banner__badge info-banner__badge--green">제휴완료</span>
+              <p class="info-banner__desc">구독 플랜 이용 가능</p>
+            </div>
+            <div class="info-banner__row">
+              <span class="info-banner__badge info-banner__badge--gray">미가맹</span>
+              <p class="info-banner__desc">기본 학식 정보만 확인 가능</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- 다음으로 버튼 (제휴완료 학교 선택 시 표시) -->
+    <div class="btn-next-area" id="btnNextArea">
+      <button class="btn-next" id="btnNext">
+        <span id="btnNextLabel">학교 선택 후 다음으로</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- 딤드 오버레이 -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- 미가맹 바텀시트 모달 -->
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal__handle"></div>
+      <p class="modal__emoji">😢</p>
+      <p class="modal__title">아직 제휴되지 않은 학교예요</p>
+      <p class="modal__desc" id="modalDesc">
+        해당 학교는 현재 제휴 협의 중이에요.<br>
+        오픈 알림을 신청하시면 가장 먼저 알려드릴게요!
+      </p>
+      <button class="modal__btn-confirm" id="modalConfirm">확인</button>
+      <button class="modal__btn-cancel" id="modalCancel">취소</button>
+    </div>
+
+  </div>
+
+  <script src="../univ-eat_js/univ-eat_transition.js"></script>
+  <script src="../univ-eat_js/univ-eat_school.js"></script>
+</body>
+</html>

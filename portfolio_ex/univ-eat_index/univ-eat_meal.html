@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Univ-Eat — 학식 정보</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_transition.css" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_meal.css" />
+</head>
+<body>
+
+  <div class="phone-wrap">
+    <div class="screen page-slide-in">
+
+      <!-- 헤더 -->
+      <header class="meal-header">
+        <h1 class="meal-header__title">학식 정보</h1>
+
+        <!-- 요일 탭 -->
+        <div class="day-tabs" id="dayTabs">
+          <button class="day-tab" data-day="mon">
+            <span class="day-tab__label">월</span>
+            <span class="day-tab__date">3/31</span>
+          </button>
+          <button class="day-tab" data-day="tue">
+            <span class="day-tab__label">화</span>
+            <span class="day-tab__date">4/01</span>
+          </button>
+          <button class="day-tab" data-day="wed">
+            <span class="day-tab__label">수</span>
+            <span class="day-tab__date">4/02</span>
+          </button>
+          <button class="day-tab day-tab--active" data-day="thu">
+            <span class="day-tab__label">목</span>
+            <span class="day-tab__date">4/03</span>
+          </button>
+          <button class="day-tab" data-day="fri">
+            <span class="day-tab__label">금</span>
+            <span class="day-tab__date">4/04</span>
+          </button>
+          <button class="day-tab" data-day="sat">
+            <span class="day-tab__label">토</span>
+            <span class="day-tab__date">4/05</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- 콘텐츠 -->
+      <div class="content">
+
+        <!-- 혼잡도 -->
+        <div class="congestion-section">
+          <div class="congestion-row">
+            <img class="congestion-row__dot" src="https://www.figma.com/api/mcp/asset/20a1df7f-e7f8-4cca-aaa2-a887e56915d7" alt="여유" />
+            <span class="congestion-row__name">학생식당</span>
+            <span class="congestion-row__status congestion-row__status--green">여유</span>
+          </div>
+          <div class="congestion-row">
+            <img class="congestion-row__dot" src="https://www.figma.com/api/mcp/asset/03663bfb-9035-4c50-bfa4-11ae8901b784" alt="보통" />
+            <span class="congestion-row__name">교직원식당</span>
+            <span class="congestion-row__status congestion-row__status--orange">보통</span>
+          </div>
+        </div>
+
+        <!-- 학생식당 카드 -->
+        <div class="meal-card">
+          <div class="meal-card__header meal-card__header--student">
+            <span class="meal-card__header-title">학생식당</span>
+            <span class="meal-card__header-sub">점심 11:30 ~ 13:30</span>
+          </div>
+          <div class="meal-card__body">
+            <div class="meal-item meal-item--border">
+              <div class="meal-item__info">
+                <p class="meal-item__name">된장찌개 정식</p>
+                <p class="meal-item__kcal">580 kcal</p>
+              </div>
+              <span class="meal-item__ai-tag">✨ AI추천</span>
+            </div>
+            <div class="meal-item meal-item--border">
+              <div class="meal-item__info">
+                <p class="meal-item__name">김치찌개 정식</p>
+                <p class="meal-item__kcal">610 kcal</p>
+              </div>
+            </div>
+            <div class="meal-item meal-item--border">
+              <div class="meal-item__info">
+                <p class="meal-item__name">제육 정식</p>
+                <p class="meal-item__kcal">650 kcal</p>
+              </div>
+            </div>
+            <div class="meal-item">
+              <div class="meal-item__info">
+                <p class="meal-item__name">돈가스 정식</p>
+                <p class="meal-item__kcal">720 kcal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 교직원식당 카드 -->
+        <div class="meal-card">
+          <div class="meal-card__header meal-card__header--faculty">
+            <span class="meal-card__header-title">교직원식당</span>
+            <span class="meal-card__header-sub">점심 11:30 ~ 13:30</span>
+          </div>
+          <div class="meal-card__body">
+            <div class="meal-item meal-item--border">
+              <div class="meal-item__info">
+                <p class="meal-item__name">된장찌개 정식</p>
+                <p class="meal-item__kcal">580 kcal</p>
+              </div>
+            </div>
+            <div class="meal-item meal-item--border">
+              <div class="meal-item__info">
+                <p class="meal-item__name">김치찌개 정식</p>
+                <p class="meal-item__kcal">610 kcal</p>
+              </div>
+            </div>
+            <div class="meal-item meal-item--border">
+              <div class="meal-item__info">
+                <p class="meal-item__name">제육 정식</p>
+                <p class="meal-item__kcal">650 kcal</p>
+              </div>
+            </div>
+            <div class="meal-item">
+              <div class="meal-item__info">
+                <p class="meal-item__name">돈가스 정식</p>
+                <p class="meal-item__kcal">720 kcal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 구독 버튼 -->
+        <button class="btn-subscribe" id="btnSubscribe">지금 구독하기</button>
+
+      </div>
+
+      <!-- 바텀 네비게이션 -->
+      <nav class="bottom-nav">
+        <button class="nav-item" data-nav="home">
+          <span class="nav-item__icon">🏠</span>
+          <span class="nav-item__label">홈</span>
+        </button>
+        <button class="nav-item nav-item--active" data-nav="meal">
+          <span class="nav-item__icon">🍽️</span>
+          <span class="nav-item__label">학식정보</span>
+        </button>
+        <button class="nav-item" data-nav="sub">
+          <span class="nav-item__icon">🎫</span>
+          <span class="nav-item__label">구독</span>
+        </button>
+        <button class="nav-item" data-nav="dining">
+          <span class="nav-item__icon">🗺️</span>
+          <span class="nav-item__label">외식정보</span>
+        </button>
+        <button class="nav-item" data-nav="mypage">
+          <span class="nav-item__icon">👤</span>
+          <span class="nav-item__label">마이페이지</span>
+        </button>
+      </nav>
+
+    </div>
+  </div>
+
+  <script src="../univ-eat_js/univ-eat_transition.js"></script>
+  <script src="../univ-eat_js/univ-eat_meal.js"></script>
+</body>
+</html>

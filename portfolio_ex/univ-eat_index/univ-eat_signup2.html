@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Univ-Eat — 회원가입</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_transition.css" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_signup2.css" />
+</head>
+<body>
+
+  <div class="phone-wrap">
+    <div class="screen page-slide-in">
+
+      <!-- 헤더 -->
+      <header class="header">
+        <button class="header__back" id="btnBack" aria-label="뒤로가기">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0f1729" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+        <p class="header__title">회원가입</p>
+        <div class="step-indicator">
+          <span class="step-indicator__bar step-indicator__bar--done"></span>
+          <span class="step-indicator__bar step-indicator__bar--active"></span>
+          <span class="step-indicator__bar"></span>
+        </div>
+      </header>
+
+      <!-- 타이틀 -->
+      <div class="page-title">
+        <p class="page-title__step">2/3 프로필 설정</p>
+        <h1 class="page-title__heading">닉네임과 프로필 사진을<br>설정해주세요</h1>
+      </div>
+
+      <!-- 아바타 업로더 -->
+      <div class="avatar-uploader" id="avatarUploader">
+        <div class="avatar-uploader__circle" id="avatarCircle">
+          <span class="avatar-uploader__emoji" id="avatarEmoji">👤</span>
+          <img class="avatar-uploader__img" id="avatarImg" src="" alt="프로필 사진" style="display:none" />
+        </div>
+        <p class="avatar-uploader__hint">탭하여 사진 추가</p>
+        <input type="file" id="avatarInput" accept="image/*" style="display:none" />
+      </div>
+
+      <!-- 폼 -->
+      <form class="form" novalidate>
+
+        <!-- 닉네임 -->
+        <div class="input-group">
+          <label class="input-group__label" for="inputNickname">닉네임 (앱 내 표시 이름)</label>
+          <div class="input-group__box">
+            <input type="text" id="inputNickname" placeholder="예: 서연이, 밥먹자" maxlength="20" />
+          </div>
+        </div>
+
+        <!-- 성별 -->
+        <div class="input-group">
+          <label class="input-group__label">성별 (선택)</label>
+          <div class="gender-row">
+            <button type="button" class="gender-btn" data-gender="남성">남성</button>
+            <button type="button" class="gender-btn" data-gender="여성">여성</button>
+            <button type="button" class="gender-btn" data-gender="선택안함">선택안함</button>
+          </div>
+        </div>
+
+        <!-- 학번 -->
+        <div class="input-group">
+          <label class="input-group__label" for="inputStudentId">학번 (선택)</label>
+          <div class="input-group__box">
+            <input type="text" id="inputStudentId" placeholder="예: 20230001" maxlength="10" inputmode="numeric" />
+          </div>
+        </div>
+
+      </form>
+
+      <!-- 다음 버튼 -->
+      <div class="btn-area">
+        <button class="btn-next" id="btnNext">다음 단계로</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../univ-eat_js/univ-eat_transition.js"></script>
+  <script src="../univ-eat_js/univ-eat_signup2.js"></script>
+</body>
+</html>

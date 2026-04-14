@@ -194,9 +194,9 @@ const workData = {
   univeat
   : {
     pdf: `${BASE}/img/UNIV-EAT_PORTFOLIO.png`,
-    link: `${BASE}/portfolio_ex/dayflow_index/dayflow_main.html`,
+    link: `${BASE}/portfolio_ex/univ-eat_index/univ-eat_login.html`,
     bg: `${BASE}/img/UNIV_CTA-bg.png`,
-    text: '본 프로젝트는 아직 구현되지 않았습니다.'
+    text: '본 프로젝트는 Figma로 디자인하고 HTML, CSS, JavaScript로 구현되었습니다.'
   },
 };
 

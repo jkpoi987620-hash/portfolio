@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Univ-Eat — 대학 학식 구독 서비스</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_transition.css" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_login.css" />
+</head>
+<body>
+
+  <div class="phone-wrap">
+    <div class="screen page-slide-in">
+
+      <!-- 장식 원 -->
+      <div class="deco-circle deco-circle--top">
+        <img src="https://www.figma.com/api/mcp/asset/dd9a3657-36c0-459e-91c5-561a83626ee3" alt="" />
+      </div>
+      <div class="deco-circle deco-circle--mid">
+        <img src="https://www.figma.com/api/mcp/asset/028e5730-4a1b-4a17-b446-4c4e3752f8c7" alt="" />
+      </div>
+
+      <!-- 상단 브랜드 -->
+      <div class="brand">
+        <div class="brand__icon">
+          <img src="https://www.figma.com/api/mcp/asset/a85bef3c-8be2-4e28-98af-d41cae96de0e" alt="Univ-Eat 로고" />
+        </div>
+        <div class="brand__text">
+          <p class="brand__name">Univ-Eat</p>
+          <p class="brand__sub">대학 학식 구독 서비스</p>
+        </div>
+      </div>
+
+      <!-- 히어로 영역 -->
+      <div class="hero">
+        <p class="hero__emoji">🎓</p>
+        <h1 class="hero__title">더 맛있고, 더 저렴하게<br>학식을 즐기세요</h1>
+        <p class="hero__desc">AI가 추천하는 맞춤 학식으로 건강하고 알뜰한<br>학교생활을 시작해보세요</p>
+      </div>
+
+      <!-- 로그인 폼 -->
+      <div class="form">
+        <div class="input-group">
+          <label class="input-group__label">이메일</label>
+          <div class="input-group__box">
+            <input type="email" placeholder="이메일 주소" />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-group__label">비밀번호</label>
+          <div class="input-group__box input-group__box--pw">
+            <input type="password" id="pwInput" placeholder="비밀번호를 입력하세요" />
+            <button class="pw-toggle" id="pwToggle" aria-label="비밀번호 표시">
+              <svg class="eye-icon eye-icon--off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a2b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+                <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+                <line x1="1" y1="1" x2="23" y2="23"/>
+              </svg>
+              <svg class="eye-icon eye-icon--on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a2b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+          <a href="#" class="forgot-pw">비밀번호를 잊으셨나요?</a>
+        </div>
+
+        <button class="btn-login" id="btnLogin">로그인</button>
+
+        <a href="javascript:void(0)" class="signup-link" id="signupLink">
+          <span class="signup-link__q">계정이 없으신가요?</span>
+          <span class="signup-link__action">회원가입</span>
+        </a>
+      </div>
+
+      <!-- 구분선 -->
+      <div class="divider">
+        <span class="divider__line"></span>
+        <span class="divider__text">또는</span>
+        <span class="divider__line"></span>
+      </div>
+
+      <!-- 소셜 로그인 -->
+      <div class="social">
+        <button class="social-btn social-btn--kakao">카카오로 시작하기</button>
+        <button class="social-btn social-btn--naver">네이버로 시작하기</button>
+        <button class="social-btn social-btn--google">Google로 시작하기</button>
+        <button class="social-btn social-btn--apple">Apple로 시작하기</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../univ-eat_js/univ-eat_transition.js"></script>
+  <script src="../univ-eat_js/univ-eat_login.js"></script>
+</body>
+</html>

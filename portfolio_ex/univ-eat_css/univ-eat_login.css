@@ -1,0 +1,371 @@
+/* =========================================
+   Univ-Eat — Login Screen
+   ========================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #0f1729;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+/* ── 폰 프레임 ── */
+.phone-wrap {
+  width: 390px;
+  min-height: 844px;
+  border-radius: 44px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── 스크린 ── */
+.screen {
+  width: 100%;
+  min-height: 844px;
+  background: linear-gradient(67.74deg, #1e3b8a 14.639%, #3b82f6 85.361%);
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 48px;
+}
+
+/* ── 장식 원 ── */
+.deco-circle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.deco-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.deco-circle--top {
+  width: 260px;
+  height: 260px;
+  left: calc(25% + 52.5px);
+  top: -87px;
+}
+
+.deco-circle--mid {
+  width: 180px;
+  height: 180px;
+  left: -45px;
+  top: 473px;
+}
+
+/* ── 상단 브랜드 ── */
+.brand {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 24px 16px 0;
+}
+
+.brand__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.brand__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand__name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.brand__sub {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+}
+
+/* ── 히어로 ── */
+.hero {
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+  padding: 0 16px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero__emoji {
+  font-size: 64px;
+  line-height: 1;
+  display: block;
+  padding: 10px 0 12px;
+  margin-bottom: 4px;
+  overflow: visible;
+}
+
+.hero__title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 36px;
+  margin-bottom: 16px;
+}
+
+.hero__desc {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 22px;
+}
+
+/* ── 폼 ── */
+.form {
+  position: relative;
+  z-index: 1;
+  margin-top: 24px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 인풋 그룹 */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group__label {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.02em;
+}
+
+.input-group__box {
+  height: 44px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  overflow: hidden;
+}
+
+.input-group__box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #0f1729;
+  outline: none;
+}
+
+.input-group__box input::placeholder {
+  color: #c0d1e1;
+}
+
+.input-group__box--pw {
+  justify-content: space-between;
+}
+
+/* 비밀번호 토글 */
+.pw-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.forgot-pw {
+  font-size: 12px;
+  font-weight: 500;
+  color: #0f1729;
+  text-align: right;
+  text-decoration: none;
+  display: block;
+}
+
+.forgot-pw:hover {
+  text-decoration: underline;
+}
+
+/* 로그인 버튼 */
+.btn-login {
+  margin-top: 12px;
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(8.26deg, #3b82f6 14.639%, #1d4ede 85.361%);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-login:hover {
+  opacity: 0.92;
+}
+
+.btn-login:active {
+  transform: scale(0.98);
+}
+
+/* 회원가입 링크 */
+.signup-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 20px;
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.signup-link__q {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.signup-link__action {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ── 구분선 ── */
+.divider {
+  position: relative;
+  z-index: 1;
+  margin: 16px 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.divider__line {
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+  display: block;
+}
+
+.divider__text {
+  font-size: 11px;
+  font-weight: 400;
+  color: #c0d1e1;
+  white-space: nowrap;
+}
+
+/* ── 소셜 로그인 ── */
+.social {
+  position: relative;
+  z-index: 1;
+  margin-top: 16px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.social-btn {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 3px 16px rgba(15, 23, 41, 0.07);
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.social-btn:active {
+  transform: scale(0.98);
+}
+
+.social-btn--kakao {
+  background: #fee500;
+  color: #0f1729;
+}
+
+.social-btn--naver {
+  background: #03c75a;
+  color: #fff;
+}
+
+.social-btn--google {
+  background: #fff;
+  color: #0f1729;
+  border: 1px solid #e2e8f0;
+}
+
+.social-btn--apple {
+  background: #0f1729;
+  color: #fff;
+}
+
+.social-btn:hover {
+  opacity: 0.9;
+}
+
+/* ── 반응형: 모바일 실제 기기 ── */
+@media (max-width: 430px) {
+  body {
+    padding: 0;
+    background: linear-gradient(67.74deg, #1e3b8a 14.639%, #3b82f6 85.361%);
+  }
+
+  .phone-wrap {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .screen {
+    min-height: 100vh;
+  }
+}

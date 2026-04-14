@@ -1,0 +1,450 @@
+/* =========================================
+   Univ-Eat — 홈 (미가맹)
+   ========================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #0f1729;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+/* ── 폰 프레임 ── */
+.phone-wrap {
+  width: 390px;
+  min-height: 844px;
+  border-radius: 44px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── 스크린 ── */
+.screen {
+  width: 100%;
+  min-height: 844px;
+  background: #f7fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── 홈 헤더 (오렌지) ── */
+.home-header {
+  height: 102px;
+  background: linear-gradient(14.59deg, #99330d 14.639%, #e5590d 85.361%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+.home-header__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-header__greeting {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.home-header__name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.home-header__bell {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: background 0.18s;
+}
+
+.home-header__bell:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ── 스크롤 콘텐츠 ── */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 16px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.content::-webkit-scrollbar { display: none; }
+
+/* ── 공통 섹션 타이틀 ── */
+.section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f1729;
+  margin-bottom: 10px;
+}
+
+/* ── 미가맹 경고 배너 ── */
+.warn-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fefce6;
+  border: 1px solid rgba(253, 209, 2, 0.5);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 2px 12px rgba(15, 23, 41, 0.06);
+}
+
+.warn-banner__icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(253, 209, 2, 0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.warn-banner__icon span {
+  display: block;
+  line-height: 1;
+  transform: translateY(-3px);
+}
+
+.warn-banner__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.warn-banner__title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #946601;
+}
+
+.warn-banner__desc {
+  font-size: 10px;
+  font-weight: 400;
+  color: #946601;
+  line-height: 1.6;
+}
+
+/* ── 바로가기 ── */
+.shortcut-grid {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.shortcut-card {
+  flex: 1;
+  height: 90px;
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  overflow: hidden;
+}
+
+.shortcut-card--light {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(15, 23, 41, 0.07);
+}
+
+.shortcut-card--green {
+  background: linear-gradient(27.48deg, #10b981 14.639%, #0a6e4d 85.361%);
+  box-shadow: 0 4px 16px rgba(15, 23, 41, 0.12);
+}
+
+.shortcut-card__icon {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.shortcut-card__name {
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.shortcut-card--light .shortcut-card__name { color: #0f1729; }
+.shortcut-card--green .shortcut-card__name { color: #fff; }
+
+.shortcut-card__desc {
+  font-size: 10px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.shortcut-card--light .shortcut-card__desc { color: #94a2b8; }
+.shortcut-card--green .shortcut-card__desc { color: rgba(255, 255, 255, 0.8); }
+
+/* ── 얼리버드 배너 ── */
+.earlybird-banner {
+  height: 72px;
+  border-radius: 16px;
+  background: linear-gradient(11.37deg, #1e3b8a 14.639%, #3b82f6 85.361%);
+  box-shadow: 0 4px 16px rgba(15, 23, 41, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.earlybird-banner__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.earlybird-banner__title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  white-space: pre;
+}
+
+.earlybird-banner__desc {
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+}
+
+.earlybird-banner__btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.18s;
+}
+
+.earlybird-banner__btn:hover { background: rgba(255, 255, 255, 0.3); }
+
+/* ── 식사 기록 ── */
+.stats-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(15, 23, 41, 0.07);
+  overflow: hidden;
+}
+
+.stats-card__header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid #f1f4f9;
+}
+
+.stats-card__header-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f1729;
+}
+
+.stats-card__header-link {
+  font-size: 11px;
+  font-weight: 500;
+  color: #3b82f6;
+}
+
+.stats-card__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  height: 68px;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stats-item__value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f1729;
+  white-space: nowrap;
+}
+
+.stats-item__label {
+  font-size: 9px;
+  font-weight: 400;
+  color: #94a2b8;
+  white-space: nowrap;
+}
+
+.stats-divider {
+  width: 1px;
+  height: 40px;
+  background: #e2e8f0;
+}
+
+/* ── 추천 맛집 ── */
+.rec-row {
+  display: flex;
+  gap: 10px;
+}
+
+.rec-card {
+  flex: 1;
+  height: 78px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(15, 23, 41, 0.07);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.rec-card__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.rec-card__img--yellow { background: #fef3c4; }
+.rec-card__img--green  { background: #d1fae5; }
+
+.rec-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  overflow: hidden;
+}
+
+.rec-card__name {
+  font-size: 11px;
+  font-weight: 700;
+  color: #0f1729;
+  white-space: nowrap;
+}
+
+.rec-card__price {
+  font-size: 10px;
+  font-weight: 500;
+  color: #3b82f6;
+}
+
+.rec-card__rating {
+  font-size: 9px;
+  font-weight: 400;
+  color: #94a2b8;
+}
+
+/* ── 바텀 네비게이션 ── */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px;
+  gap: 6px;
+  z-index: 10;
+}
+
+.nav-item {
+  flex: 1;
+  height: 52px;
+  border: none;
+  background: transparent;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+  padding: 8px 10px;
+  transition: background 0.18s;
+}
+
+.nav-item--active { background: #eff6ff; }
+
+.nav-item__icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.nav-item__label {
+  font-size: 9px;
+  font-weight: 400;
+  color: #94a2b8;
+  width: 47px;
+  text-align: center;
+}
+
+.nav-item--active .nav-item__label {
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+/* ── 반응형: 실제 모바일 ── */
+@media (max-width: 430px) {
+  body {
+    padding: 0;
+    background: #f7fafc;
+  }
+
+  .phone-wrap {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .screen { min-height: 100vh; }
+}

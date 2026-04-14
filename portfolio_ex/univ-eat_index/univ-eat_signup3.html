@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Univ-Eat — 회원가입</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_transition.css" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_signup3.css" />
+</head>
+<body>
+
+  <div class="phone-wrap">
+    <div class="screen page-slide-in">
+
+      <!-- 헤더 -->
+      <header class="header">
+        <button class="header__back" id="btnBack" aria-label="뒤로가기">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0f1729" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+        <p class="header__title">회원가입</p>
+        <div class="step-indicator">
+          <span class="step-indicator__bar step-indicator__bar--done"></span>
+          <span class="step-indicator__bar step-indicator__bar--done"></span>
+          <span class="step-indicator__bar step-indicator__bar--active"></span>
+        </div>
+      </header>
+
+      <!-- 타이틀 -->
+      <div class="page-title">
+        <p class="page-title__step">3/3 알레르기 &amp; 식단</p>
+        <h1 class="page-title__heading">맞춤 AI 추천을 위해<br>정보를 알려주세요</h1>
+      </div>
+
+      <!-- AI 배너 -->
+      <div class="ai-banner">
+        <span class="ai-banner__tag">✨ AI</span>
+        <p class="ai-banner__text">입력하신 정보로 AI가 맞춤 메뉴를 추천해드려요</p>
+      </div>
+
+      <!-- 알레르기 -->
+      <div class="section">
+        <p class="section__label">알레르기 (해당 항목 선택)</p>
+        <div class="tag-grid" id="allergyGrid">
+          <button type="button" class="tag" data-group="allergy">🥜 땅콩</button>
+          <button type="button" class="tag" data-group="allergy">🥚 계란</button>
+          <button type="button" class="tag" data-group="allergy">🐟 생선</button>
+          <button type="button" class="tag" data-group="allergy">🦐 갑각류</button>
+          <button type="button" class="tag" data-group="allergy">🌾 글루텐</button>
+          <button type="button" class="tag" data-group="allergy">🥛 유제품</button>
+          <button type="button" class="tag" data-group="allergy">🌰 견과류</button>
+          <button type="button" class="tag" data-group="allergy">🐷 돼지고기</button>
+        </div>
+      </div>
+
+      <!-- 식단 목표 -->
+      <div class="section">
+        <p class="section__label">식단 목표</p>
+        <div class="tag-row" id="dietRow">
+          <button type="button" class="tag" data-group="diet">🥗 균형 식단</button>
+          <button type="button" class="tag" data-group="diet">🔥 고단백</button>
+          <button type="button" class="tag" data-group="diet">🌿 저칼로리</button>
+          <button type="button" class="tag" data-group="diet">🚫 채식</button>
+        </div>
+      </div>
+
+      <!-- 알림 설정 -->
+      <div class="section">
+        <p class="section__label">알림 설정</p>
+        <div class="notif-list">
+
+          <div class="notif-row">
+            <span class="notif-row__label">🍽️ 오늘의 학식 알림</span>
+            <button type="button" class="toggle" data-notif="meal" aria-pressed="false">
+              <span class="toggle__dot"></span>
+            </button>
+          </div>
+
+          <div class="notif-row">
+            <span class="notif-row__label">🎫 식권 만료 알림</span>
+            <button type="button" class="toggle" data-notif="ticket" aria-pressed="false">
+              <span class="toggle__dot"></span>
+            </button>
+          </div>
+
+          <div class="notif-row">
+            <span class="notif-row__label">📣 이벤트 &amp; 혜택</span>
+            <button type="button" class="toggle" data-notif="event" aria-pressed="false">
+              <span class="toggle__dot"></span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 완료 버튼 -->
+      <div class="btn-area">
+        <button class="btn-complete" id="btnComplete">🎉&nbsp; Univ-Eat 시작하기</button>
+        <button type="button" class="btn-skip" id="btnSkip">나중에 설정할게요</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../univ-eat_js/univ-eat_transition.js"></script>
+  <script src="../univ-eat_js/univ-eat_signup3.js"></script>
+</body>
+</html>

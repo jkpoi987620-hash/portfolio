@@ -1,0 +1,69 @@
+/* =========================================
+   Univ-Eat — 페이지 전환 애니메이션 (공통)
+   ========================================= */
+
+/* 슬라이드 인 (오른쪽에서 왼쪽 → 정위치) */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 슬라이드 아웃 (정위치 → 왼쪽으로) */
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+}
+
+/* 슬라이드 인 (왼쪽에서 오른쪽 → 정위치 / 뒤로가기) */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 슬라이드 아웃 (정위치 → 오른쪽으로 / 뒤로가기) */
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.page-slide-in {
+  animation: slideInFromRight 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.page-slide-in-back {
+  animation: slideInFromLeft 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.page-slide-out {
+  animation: slideOutToLeft 0.28s cubic-bezier(0.55, 0, 0.55, 0.2) both;
+  pointer-events: none;
+}
+
+.page-slide-out-back {
+  animation: slideOutToRight 0.28s cubic-bezier(0.55, 0, 0.55, 0.2) both;
+  pointer-events: none;
+}
