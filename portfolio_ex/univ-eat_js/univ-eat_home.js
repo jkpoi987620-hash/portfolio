@@ -19,7 +19,7 @@ document.querySelectorAll('.nav-item').forEach(item => {
       return;
     }
     if (nav === 'sub') {
-      navigateTo('univ-eat_sub.html');
+      navigateTo('univ-eat_sub_active.html');
       return;
     }
     if (nav === 'dining') {

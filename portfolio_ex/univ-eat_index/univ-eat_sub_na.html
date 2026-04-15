@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Univ-Eat — 구독 (미가맹)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_transition.css" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_sub_na.css" />
+</head>
+<body>
+
+  <div class="phone-wrap">
+    <div class="screen page-slide-in">
+
+      <!-- 헤더 (오렌지) -->
+      <header class="sub-header">
+        <div class="sub-header__text">
+          <h1 class="sub-header__title">구독 플랜 선택</h1>
+          <p class="sub-header__sub">현재 구독 기능을 이용할 수 없어요</p>
+        </div>
+      </header>
+
+      <!-- 콘텐츠 -->
+      <div class="content">
+
+        <!-- 잠금 안내 카드 -->
+        <div class="lock-card">
+          <span class="lock-card__icon">🔒</span>
+          <p class="lock-card__title">구독 기능 미지원</p>
+          <p class="lock-card__desc">한국경영대학교는 현재 미가맹 상태예요.<br>가맹 완료 후 모든 구독 플랜을 이용할 수 있어요.</p>
+        </div>
+
+        <!-- 정보 정확도 안내 -->
+        <div class="disclaimer-card">
+          <p class="disclaimer-card__title">📋&nbsp; 정보 정확도 안내</p>
+          <p class="disclaimer-card__desc">현재 표시된 학식 메뉴 및 현장 구매 가격 정보는 실제와 다를 수 있습니다. 학교 가맹 시점에 맞춰 자동으로 업데이트될 예정입니다.</p>
+        </div>
+
+        <!-- 가맹 신청 버튼 -->
+        <button class="btn-partnership">🏫&nbsp; 우리 학교 가맹 신청하기</button>
+
+        <!-- 얼리버드 배너 -->
+        <div class="earlybird-banner">
+          <div class="earlybird-banner__text">
+            <p class="earlybird-banner__title">🎁&nbsp; 얼리버드 혜택</p>
+            <p class="earlybird-banner__desc">가맹 확정 즉시 첫 달 구독료 무료 제공</p>
+          </div>
+          <span class="earlybird-banner__tag">예약 중</span>
+        </div>
+
+        <!-- 구독 플랜 미리보기 -->
+        <p class="section-title">구독 플랜 미리보기</p>
+
+        <div class="plan-preview">
+          <div class="plan-preview__info">
+            <p class="plan-preview__name">30식 플랜</p>
+            <p class="plan-preview__price">152,000원 / 월 (가맹 후 이용 가능)</p>
+          </div>
+          <span class="plan-preview__lock">🔒 잠금</span>
+        </div>
+
+        <div class="plan-preview">
+          <div class="plan-preview__info">
+            <p class="plan-preview__name">60식 플랜</p>
+            <p class="plan-preview__price">252,000원 / 월 (가맹 후 이용 가능)</p>
+          </div>
+          <span class="plan-preview__lock">🔒 잠금</span>
+        </div>
+
+        <div class="plan-preview">
+          <div class="plan-preview__info">
+            <p class="plan-preview__name">90식 플랜</p>
+            <p class="plan-preview__price">352,000원 / 월 (가맹 후 이용 가능)</p>
+          </div>
+          <span class="plan-preview__lock">🔒 잠금</span>
+        </div>
+
+        <!-- 홈으로 돌아가기 -->
+        <button class="btn-back-home" id="btnBackHome">홈으로 돌아가기</button>
+
+      </div>
+
+      <!-- 바텀 네비게이션 -->
+      <nav class="bottom-nav">
+        <button class="nav-item" data-nav="home">
+          <span class="nav-item__icon">🏠</span>
+          <span class="nav-item__label">홈</span>
+        </button>
+        <button class="nav-item" data-nav="meal">
+          <span class="nav-item__icon">🍽️</span>
+          <span class="nav-item__label">학식정보</span>
+        </button>
+        <button class="nav-item nav-item--active" data-nav="sub">
+          <span class="nav-item__icon">🎫</span>
+          <span class="nav-item__label">구독</span>
+        </button>
+        <button class="nav-item" data-nav="dining">
+          <span class="nav-item__icon">🗺️</span>
+          <span class="nav-item__label">외식정보</span>
+        </button>
+        <button class="nav-item" data-nav="mypage">
+          <span class="nav-item__icon">👤</span>
+          <span class="nav-item__label">마이페이지</span>
+        </button>
+      </nav>
+
+    </div>
+  </div>
+
+  <script src="../univ-eat_js/univ-eat_transition.js"></script>
+  <script src="../univ-eat_js/univ-eat_sub_na.js"></script>
+</body>
+</html>

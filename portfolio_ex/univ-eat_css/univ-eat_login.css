@@ -43,27 +43,23 @@ body {
   position: absolute;
   pointer-events: none;
   z-index: 0;
-}
-
-.deco-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
+  border-radius: 50%;
 }
 
 .deco-circle--top {
   width: 260px;
   height: 260px;
-  left: calc(25% + 52.5px);
   top: -87px;
+  left: calc(25% + 52.5px);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .deco-circle--mid {
   width: 180px;
   height: 180px;
-  left: -45px;
   top: 473px;
+  left: -45px;
+  background: rgba(255, 255, 255, 0.10);
 }
 
 /* ── 상단 브랜드 ── */

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Univ-Eat — 구독</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_transition.css" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_sub.css" />
+</head>
+<body>
+
+  <div class="phone-wrap">
+    <div class="screen page-slide-in">
+
+      <!-- 헤더 -->
+      <header class="sub-header">
+        <div class="sub-header__text">
+          <h1 class="sub-header__title">구독 플랜 선택</h1>
+          <p class="sub-header__sub">더 많이 구독할수록 더 많이 절약해요 💰</p>
+        </div>
+      </header>
+
+      <!-- 콘텐츠 -->
+      <div class="content">
+
+        <!-- 플랜 카드 목록 -->
+        <ul class="plan-list" id="planList">
+
+          <!-- 30식 플랜 -->
+          <li class="plan-card" data-plan="30">
+            <div class="plan-card__top">
+              <p class="plan-card__name">30식 플랜</p>
+              <span class="plan-card__badge plan-card__badge--default">한 달 기준</span>
+            </div>
+            <div class="plan-card__price-row">
+              <span class="plan-card__price">152,000원</span>
+              <span class="plan-card__origin">320,000원</span>
+              <span class="plan-card__discount">40% ↓</span>
+            </div>
+            <p class="plan-card__desc">🍱 점심 모두 이용 가능</p>
+          </li>
+
+          <!-- 60식 플랜 (인기) -->
+          <li class="plan-card plan-card--popular" data-plan="60">
+            <div class="plan-card__top">
+              <p class="plan-card__name">60식 플랜</p>
+              <span class="plan-card__badge plan-card__badge--hot">🔥 가장 인기</span>
+            </div>
+            <div class="plan-card__price-row">
+              <span class="plan-card__price">252,000원</span>
+              <span class="plan-card__origin">420,000원</span>
+              <span class="plan-card__discount">40% ↓</span>
+            </div>
+            <p class="plan-card__desc">🍱 점심 모두 이용 가능</p>
+          </li>
+
+          <!-- 90식 플랜 -->
+          <li class="plan-card" data-plan="90">
+            <div class="plan-card__top">
+              <p class="plan-card__name">90식 플랜</p>
+              <span class="plan-card__badge plan-card__badge--default">한 달 기준</span>
+            </div>
+            <div class="plan-card__price-row">
+              <span class="plan-card__price">352,000원</span>
+              <span class="plan-card__origin">520,000원</span>
+              <span class="plan-card__discount">40% ↓</span>
+            </div>
+            <p class="plan-card__desc">🍱 점심 모두 이용 가능</p>
+          </li>
+
+        </ul>
+
+        <!-- 결제 방법 -->
+        <div class="pay-section">
+          <p class="pay-section__title">결제 방법 선택</p>
+          <div class="pay-grid" id="payGrid">
+            <button type="button" class="pay-btn" data-pay="card">💳 신용/체크카드</button>
+            <button type="button" class="pay-btn" data-pay="naver">N 네이버페이</button>
+            <button type="button" class="pay-btn" data-pay="kakao">K 카카오페이</button>
+            <button type="button" class="pay-btn" data-pay="toss">toss 토스</button>
+            <button type="button" class="pay-btn pay-btn--full" data-pay="bank">🏦 무통장입금</button>
+          </div>
+        </div>
+
+        <!-- 구독하기 버튼 -->
+        <div class="btn-area">
+          <button class="btn-subscribe" id="btnSubscribe">구독하기</button>
+        </div>
+
+      </div>
+
+      <!-- 바텀 네비게이션 -->
+      <nav class="bottom-nav">
+        <button class="nav-item" data-nav="home">
+          <span class="nav-item__icon">🏠</span>
+          <span class="nav-item__label">홈</span>
+        </button>
+        <button class="nav-item" data-nav="meal">
+          <span class="nav-item__icon">🍽️</span>
+          <span class="nav-item__label">학식정보</span>
+        </button>
+        <button class="nav-item nav-item--active" data-nav="sub">
+          <span class="nav-item__icon">🎫</span>
+          <span class="nav-item__label">구독</span>
+        </button>
+        <button class="nav-item" data-nav="dining">
+          <span class="nav-item__icon">🗺️</span>
+          <span class="nav-item__label">외식정보</span>
+        </button>
+        <button class="nav-item" data-nav="mypage">
+          <span class="nav-item__icon">👤</span>
+          <span class="nav-item__label">마이페이지</span>
+        </button>
+      </nav>
+
+    </div>
+  </div>
+
+  <script src="../univ-eat_js/univ-eat_transition.js"></script>
+  <script src="../univ-eat_js/univ-eat_sub_nosub.js"></script>
+</body>
+</html>

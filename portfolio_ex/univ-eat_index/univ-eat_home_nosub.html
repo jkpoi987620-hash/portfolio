@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Univ-Eat — 홈</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_transition.css" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_home.css" />
+</head>
+<body>
+
+  <div class="phone-wrap">
+    <div class="screen page-slide-in">
+
+      <!-- 홈 헤더 -->
+      <header class="home-header">
+        <div class="home-header__text">
+          <p class="home-header__greeting">목요일 좋은 아침이에요 ☀️</p>
+          <p class="home-header__name">한국대학교 학생님!</p>
+        </div>
+        <button class="home-header__bell" aria-label="알림">
+          <span>🔔</span>
+        </button>
+      </header>
+
+      <!-- 스크롤 콘텐츠 -->
+      <div class="content">
+
+        <!-- QR 위젯 (미구독) -->
+        <div class="qr-widget">
+          <div class="qr-widget__top">
+            <div class="qr-widget__ticket">
+              <p class="qr-widget__ticket-label">잔여 식권</p>
+              <p class="qr-widget__ticket-count qr-widget__ticket-count--none">0개</p>
+            </div>
+            <span class="qr-widget__badge qr-widget__badge--nosub">🔒 미구독</span>
+          </div>
+          <div class="qr-widget__qr qr-widget__qr--locked">
+            <span class="qr-widget__lock-icon">🔒</span>
+            <p class="qr-widget__lock-title">아직 구독하지 않았어요</p>
+            <p class="qr-widget__lock-desc">구독하면 입장 바코드를 이용할 수 있어요</p>
+          </div>
+          <button class="qr-widget__action" id="btnGoSub">🎫&nbsp; 구독 플랜 선택하기</button>
+        </div>
+
+        <!-- AI 분석 위젯 -->
+        <div class="ai-widget">
+          <span class="ai-widget__tag">✨ AI 분석</span>
+          <p class="ai-widget__title">이번 달 절약 &amp; 영양 리포트</p>
+          <div class="ai-widget__stats">
+            <div class="ai-widget__stat">
+              <p class="ai-widget__stat-value">₩42,600</p>
+              <p class="ai-widget__stat-label">이번 달 절약</p>
+            </div>
+            <div class="ai-widget__stat">
+              <p class="ai-widget__stat-value">1,820kcal</p>
+              <p class="ai-widget__stat-label">평균 칼로리</p>
+            </div>
+            <div class="ai-widget__stat">
+              <p class="ai-widget__stat-value">87%</p>
+              <p class="ai-widget__stat-label">영양 균형</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 빠른 메뉴 -->
+        <div class="quick-section">
+          <p class="section-title">빠른 메뉴</p>
+          <div class="quick-grid">
+            <button class="quick-btn">
+              <span class="quick-btn__icon">⚠️</span>
+              <span class="quick-btn__label">알레르기 설정</span>
+            </button>
+            <button class="quick-btn">
+              <span class="quick-btn__icon">🍽️</span>
+              <span class="quick-btn__label">오늘의 학식</span>
+            </button>
+            <button class="quick-btn">
+              <span class="quick-btn__icon">🗺️</span>
+              <span class="quick-btn__label">주변 식당</span>
+            </button>
+            <button class="quick-btn">
+              <span class="quick-btn__icon">📊</span>
+              <span class="quick-btn__label">이용 내역</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 오늘의 메뉴 미리보기 -->
+        <div class="menu-section">
+          <p class="section-title">오늘의 메뉴 미리보기</p>
+          <div class="menu-card">
+            <div class="menu-item menu-item--border">
+              <div class="menu-item__info">
+                <p class="menu-item__name">된장찌개 정식</p>
+                <p class="menu-item__kcal">580 kcal</p>
+              </div>
+              <span class="menu-item__ai-tag">✨ AI추천</span>
+            </div>
+            <div class="menu-item menu-item--border">
+              <div class="menu-item__info">
+                <p class="menu-item__name">김치찌개 정식</p>
+                <p class="menu-item__kcal">580 kcal</p>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <p class="menu-item__name">제육 정식</p>
+                <p class="menu-item__kcal">580 kcal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 바텀 네비게이션 -->
+      <nav class="bottom-nav">
+        <button class="nav-item nav-item--active" data-nav="home">
+          <span class="nav-item__icon">🏠</span>
+          <span class="nav-item__label">홈</span>
+        </button>
+        <button class="nav-item" data-nav="meal">
+          <span class="nav-item__icon">🍽️</span>
+          <span class="nav-item__label">학식정보</span>
+        </button>
+        <button class="nav-item" data-nav="sub">
+          <span class="nav-item__icon">🎫</span>
+          <span class="nav-item__label">구독</span>
+        </button>
+        <button class="nav-item" data-nav="dining">
+          <span class="nav-item__icon">🗺️</span>
+          <span class="nav-item__label">외식정보</span>
+        </button>
+        <button class="nav-item" data-nav="mypage">
+          <span class="nav-item__icon">👤</span>
+          <span class="nav-item__label">마이페이지</span>
+        </button>
+      </nav>
+
+    </div>
+  </div>
+
+  <script src="../univ-eat_js/univ-eat_transition.js"></script>
+  <script src="../univ-eat_js/univ-eat_home_nosub.js"></script>
+</body>
+</html>

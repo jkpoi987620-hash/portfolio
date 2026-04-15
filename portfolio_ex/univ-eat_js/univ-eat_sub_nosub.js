@@ -1,8 +1,3 @@
-// ── 뒤로가기 ──
-document.getElementById('btnBack').addEventListener('click', () => {
-  navigateTo('univ-eat_school.html', true);
-});
-
 // ── 플랜 카드 선택 (단일 선택, 초기 선택 없음) ──
 document.querySelectorAll('.plan-card').forEach(card => {
   card.addEventListener('click', () => {
@@ -19,13 +14,24 @@ document.querySelectorAll('.pay-btn').forEach(btn => {
   });
 });
 
-// ── 구독하기 / 넘어가기 ──
+// ── 구독하기 → 미구독 플로우 탈출, 바코드 있는 홈으로 이동 ──
 document.getElementById('btnSubscribe').addEventListener('click', () => {
-  sessionStorage.setItem('subscribed', 'true');
   navigateTo('univ-eat_home.html');
 });
 
-document.getElementById('btnSkip').addEventListener('click', () => {
-  sessionStorage.setItem('subscribed', 'false');
-  navigateTo('univ-eat_home_nosub.html');
+// ── 바텀 네비 (미구독 플로우) ──
+document.querySelector('[data-nav="home"]').addEventListener('click', () => {
+  navigateTo('univ-eat_home_nosub.html', true);
+});
+
+document.querySelector('[data-nav="meal"]').addEventListener('click', () => {
+  navigateTo('univ-eat_meal_nosub.html');
+});
+
+document.querySelector('[data-nav="dining"]').addEventListener('click', () => {
+  navigateTo('univ-eat_dining_nosub.html');
+});
+
+document.querySelector('[data-nav="mypage"]').addEventListener('click', () => {
+  navigateTo('univ-eat_mypage_nosub.html');
 });

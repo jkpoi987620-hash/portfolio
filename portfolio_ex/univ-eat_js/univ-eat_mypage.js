@@ -17,7 +17,7 @@ document.querySelector('[data-nav="meal"]').addEventListener('click', () => {
 });
 
 document.querySelector('[data-nav="sub"]').addEventListener('click', () => {
-  navigateTo('univ-eat_sub.html', true);
+  navigateTo('univ-eat_sub_active.html');
 });
 
 document.querySelector('[data-nav="dining"]').addEventListener('click', () => {

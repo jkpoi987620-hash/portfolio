@@ -8,20 +8,17 @@ document.querySelectorAll('.day-tab').forEach(tab => {
 
 // ── 바텀 네비 ──
 document.querySelector('[data-nav="home"]').addEventListener('click', () => {
-  navigateTo('univ-eat_home.html', true);
+  navigateTo('univ-eat_home_na.html', true);
 });
 
-// ── 바텀 네비: 구독 탭 ──
 document.querySelector('[data-nav="sub"]').addEventListener('click', () => {
-  navigateTo('univ-eat_sub_active.html');
+  navigateTo('univ-eat_sub_na.html');
 });
 
-// ── 바텀 네비: 외식정보 탭 ──
 document.querySelector('[data-nav="dining"]').addEventListener('click', () => {
-  navigateTo('univ-eat_dining.html');
+  navigateTo('univ-eat_dining_na.html');
 });
 
-// ── 바텀 네비: 마이페이지 탭 ──
 document.querySelector('[data-nav="mypage"]').addEventListener('click', () => {
-  navigateTo('univ-eat_mypage.html');
+  navigateTo('univ-eat_mypage_na.html');
 });

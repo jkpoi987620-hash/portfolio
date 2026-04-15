@@ -16,7 +16,7 @@ document.getElementById('signupLink').addEventListener('click', () => {
   navigateTo('univ-eat_signup1.html');
 });
 
-// ── 다음 단계 ──
+// ── 로그인 클릭시 바로 홈 ──
 document.getElementById('btnLogin').addEventListener('click', () => {
   navigateTo('univ-eat_home.html');
 });

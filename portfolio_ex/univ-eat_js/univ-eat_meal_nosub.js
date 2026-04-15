@@ -6,22 +6,24 @@ document.querySelectorAll('.day-tab').forEach(tab => {
   });
 });
 
-// ── 바텀 네비 ──
+// ── 바텀 네비 (미구독 플로우) ──
 document.querySelector('[data-nav="home"]').addEventListener('click', () => {
-  navigateTo('univ-eat_home.html', true);
+  navigateTo('univ-eat_home_nosub.html', true);
 });
 
-// ── 바텀 네비: 구독 탭 ──
+// ── 지금 구독하기 ──
+document.getElementById('btnSubscribe').addEventListener('click', () => {
+  navigateTo('univ-eat_sub_nosub.html');
+});
+
 document.querySelector('[data-nav="sub"]').addEventListener('click', () => {
-  navigateTo('univ-eat_sub_active.html');
+  navigateTo('univ-eat_sub_nosub.html');
 });
 
-// ── 바텀 네비: 외식정보 탭 ──
 document.querySelector('[data-nav="dining"]').addEventListener('click', () => {
-  navigateTo('univ-eat_dining.html');
+  navigateTo('univ-eat_dining_nosub.html');
 });
 
-// ── 바텀 네비: 마이페이지 탭 ──
 document.querySelector('[data-nav="mypage"]').addEventListener('click', () => {
-  navigateTo('univ-eat_mypage.html');
+  navigateTo('univ-eat_mypage_nosub.html');
 });

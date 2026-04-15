@@ -1,0 +1,276 @@
+/* =========================================
+   Univ-Eat — 구독 관리 (구독 중)
+   ========================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #0f1729;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+/* ── 폰 프레임 ── */
+.phone-wrap {
+  width: 390px;
+  min-height: 844px;
+  border-radius: 44px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── 스크린 ── */
+.screen {
+  width: 100%;
+  min-height: 844px;
+  background: #f7fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── 헤더 ── */
+.sub-header {
+  height: 79px;
+  background: linear-gradient(11.45deg, #1e3b8a 14.639%, #3b82f6 85.361%);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+.sub-header__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sub-header__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.sub-header__sub {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ── 콘텐츠 ── */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 16px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.content::-webkit-scrollbar { display: none; }
+
+/* ── 구독 상태 카드 ── */
+.status-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(15, 23, 41, 0.08);
+  padding: 20px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.status-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-card__active-badge {
+  background: #ecfdf5;
+  color: #10b981;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.status-card__plan-badge {
+  background: linear-gradient(13.86deg, #ef4444 14.639%, #fa9910 85.361%);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.status-card__price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f1729;
+}
+
+.status-card__price-unit {
+  font-size: 14px;
+  font-weight: 400;
+  color: #94a2b8;
+}
+
+.status-card__divider {
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.status-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 28px;
+}
+
+.status-card__label {
+  font-size: 13px;
+  font-weight: 400;
+  color: #94a2b8;
+}
+
+.status-card__value {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f1729;
+}
+
+.status-card__value--blue {
+  color: #3b82f6;
+}
+
+.status-card__value--green {
+  color: #10b981;
+}
+
+/* ── 플랜 변경 버튼 ── */
+.btn-change {
+  width: 100%;
+  height: 52px;
+  border: 2px solid #3b82f6;
+  border-radius: 16px;
+  background: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #3b82f6;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.btn-change:hover { background: #eff6ff; }
+
+/* ── 결제 내역 버튼 ── */
+.btn-payment {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 16px;
+  background: #f1f4f9;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #47576e;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.btn-payment:hover { background: #e8edf4; }
+
+/* ── 구독 해지 버튼 ── */
+.btn-cancel {
+  width: 100%;
+  height: 36px;
+  border: none;
+  background: transparent;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #94a2b8;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* ── 바텀 네비게이션 ── */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px;
+  gap: 6px;
+  z-index: 10;
+}
+
+.nav-item {
+  flex: 1;
+  height: 52px;
+  border: none;
+  background: transparent;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+  padding: 8px 10px;
+  transition: background 0.18s;
+}
+
+.nav-item--active { background: #eff6ff; }
+
+.nav-item__icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.nav-item__label {
+  font-size: 9px;
+  font-weight: 400;
+  color: #94a2b8;
+  width: 47px;
+  text-align: center;
+}
+
+.nav-item--active .nav-item__label {
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+/* ── 반응형: 실제 모바일 ── */
+@media (max-width: 430px) {
+  body {
+    padding: 0;
+    background: #f7fafc;
+  }
+
+  .phone-wrap {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .screen { min-height: 100vh; }
+}

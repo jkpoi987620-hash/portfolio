@@ -1,5 +1,4 @@
 // ── Leaflet 지도 초기화 ──
-// 한국대학교 정문 근처 (연세대 정문 일대)
 const CENTER = [37.5596, 126.9369];
 
 const map = L.map('map', {
@@ -60,19 +59,19 @@ document.querySelectorAll('.chip').forEach(chip => {
   });
 });
 
-// ── 바텀 네비 ──
+// ── 바텀 네비 (미구독 플로우) ──
 document.querySelector('[data-nav="home"]').addEventListener('click', () => {
-  navigateTo('univ-eat_home.html', true);
+  navigateTo('univ-eat_home_nosub.html', true);
 });
 
 document.querySelector('[data-nav="meal"]').addEventListener('click', () => {
-  navigateTo('univ-eat_meal.html', true);
+  navigateTo('univ-eat_meal_nosub.html');
 });
 
 document.querySelector('[data-nav="sub"]').addEventListener('click', () => {
-  navigateTo('univ-eat_sub_active.html');
+  navigateTo('univ-eat_sub_nosub.html');
 });
 
 document.querySelector('[data-nav="mypage"]').addEventListener('click', () => {
-  navigateTo('univ-eat_mypage.html');
+  navigateTo('univ-eat_mypage_nosub.html');
 });

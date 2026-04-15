@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Univ-Eat — 마이페이지</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_transition.css" />
+  <link rel="stylesheet" href="../univ-eat_css/univ-eat_mypage.css" />
+</head>
+<body>
+
+  <div class="phone-wrap">
+    <div class="screen page-slide-in">
+
+      <!-- 프로필 헤더 -->
+      <header class="my-header">
+        <div class="my-header__avatar">
+          <span>👩‍🎓</span>
+        </div>
+        <div class="my-header__info">
+          <div class="my-header__name-row">
+            <p class="my-header__name">김서연</p>
+            <p class="my-header__school">🏫 한국대학교 컴퓨터공학과 3학년</p>
+          </div>
+          <div class="my-header__grade">⭐ 메이트 Gold 등급</div>
+        </div>
+      </header>
+
+      <!-- 스크롤 콘텐츠 -->
+      <div class="content">
+
+        <!-- QR 위젯 (미구독) -->
+        <div class="qr-widget">
+          <div class="qr-widget__top">
+            <div class="qr-widget__ticket">
+              <p class="qr-widget__ticket-label">잔여 식권</p>
+              <p class="qr-widget__ticket-count qr-widget__ticket-count--none">0개</p>
+            </div>
+            <span class="qr-widget__badge qr-widget__badge--nosub">🔒 미구독</span>
+          </div>
+          <div class="qr-widget__qr qr-widget__qr--locked">
+            <span class="qr-widget__lock-icon">🔒</span>
+            <p class="qr-widget__lock-title">아직 구독하지 않았어요</p>
+            <p class="qr-widget__lock-desc">구독하면 입장 바코드를 이용할 수 있어요</p>
+          </div>
+          <button class="qr-widget__action" id="btnGoSub">🎫&nbsp; 구독 플랜 선택하기</button>
+        </div>
+
+        <!-- 설정 섹션 타이틀 -->
+        <p class="setting-label">설정</p>
+
+        <!-- 구독 관리 -->
+        <div class="setting-card">
+          <p class="setting-card__group-label">구독 관리</p>
+          <div class="setting-row">
+            <span class="setting-row__icon">🎫</span>
+            <span class="setting-row__text">현재 구독 플랜</span>
+            <span class="setting-row__badge">미구독</span>
+            <span class="setting-row__arrow">›</span>
+          </div>
+          <div class="setting-divider"></div>
+          <div class="setting-row">
+            <span class="setting-row__icon">📅</span>
+            <span class="setting-row__text">다음 갱신일</span>
+            <span class="setting-row__value">미구독</span>
+            <span class="setting-row__arrow">›</span>
+          </div>
+          <div class="setting-divider"></div>
+          <div class="setting-row">
+            <span class="setting-row__icon">💳</span>
+            <span class="setting-row__text">결제 내역</span>
+            <span class="setting-row__arrow">›</span>
+          </div>
+        </div>
+
+        <!-- AI 개인화 설정 -->
+        <div class="setting-card">
+          <p class="setting-card__group-label">AI 개인화 설정</p>
+          <div class="setting-row">
+            <span class="setting-row__icon">⚠️</span>
+            <span class="setting-row__text">알레르기 설정</span>
+            <span class="setting-row__badge">계란 · 땅콩</span>
+            <span class="setting-row__arrow">›</span>
+          </div>
+          <div class="setting-divider"></div>
+          <div class="setting-row">
+            <span class="setting-row__icon">🥗</span>
+            <span class="setting-row__text">식단 목표(AI)</span>
+            <span class="setting-row__badge">저칼로리</span>
+            <span class="setting-row__arrow">›</span>
+          </div>
+          <div class="setting-divider"></div>
+          <div class="setting-row">
+            <span class="setting-row__icon">🔔</span>
+            <span class="setting-row__text">알림 설정</span>
+            <span class="setting-row__arrow">›</span>
+          </div>
+        </div>
+
+        <!-- 기타 -->
+        <div class="setting-card">
+          <p class="setting-card__group-label">기타</p>
+          <div class="setting-row">
+            <span class="setting-row__icon">📣</span>
+            <span class="setting-row__text">친구 초대</span>
+            <span class="setting-row__arrow">›</span>
+          </div>
+          <div class="setting-divider"></div>
+          <div class="setting-row">
+            <span class="setting-row__icon">💬</span>
+            <span class="setting-row__text">고객센터</span>
+            <span class="setting-row__arrow">›</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 바텀 네비게이션 -->
+      <nav class="bottom-nav">
+        <button class="nav-item" data-nav="home">
+          <span class="nav-item__icon">🏠</span>
+          <span class="nav-item__label">홈</span>
+        </button>
+        <button class="nav-item" data-nav="meal">
+          <span class="nav-item__icon">🍽️</span>
+          <span class="nav-item__label">학식정보</span>
+        </button>
+        <button class="nav-item" data-nav="sub">
+          <span class="nav-item__icon">🎫</span>
+          <span class="nav-item__label">구독</span>
+        </button>
+        <button class="nav-item" data-nav="dining">
+          <span class="nav-item__icon">🗺️</span>
+          <span class="nav-item__label">외식정보</span>
+        </button>
+        <button class="nav-item nav-item--active" data-nav="mypage">
+          <span class="nav-item__icon">👤</span>
+          <span class="nav-item__label">마이페이지</span>
+        </button>
+      </nav>
+
+    </div>
+  </div>
+
+  <script src="../univ-eat_js/univ-eat_transition.js"></script>
+  <script src="../univ-eat_js/univ-eat_mypage_nosub.js"></script>
+</body>
+</html>

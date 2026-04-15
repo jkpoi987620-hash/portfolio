@@ -114,8 +114,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 48px;
-  overflow: hidden;
 }
 
 .qr-widget__ticket-label {
@@ -193,6 +191,44 @@ body {
 }
 
 .qr-widget__action:hover { opacity: 0.9; }
+
+/* ── QR 위젯 미구독 상태 ── */
+.qr-widget__ticket-count--none {
+  color: #c0d1e1;
+}
+
+.qr-widget__badge--nosub {
+  background: #f1f4f9;
+  color: #94a2b8;
+}
+
+.qr-widget__qr--locked {
+  cursor: default;
+  gap: 8px;
+}
+
+.qr-widget__qr--locked:hover {
+  background: #f1f4f9;
+}
+
+.qr-widget__lock-icon {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.qr-widget__lock-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f1729;
+  text-align: center;
+}
+
+.qr-widget__lock-desc {
+  font-size: 11px;
+  font-weight: 400;
+  color: #94a2b8;
+  text-align: center;
+}
 
 /* ── AI 위젯 ── */
 .ai-widget {
@@ -418,14 +454,13 @@ body {
 
 /* ── QR 확대 오버레이 ── */
 .qr-overlay {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: rgba(15, 23, 41, 0.75);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 50;
-  border-radius: 44px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s;
@@ -474,5 +509,4 @@ body {
 
   .screen { min-height: 100vh; }
 
-  .qr-overlay { border-radius: 0; }
 }

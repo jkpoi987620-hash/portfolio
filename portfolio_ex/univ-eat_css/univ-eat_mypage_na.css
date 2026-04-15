@@ -1,5 +1,5 @@
 /* =========================================
-   Univ-Eat — 마이페이지
+   Univ-Eat — 마이페이지 (미가맹)
    ========================================= */
 
 *, *::before, *::after {
@@ -37,10 +37,10 @@ body {
   flex-direction: column;
 }
 
-/* ── 프로필 헤더 ── */
+/* ── 프로필 헤더 (오렌지) ── */
 .my-header {
   height: 120px;
-  background: linear-gradient(17.06deg, #1e3b8a 14.639%, #3b82f6 85.361%);
+  background: linear-gradient(17.06deg, #99330d 14.639%, #e5590d 85.361%);
   display: flex;
   align-items: center;
   gap: 15px;
@@ -85,16 +85,17 @@ body {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.my-header__grade {
+.my-header__badge {
   display: inline-flex;
   align-items: center;
   height: 24px;
   padding: 0 10px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(253, 209, 2, 0.2);
+  border: 1px solid rgba(253, 209, 2, 0.5);
   border-radius: 12px;
   font-size: 11px;
   font-weight: 700;
-  color: #fff;
+  color: #fdd102;
   white-space: nowrap;
   align-self: flex-start;
 }
@@ -111,108 +112,93 @@ body {
 
 .content::-webkit-scrollbar { display: none; }
 
-/* ── QR 위젯 ── */
-.qr-widget {
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 28px rgba(15, 23, 41, 0.12);
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.qr-widget__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.qr-widget__ticket-label {
-  font-size: 11px;
-  font-weight: 700;
-  color: #94a2b8;
-  margin-bottom: 4px;
-}
-
-.qr-widget__ticket-count {
-  font-size: 26px;
-  font-weight: 700;
-  color: #0f1729;
-  white-space: nowrap;
-}
-
-.qr-widget__badge {
-  background: #eff6ff;
-  color: #3b82f6;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 12px;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.qr-widget__qr {
-  background: #f1f4f9;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 12px;
-  height: 108px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  cursor: pointer;
-  transition: background 0.18s;
-}
-
-.qr-widget__qr:hover { background: #e8edf4; }
-
-.qr-widget__qr-img {
-  width: 53px;
-  height: 53px;
-  object-fit: cover;
-  display: block;
-}
-
-.qr-widget__qr-hint {
-  font-size: 11px;
-  font-weight: 400;
-  color: #94a2b8;
-  text-align: center;
-}
-
-.qr-widget__action {
-  width: 100%;
-  height: 38px;
-  border: none;
-  border-radius: 10px;
-  background: linear-gradient(6.97deg, #3b82f6 14.639%, #1d4ede 85.361%);
-  box-shadow: 0 6px 20px rgba(59, 130, 245, 0.3);
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: #fff;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-
-.qr-widget__action:hover { opacity: 0.9; }
-
-/* ── 설정 레이블 ── */
-.setting-label {
+/* ── 섹션 레이블 ── */
+.section-label {
   font-size: 13px;
   font-weight: 700;
   color: #0f1729;
   padding: 4px 0 0 2px;
 }
 
+/* ── 통계 카드 ── */
+.stats-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(15, 23, 41, 0.08);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.stats-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stats-card__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f1729;
+}
+
+.stats-card__link {
+  font-size: 11px;
+  font-weight: 400;
+  color: #94a2b8;
+  white-space: nowrap;
+}
+
+.stats-card__grid {
+  display: flex;
+}
+
+.stats-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 0 8px;
+  border-right: 1px solid #e2e8f0;
+}
+
+.stats-item:last-child {
+  border-right: none;
+}
+
+.stats-item:first-child {
+  padding-left: 0;
+}
+
+.stats-item__label {
+  font-size: 10px;
+  font-weight: 400;
+  color: #94a2b8;
+  white-space: nowrap;
+  text-align: center;
+  order: 2;
+}
+
+.stats-item__value {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f1729;
+  white-space: nowrap;
+  text-align: center;
+  order: 1;
+}
+
+.stats-item--green .stats-item__value {
+  color: #10b981;
+}
+
 /* ── 설정 카드 ── */
 .setting-card {
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(15, 23, 41, 0.06);
+  box-shadow: 0 0 0 1px #e8edf4, 0 4px 14px rgba(15, 23, 41, 0.06);
   overflow: hidden;
   padding: 0 16px;
 }
@@ -254,6 +240,12 @@ body {
   border-radius: 11px;
   white-space: nowrap;
   flex-shrink: 0;
+}
+
+.setting-row__badge--yellow {
+  background: rgba(253, 209, 2, 0.2);
+  border: 1px solid rgba(253, 209, 2, 0.5);
+  color: #995901;
 }
 
 .setting-row__value {
@@ -328,47 +320,6 @@ body {
 .nav-item--active .nav-item__label {
   font-weight: 700;
   color: #3b82f6;
-}
-
-/* ── QR 확대 오버레이 ── */
-.qr-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(15, 23, 41, 0.75);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 50;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s;
-}
-
-.qr-overlay--show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.qr-overlay__box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.qr-overlay__box img {
-  width: 220px;
-  height: 220px;
-  object-fit: contain;
-  border-radius: 16px;
-  background: #fff;
-  padding: 12px;
-}
-
-.qr-overlay__hint {
-  font-size: 13px;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.7);
 }
 
 /* ── 반응형: 실제 모바일 ── */

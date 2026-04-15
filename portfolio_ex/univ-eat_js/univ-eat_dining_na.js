@@ -60,19 +60,19 @@ document.querySelectorAll('.chip').forEach(chip => {
   });
 });
 
-// ── 바텀 네비 ──
+// ── 바텀 네비 (미가맹 플로우) ──
 document.querySelector('[data-nav="home"]').addEventListener('click', () => {
-  navigateTo('univ-eat_home.html', true);
+  navigateTo('univ-eat_home_na.html', true);
 });
 
 document.querySelector('[data-nav="meal"]').addEventListener('click', () => {
-  navigateTo('univ-eat_meal.html', true);
+  navigateTo('univ-eat_meal_na.html');
 });
 
 document.querySelector('[data-nav="sub"]').addEventListener('click', () => {
-  navigateTo('univ-eat_sub_active.html');
+  navigateTo('univ-eat_sub_na.html');
 });
 
 document.querySelector('[data-nav="mypage"]').addEventListener('click', () => {
-  navigateTo('univ-eat_mypage.html');
+  navigateTo('univ-eat_mypage_na.html');
 });

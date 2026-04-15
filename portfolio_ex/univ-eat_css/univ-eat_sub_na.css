@@ -1,0 +1,335 @@
+/* =========================================
+   Univ-Eat — 구독 (미가맹)
+   ========================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #0f1729;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+/* ── 폰 프레임 ── */
+.phone-wrap {
+  width: 390px;
+  min-height: 844px;
+  border-radius: 44px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── 스크린 ── */
+.screen {
+  width: 100%;
+  min-height: 844px;
+  background: #f7fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── 헤더 (오렌지) ── */
+.sub-header {
+  height: 79px;
+  background: linear-gradient(11.45deg, #99330d 14.639%, #e5590d 85.361%);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+.sub-header__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sub-header__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.sub-header__sub {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ── 콘텐츠 ── */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 16px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.content::-webkit-scrollbar { display: none; }
+
+/* ── 잠금 안내 카드 ── */
+.lock-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(15, 23, 41, 0.08);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.lock-card__icon {
+  font-size: 56px;
+  line-height: 1;
+}
+
+.lock-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f1729;
+}
+
+.lock-card__desc {
+  font-size: 12px;
+  font-weight: 400;
+  color: #94a2b8;
+  line-height: 1.6;
+}
+
+/* ── 정보 정확도 안내 ── */
+.disclaimer-card {
+  background: #fefce6;
+  border: 1px solid rgba(253, 209, 2, 0.5);
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.disclaimer-card__title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #995901;
+  white-space: pre;
+}
+
+.disclaimer-card__desc {
+  font-size: 11px;
+  font-weight: 400;
+  color: #995901;
+  line-height: 1.6;
+}
+
+/* ── 가맹 신청 버튼 ── */
+.btn-partnership {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(8.26deg, #3b82f6 14.639%, #1d4ede 85.361%);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-partnership:hover { opacity: 0.9; }
+
+/* ── 얼리버드 배너 ── */
+.earlybird-banner {
+  height: 80px;
+  border-radius: 16px;
+  background: linear-gradient(12.60deg, #0f1729 14.639%, #1e2e48 85.361%);
+  box-shadow: 0 4px 16px rgba(15, 23, 41, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  overflow: hidden;
+}
+
+.earlybird-banner__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.earlybird-banner__title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  white-space: pre;
+}
+
+.earlybird-banner__desc {
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+}
+
+.earlybird-banner__tag {
+  background: rgba(59, 130, 246, 0.3);
+  border-radius: 10px;
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #93c5fd;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── 섹션 타이틀 ── */
+.section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f1729;
+  padding: 2px 0 0;
+}
+
+/* ── 플랜 미리보기 카드 ── */
+.plan-preview {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(15, 23, 41, 0.06);
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  overflow: hidden;
+}
+
+.plan-preview__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.plan-preview__name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #c0d1e1;
+  white-space: nowrap;
+}
+
+.plan-preview__price {
+  font-size: 11px;
+  font-weight: 400;
+  color: #c0d1e1;
+  white-space: nowrap;
+}
+
+.plan-preview__lock {
+  background: #f1f4f9;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a2b8;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── 홈으로 돌아가기 버튼 ── */
+.btn-back-home {
+  width: 100%;
+  height: 36px;
+  border: none;
+  background: transparent;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #94a2b8;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* ── 바텀 네비게이션 ── */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px;
+  gap: 6px;
+  z-index: 10;
+}
+
+.nav-item {
+  flex: 1;
+  height: 52px;
+  border: none;
+  background: transparent;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+  padding: 8px 10px;
+  transition: background 0.18s;
+}
+
+.nav-item--active { background: #eff6ff; }
+
+.nav-item__icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.nav-item__label {
+  font-size: 9px;
+  font-weight: 400;
+  color: #94a2b8;
+  width: 47px;
+  text-align: center;
+}
+
+.nav-item--active .nav-item__label {
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+/* ── 반응형: 실제 모바일 ── */
+@media (max-width: 430px) {
+  body {
+    padding: 0;
+    background: #f7fafc;
+  }
+
+  .phone-wrap {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .screen { min-height: 100vh; }
+}
