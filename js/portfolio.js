@@ -146,7 +146,6 @@ resetPage();
 /* ── Works 상세 페이지 추가 ── */
 const pageWorks = document.getElementById('page-works');
 const workPdfImg = document.getElementById('workPdfImg');
-const workCtaBtn = document.getElementById('workCtaBtn');
 
 
 
@@ -155,49 +154,13 @@ pageWorks.style.cssText = 'position:absolute;top:0;left:0;width:100%;transform:t
 
 const BASE = window.location.pathname.includes('/portfolio') ? '/portfolio' : '';
 const workData = {
-  cineq: {
-    pdf: `${BASE}/img/CINEQ_PORTFOLIO.jpg`,
-    link: `${BASE}/portfolio_ex/movie.html`,
-    bg: `${BASE}/img/CINEQ_CTA-bg.png`,
-    text: '본 프로젝트는 Figma로 디자인하고 HTML, CSS로 구현되었습니다.'
-  },
-  tempur: {
-    pdf: `${BASE}/img/TEMPUR_PORTFOLIO.png`,
-    link: `${BASE}/portfolio_ex/index.html`,
-    bg: `${BASE}/img/TEMPUR_CTA-bg.png`,
-    text: '본 프로젝트는 Figma로 디자인하고 HTML, CSS, JavaScript로 구현되었습니다.'
-  },
-  melon: {
-    pdf: `${BASE}/img/MELON_PORTFOLIO.jpg`,
-    link: `${BASE}/portfolio_ex/melon.html`,
-    bg: `${BASE}/img/MELON_CTA-bg.png`,
-    text: '본 프로젝트는 Figma로 디자인하고 HTML, CSS, JavaScript로 구현되었습니다.'
-  },
-  aquaderm: {
-    pdf: `${BASE}/img/AQUADREM_PORTFOLIO.jpg`,
-    link: `${BASE}/portfolio_ex/aquadrem_index/aquaderm.html`,
-    bg: `${BASE}/img/AQUA_CTA-bg.png`,
-    text: '본 프로젝트는 Figma로 디자인하고 HTML, CSS, JavaScript로 구현되었습니다.'
-  },
-  ssense: {
-    pdf: `${BASE}/img/SSENSE_PORTFOLIO.png`,
-    link: `${BASE}/portfolio_ex/teamProject-main/index.html`,
-    bg: `${BASE}/img/SSENSE_CTA-bg.png`,
-    text: '본 프로젝트는 Figma로 디자인하고 HTML, CSS, JavaScript로 구현되었습니다.'
-  },
-  dayflow: {
-    pdf: `${BASE}/img/DAYFLOW_PORTFOLIO.jpg`,
-    link: `${BASE}/portfolio_ex/dayflow_index/dayflow_main.html`,
-    bg: `${BASE}/img/DAYFLOW_CTA-bg.png`,
-    text: '본 프로젝트는 Figma로 디자인하고 HTML, CSS, JavaScript로 구현되었습니다.'
-  },
-  univeat
-  : {
-    pdf: `${BASE}/img/UNIV-EAT_PORTFOLIO.png`,
-    link: `${BASE}/portfolio_ex/univ-eat_index/univ-eat_login.html`,
-    bg: `${BASE}/img/UNIV_CTA-bg.png`,
-    text: '본 프로젝트는 Figma로 디자인하고 HTML, CSS, JavaScript로 구현되었습니다.'
-  },
+  cineq:    { pdf: `${BASE}/img/CINEQ_PORTFOLIO.jpg` },
+  tempur:   { pdf: `${BASE}/img/TEMPUR_PORTFOLIO.png` },
+  melon:    { pdf: `${BASE}/img/MELON_PORTFOLIO.jpg` },
+  aquaderm: { pdf: `${BASE}/img/AQUADREM_PORTFOLIO.jpg` },
+  ssense:   { pdf: `${BASE}/img/SSENSE_PORTFOLIO.png` },
+  dayflow:  { pdf: `${BASE}/img/DAYFLOW_PORTFOLIO.jpg` },
+  univeat:  { pdf: `${BASE}/img/UNIV-EAT_PORTFOLIO.png` },
 };
 
 function openWork(workKey) {
@@ -207,9 +170,6 @@ function openWork(workKey) {
   const data = workData[workKey];
   if (data) {
     workPdfImg.src = data.pdf;
-    workCtaBtn.href = data.link;
-    document.querySelector('.work-cta').style.backgroundImage = data.bg ? `url(${data.bg})` : '';
-    document.querySelector('.work-cta-text').innerHTML = data.text;
   }
   document.querySelectorAll('.subnav-item').forEach(item => {
     item.classList.toggle('active', item.dataset.work === workKey);
@@ -244,14 +204,11 @@ document.querySelectorAll('.subnav-item').forEach(item => {
     const data = workData[item.dataset.work];
     if (data) {
       workPdfImg.src = data.pdf;
-      workCtaBtn.href = data.link;
-      document.querySelector('.work-cta').style.backgroundImage = data.bg ? `url(${data.bg})` : '';
-      document.querySelector('.work-cta-text').innerHTML = data.text;
     }
     document.querySelectorAll('.subnav-item').forEach(i => i.classList.remove('active'));
     item.classList.add('active');
     scrollSubnavToActive(item);
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
 
